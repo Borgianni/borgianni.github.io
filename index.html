@@ -34,8 +34,9 @@ ul{list-style:none;}
   justify-content:center;font-size:2rem;margin-bottom:1.25rem;overflow:hidden;
 }
 .profile-photo img{
-  width:100%;height:100%;object-fit:cover;
+  width:100%;height:100%;object-fit:cover;display:block;
 }
+.profile-photo img:not([src]),.home-photo img:not([src]){display:none;}
 .sidebar-name{font-family:var(--ff-serif);font-size:1.15rem;font-weight:600;color:var(--ink);line-height:1.25;margin-bottom:.3rem;}
 .sidebar-role{font-size:.82rem;color:var(--muted);line-height:1.45;margin-bottom:.2rem;}
 .sidebar-uni{font-size:.8rem;color:var(--blue);font-weight:500;margin-bottom:1.5rem;}
@@ -86,7 +87,7 @@ p{margin-bottom:1rem;color:var(--ink2);text-align:justify;}
 /* HOME */
 .home-intro{display:flex;gap:2.5rem;align-items:flex-start;margin-bottom:2.5rem;}
 .home-photo{width:120px;height:120px;border-radius:50%;flex-shrink:0;background:var(--bg2);border:2px solid var(--border);display:flex;align-items:center;justify-content:center;overflow:hidden;}
-.home-photo img{width:100%;height:100%;object-fit:cover;}
+.home-photo img{width:100%;height:100%;object-fit:cover;display:block;}
 .home-bio p:first-child{font-size:1.05rem;}
 .news-list{display:flex;flex-direction:column;}
 .news-item{display:flex;gap:1.5rem;padding:.9rem 0;border-bottom:1px solid var(--border);align-items:baseline;}
@@ -160,6 +161,14 @@ p{margin-bottom:1rem;color:var(--ink2);text-align:justify;}
 .tri-stat{background:var(--white);padding:1.25rem;text-align:center;}
 .tri-num{font-family:var(--ff-serif);font-size:1.8rem;font-weight:600;color:var(--blue);line-height:1;}
 .tri-label{font-size:.78rem;color:var(--muted);margin-top:.25rem;}
+.sport-feature{display:grid;grid-template-columns:220px 1fr;gap:1.25rem;align-items:stretch;margin:1.25rem 0 1.5rem;}
+.sport-photo{border-radius:8px;overflow:hidden;border:1px solid var(--border);background:var(--white);min-height:220px;}
+.sport-photo img{width:100%;height:100%;object-fit:cover;display:block;}
+.sport-results{background:var(--white);border:1px solid var(--border);border-radius:8px;padding:1.15rem 1.25rem;}
+.sport-results h3{margin-bottom:.75rem;}
+.result-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.6rem .9rem;}
+.result-item{font-size:.84rem;color:var(--ink2);padding:.45rem .6rem;background:var(--bg);border-radius:5px;}
+.result-year{font-weight:700;color:var(--blue);margin-right:.35rem;}
 .music-card{padding:1.25rem 1.5rem;border:1px solid var(--border);border-radius:6px;background:var(--white);margin-bottom:1rem;}
 .music-card h3{margin-bottom:.35rem;}
 .genre-row{display:flex;gap:.5rem;flex-wrap:wrap;margin:.5rem 0;}
@@ -175,10 +184,14 @@ p{margin-bottom:1rem;color:var(--ink2);text-align:justify;}
   .page{padding:2rem 1.5rem;}
   .home-intro{flex-direction:column;gap:1.25rem;}
 }
+@media(max-width:780px){
+  .sport-feature{grid-template-columns:1fr;}
+}
 @media(max-width:520px){
   .tri-stats{grid-template-columns:1fr 1fr;}
   .yt-card{flex-direction:column;}
   .yt-thumb{width:100%;height:100px;}
+  .result-grid{grid-template-columns:1fr;}
 }
 </style>
 </head>
@@ -187,7 +200,7 @@ p{margin-bottom:1rem;color:var(--ink2);text-align:justify;}
 
 <!-- SIDEBAR -->
 <aside id="sidebar">
-  <div class="profile-photo"><img src="IMG_7197 1.jpg" alt="Luca Borgianni"></div>
+  <div class="profile-photo"><img src="luca_photo.png" alt="Luca Borgianni" onerror="this.style.display='none'; this.parentElement.textContent='LB';"></div>
   <div class="sidebar-name">Luca Borgianni, Ph.D.</div>
   <div class="sidebar-role" data-i18n="profile.role">Postdoctoral Researcher<br>Dept. of Information Engineering</div>
   <div class="sidebar-uni">University of Pisa</div>
@@ -206,7 +219,7 @@ p{margin-bottom:1rem;color:var(--ink2);text-align:justify;}
   <div class="sidebar-divider"></div>
   <div class="sidebar-contacts">
     <a href="mailto:luca.borgianni@unipi.it">✉ luca.borgianni@unipi.it</a>
-    <a href="CV_Borgianni (11)_3.pdf" target="_blank">📄 <span data-i18n="sidebar.cv">Download CV</span></a>
+    <a href="CV_Borgianni.pdf" target="_blank">📄 <span data-i18n="sidebar.cv">Download CV</span></a>
     <a href="https://scholar.google.com" target="_blank">🔗 Google Scholar</a>
     <a href="https://github.com/borgianni" target="_blank">🐙 GitHub</a>
     <a href="https://linkedin.com" target="_blank">💼 LinkedIn</a>
@@ -232,7 +245,7 @@ p{margin-bottom:1rem;color:var(--ink2);text-align:justify;}
   <a href="#inter" onclick="go('inter');toggleNav()"><span>✦</span>  <span data-i18n="nav.inter">Interests</span></a>
   <div class="mobile-contact-row">
     <a href="mailto:luca.borgianni@unipi.it">✉ Email</a>
-    <a href="CV_Borgianni (11)_3.pdf" target="_blank">📄 CV</a><a href="#">Scholar</a><a href="https://github.com/borgianni">GitHub</a>
+    <a href="CV_Borgianni.pdf" target="_blank">📄 CV</a><a href="#">Scholar</a><a href="https://github.com/borgianni">GitHub</a>
   </div>
 </div>
 
@@ -242,14 +255,14 @@ p{margin-bottom:1rem;color:var(--ink2);text-align:justify;}
 <!-- HOME -->
 <div class="page active" id="page-home">
   <div class="home-intro">
-    <div class="home-photo"><img src="image_718be1.jpg" alt="Luca Borgianni"></div>
+    <div class="home-photo"><img src="luca_photo.png" alt="Luca Borgianni" onerror="this.style.display='none'; this.parentElement.textContent='LB';"></div>
     <div class="home-bio">
       <h1>Luca Borgianni, Ph.D.</h1>
       <p class="page-tagline" data-i18n="home.tagline">Postdoctoral Researcher · Dept. of Information Engineering · University of Pisa</p>
       <p data-i18n="home.bio1">I am a Postdoctoral Researcher at the University of Pisa and an Affiliate Researcher at Stanford University (CCRMA). My research thrives at the intersection of Resilient Data-Driven Networking for 6G, Low-Latency Edge AI, and Networked Music Performance using LEO Satellite Internet (Starlink).</p>
-      <p data-i18n="home.bio2">Currently, I serve as WP8 Leader within the Horizon Europe project "EU-TRAINS", developing Edge AI systems for swimming wearable assessment. Concurrently, I collaborate with Stanford Medicine School on the TAM project, implementing Machine Learning for automated tracheal breath sound analysis[cite: 1].</p>
+      <p data-i18n="home.bio2">Currently, I serve as WP8 Leader within the Horizon Europe project "EU-TRAINS", developing Edge AI systems for swimming wearable assessment. Concurrently, I collaborate with Stanford Medicine School on the TAM project, implementing Machine Learning for automated tracheal breath sound analysis.</p>
       <div class="quick-links">
-        <a href="CV_Borgianni (11)_3.pdf" target="_blank" class="qlink primary">📄 <span data-i18n="home.cv">Curriculum Vitae</span></a>
+        <a href="CV_Borgianni.pdf" target="_blank" class="qlink primary">📄 <span data-i18n="home.cv">Curriculum Vitae</span></a>
         <a href="#" class="qlink" onclick="go('pub');return false">📚 <span data-i18n="nav.pub">Publications</span></a>
         <a href="mailto:luca.borgianni@unipi.it" class="qlink">✉ <span data-i18n="home.email">Email</span></a>
         <a href="https://scholar.google.com" target="_blank" class="qlink">🔗 Scholar</a>
@@ -263,19 +276,19 @@ p{margin-bottom:1rem;color:var(--ink2);text-align:justify;}
   <div class="news-list">
     <div class="news-item">
       <span class="news-date">May 2026</span>
-      <span class="news-text"><span class="news-badge badge-talk" data-i18n="badge.talk">Pitch</span><span data-i18n="news.1">Selected as Top 6 presenter at the IEEE ICC 2026 Research Collaboration Pitch Session in Glasgow for industrial R&D leaders[cite: 1].</span></span>
+      <span class="news-text"><span class="news-badge badge-talk" data-i18n="badge.talk">Pitch</span><span data-i18n="news.1">Selected as Top 6 presenter at the IEEE ICC 2026 Research Collaboration Pitch Session in Glasgow for industrial R&D leaders.</span></span>
     </div>
     <div class="news-item">
       <span class="news-date">Apr 2026</span>
-      <span class="news-text"><span class="news-badge badge-new" data-i18n="badge.new">New</span><span data-i18n="news.2">Appointed as Postdoctoral Researcher for Machine Learning breath sound detection in the TAM project with Stanford Medicine School[cite: 1].</span></span>
+      <span class="news-text"><span class="news-badge badge-new" data-i18n="badge.new">New</span><span data-i18n="news.2">Appointed as Postdoctoral Researcher for Machine Learning breath sound detection in the TAM project with Stanford Medicine School.</span></span>
     </div>
     <div class="news-item">
       <span class="news-date">Feb 2026</span>
-      <span class="news-text"><span class="news-badge badge-award" data-i18n="badge.award">Ph.D.</span><span data-i18n="news.3">Defended my Ph.D. Thesis on Resilient Networking for 6G and LEO Satellites, graduating <em>cum laude</em> from the University of Pisa[cite: 1].</span></span>
+      <span class="news-text"><span class="news-badge badge-award" data-i18n="badge.award">Ph.D.</span><span data-i18n="news.3">Defended my Ph.D. Thesis on Resilient Networking for 6G and LEO Satellites, graduating <em>cum laude</em> from the University of Pisa.</span></span>
     </div>
     <div class="news-item">
       <span class="news-date">Dec 2025</span>
-      <span class="news-text"><span class="news-badge badge-award" data-i18n="badge.award">Award</span><span data-i18n="news.4">Selected as Finalist for the prestigious IEEE ComSoc Four Minute Thesis (4MT) Competition at IEEE Globecom 2025 in Taipei[cite: 1].</span></span>
+      <span class="news-text"><span class="news-badge badge-award" data-i18n="badge.award">Award</span><span data-i18n="news.4">Selected as Finalist for the prestigious IEEE ComSoc Four Minute Thesis (4MT) Competition at IEEE Globecom 2025 in Taipei.</span></span>
     </div>
   </div>
 
@@ -298,7 +311,7 @@ p{margin-bottom:1rem;color:var(--ink2);text-align:justify;}
 <!-- PUBLICATIONS -->
 <div class="page" id="page-pub">
   <h1 data-i18n="pub.title">Complete Publications</h1>
-  <p class="page-tagline" data-i18n="pub.tagline">Peer-reviewed international journals and conference proceedings[cite: 1].</p>
+  <p class="page-tagline" data-i18n="pub.tagline">Peer-reviewed international journals and conference proceedings.</p>
   <div class="pub-filters">
     <button class="filter-btn active" onclick="filterPubs(this,'all')"  data-i18n="pub.f.all">All</button>
     <button class="filter-btn"        onclick="filterPubs(this,'jour')" data-i18n="pub.f.jour">International Journals</button>
@@ -376,12 +389,21 @@ p{margin-bottom:1rem;color:var(--ink2);text-align:justify;}
     <div class="pub-entry" data-type="conf"><h3>19. Spectrogram Based Bee Sound Analysis with DNNs: a step toward Federated Learning approach</h3><div class="pub-authors"><strong>L. Borgianni</strong>, M. S. Ahmed, D. Adami, S. Giordano</div><div class="pub-venue">Internet of Sounds, October 2023 <span class="pub-venue-badge venue-conf">Conference</span></div></div>
     <div class="pub-entry" data-type="conf"><h3>20. From MPLS to SD-WAN to ensure QoS and QoE in cloud-based applications</h3><div class="pub-authors"><strong>L. Borgianni</strong>, S. Troia, D. Adami, G. Maier, S. Giordano</div><div class="pub-venue">IEEE NetSoft, June 2023 <span class="pub-venue-badge venue-conf">Conference</span></div></div>
   </div>
+
+  <div class="pub-year-group" data-group-type="book">
+    <div class="pub-year-label" data-i18n="pub.label.books">Book Chapter</div>
+    <div class="pub-entry" data-type="book">
+      <h3>E.T. Telefono a Fibra ottica</h3>
+      <div class="pub-authors"><strong>L. Borgianni</strong>, co-author</div>
+      <div class="pub-venue"><em>La facoltà di scegliere</em>, edited by Giulio Deangeli, Mondadori, January 2024. ISBN: 978-8804774464 <span class="pub-venue-badge venue-jour">Book</span></div>
+    </div>
+  </div>
 </div>
 
 <!-- EXPERIENCE & TEACHING -->
 <div class="page" id="page-teach">
   <h1 data-i18n="teach.title">Professional Experience & Teaching</h1>
-  <p class="page-tagline" data-i18n="teach.tagline">Bridging advanced corporate R&D, international fellowships, and academic lecturing[cite: 1].</p>
+  <p class="page-tagline" data-i18n="teach.tagline">Bridging advanced corporate R&D, international fellowships, and academic lecturing.</p>
 
   <h2 data-i18n="teach.sect.exp">Research & Industrial Experience</h2>
   <div class="exp-timeline">
@@ -389,7 +411,7 @@ p{margin-bottom:1rem;color:var(--ink2);text-align:justify;}
       <div class="exp-header">
         <h3>Postdoctoral Researcher</h3>
         <div class="exp-sub">University of Pisa, Italy</div>
-        <div class="exp-desc" data-i18n="exp.1">Machine Learning frameworks for automated Breath Sound detection. Partnered under the TAM project with Stanford University Medicine School[cite: 1].</div>
+        <div class="exp-desc" data-i18n="exp.1">Machine Learning frameworks for automated Breath Sound detection. Partnered under the TAM project with Stanford University Medicine School.</div>
       </div>
       <span class="exp-date">04/2026 - Present</span>
     </div>
@@ -397,7 +419,7 @@ p{margin-bottom:1rem;color:var(--ink2);text-align:justify;}
       <div class="exp-header">
         <h3>R&D Engineer & WP8 Leader</h3>
         <div class="exp-sub">Xtremion</div>
-        <div class="exp-desc" data-i18n="exp.2">Leading Work Package 8 within the Horizon Europe project "EU-TRAINS". Designing advanced Edge AI system topologies for swimming bio-wearables communication[cite: 1].</div>
+        <div class="exp-desc" data-i18n="exp.2">Leading Work Package 8 within the Horizon Europe project "EU-TRAINS". Designing advanced Edge AI system topologies for swimming bio-wearables communication.</div>
       </div>
       <span class="exp-date">11/2025 - Present</span>
     </div>
@@ -405,7 +427,7 @@ p{margin-bottom:1rem;color:var(--ink2);text-align:justify;}
       <div class="exp-header">
         <h3>Technical Director (GATE Project)</h3>
         <div class="exp-sub">Kalliope Srl / PE SERICS Program (PNRR)</div>
-        <div class="exp-desc" data-i18n="exp.3">Directed technical deployment for cybersecurity voice protection, building AI platforms defending against vishing and generative voice deepfakes over VoIP[cite: 1].</div>
+        <div class="exp-desc" data-i18n="exp.3">Directed technical deployment for cybersecurity voice protection, building AI platforms defending against vishing and generative voice deepfakes over VoIP.</div>
       </div>
       <span class="exp-date">07/2024 - 09/2025</span>
     </div>
@@ -413,7 +435,7 @@ p{margin-bottom:1rem;color:var(--ink2);text-align:justify;}
       <div class="exp-header">
         <h3>Visiting Ph.D. Fellow</h3>
         <div class="exp-sub">Stanford University, CCRMA (USA)</div>
-        <div class="exp-desc" data-i18n="exp.4">Co-advised by Prof. Chris Chafe. Researching Networked Music Performance (NMP) over LEO satellite infrastructure (Starlink) and AI-driven signal processing arrays[cite: 1].</div>
+        <div class="exp-desc" data-i18n="exp.4">Co-advised by Prof. Chris Chafe. Researching Networked Music Performance (NMP) over LEO satellite infrastructure (Starlink) and AI-driven signal processing arrays.</div>
       </div>
       <span class="exp-date">03/2024 - 08/2024</span>
     </div>
@@ -439,54 +461,75 @@ p{margin-bottom:1rem;color:var(--ink2);text-align:justify;}
   </div>
 
   <h2 data-i18n="teach.sup">Supervised Student Theses</h2>
-  <p data-i18n="teach.sup.text">Proudly mentored and supervised several undergraduate and graduate research theses[cite: 1]:</p>
+  <p data-i18n="teach.sup.text">Proudly mentored and supervised several undergraduate and graduate research theses:</p>
   <ul style="margin-left: 1.5rem; list-style-type: square; margin-bottom: 2rem; color: var(--ink2); font-size: 0.92rem; display: flex; flex-direction: column; gap: 0.4rem;">
-    <li>"Dynamic tunnel Selection in SD-WAN using PPO-based Reinforcement Learning" — Delaram Ghadir (M.Sc. Computer Science & Networking)[cite: 1]</li>
-    <li>"Deep Q-Learning for Enhanced SD-WAN Performance and Reliability in Rural Areas" — Setayesh Ghadir (M.Sc. Computer Science & Networking)[cite: 1]</li>
-    <li>"SDN Traffic Optimization Using RYU and Reinforcement Learning" — Muhammad Ameen Uddin (M.Sc.)[cite: 1]</li>
-    <li>"Dynamic Overlay Selection in SD-WAN Using Reinforcement Learning" — Elshan Khanlari (M.Sc.)[cite: 1]</li>
-    <li>"Emulating and Evaluating Starlink-like LEO Satellite Networks" — Sagar Kumar (M.Sc. Computer Science & Networking)[cite: 1]</li>
-    <li>"Federated Learning in Drone Networks with Digital Twin Modeling" — Matteo della Bartola (M.Sc.)[cite: 1]</li>
-    <li>"SD-WAN for 6G: Integrating Terrestrial and Non-Terrestrial Networks" — Eleonora Bellini (B.Sc. Telecommunication Eng.)[cite: 1]</li>
-    <li>"Semantic Communication at the edge for wildlife surveillance" — Federico Cheli (M.Sc. Telecommunication Eng.)[cite: 1]</li>
+    <li>"Dynamic tunnel Selection in SD-WAN using PPO-based Reinforcement Learning" — Delaram Ghadir (M.Sc. Computer Science & Networking)</li>
+    <li>"Deep Q-Learning for Enhanced SD-WAN Performance and Reliability in Rural Areas" — Setayesh Ghadir (M.Sc. Computer Science & Networking)</li>
+    <li>"SDN Traffic Optimization Using RYU and Reinforcement Learning" — Muhammad Ameen Uddin (M.Sc.)</li>
+    <li>"Dynamic Overlay Selection in SD-WAN Using Reinforcement Learning" — Elshan Khanlari (M.Sc.)</li>
+    <li>"Emulating and Evaluating Starlink-like LEO Satellite Networks" — Sagar Kumar (M.Sc. Computer Science & Networking)</li>
+    <li>"Federated Learning in Drone Networks with Digital Twin Modeling" — Matteo della Bartola (M.Sc.)</li>
+    <li>"SD-WAN for 6G: Integrating Terrestrial and Non-Terrestrial Networks" — Eleonora Bellini (B.Sc. Telecommunication Eng.)</li>
+    <li>"Semantic Communication at the edge for wildlife surveillance" — Federico Cheli (M.Sc. Telecommunication Eng.)</li>
   </ul>
 </div>
 
 <!-- NEWS TIMELINE -->
 <div class="page" id="page-news">
   <h1 data-i18n="news.title">Academic Presentations & Timeline</h1>
-  <p class="page-tagline" data-i18n="news.tagline">Chronological archive of international research talks, pitches, and panel sessions[cite: 1].</p>
+  <p class="page-tagline" data-i18n="news.tagline">Chronological archive of international research talks, pitches, and panel sessions.</p>
   <div class="news-list news-full">
-    <div class="news-item"><span class="news-date">05/2026</span><span class="news-text"><span class="news-badge badge-talk">Pitch</span><strong>IEEE ICC 2026 (Glasgow):</strong> Selected as Top 6 international presenter for industrial R&D leaders. Talk: <em>"Semantic Communication Framework for Deepfake Voice Detection"</em>[cite: 1].</span></div>
-    <div class="news-item"><span class="news-date">05/2026</span><span class="news-text"><span class="news-badge badge-pub">Talk</span><strong>IEEE/IFIP NOMS 2026 (Rome):</strong> Paper Presentation: <em>"An AI-Driven SD-WAN Deployment for LEO Satellite and Terrestrial Network Integration"</em>[cite: 1].</span></div>
-    <div class="news-item"><span class="news-date">01/2026</span><span class="news-text"><span class="news-badge badge-talk">Oral</span><strong>Italian Networking Workshop (Bardonecchia):</strong> Oral presentation on <em>"Semantic Experiences in the Wild"</em>[cite: 1].</span></div>
-    <div class="news-item"><span class="news-date">12/2025</span><span class="news-text"><span class="news-badge badge-award">Finalist</span><strong>IEEE Globecom 2025 (Taipei):</strong> Presented as world finalist at the ComSoc Four Minute Thesis (4MT) Competition[cite: 1].</span></div>
-    <div class="news-item"><span class="news-date">10/2025</span><span class="news-text"><span class="news-badge badge-talk">Talk</span><strong>IEEE NFV/SDN (Athens):</strong> Paper presentation: <em>"Proximal Policy Optimization for AI-Orchestrated SD-WAN"</em>[cite: 1].</span></div>
-    <div class="news-item"><span class="news-date">05/2025</span><span class="news-text"><span class="news-badge badge-talk">Talk</span><strong>Stanford University (USA):</strong> Invited Talk at CCRMA: <em>"Can Musicians Play Together Over Satellite Internet? The Starlink case"</em>[cite: 1].</span></div>
-    <div class="news-item"><span class="news-date">04/2025</span><span class="news-text"><span class="news-badge badge-talk">Panel</span><strong>10th Workshop on Molecular Communications (Catania):</strong> Invited Panel Speaker on Future Trends: <em>"6G and Beyond"</em>[cite: 1].</span></div>
-    <div class="news-item"><span class="news-date">01/2024</span><span class="news-text"><span class="news-badge badge-award">Speech</span><strong>Senato della Repubblica Italiana:</strong> Delivered an invited institutional speech at the Senate of the Italian Republic[cite: 1].</span></div>
+    <div class="news-item"><span class="news-date">05/2026</span><span class="news-text"><span class="news-badge badge-talk">Pitch</span><strong>IEEE ICC 2026 (Glasgow):</strong> Selected as Top 6 international presenter for industrial R&D leaders. Talk: <em>"Semantic Communication Framework for Deepfake Voice Detection"</em>.</span></div>
+    <div class="news-item"><span class="news-date">05/2026</span><span class="news-text"><span class="news-badge badge-pub">Talk</span><strong>IEEE/IFIP NOMS 2026 (Rome):</strong> Paper Presentation: <em>"An AI-Driven SD-WAN Deployment for LEO Satellite and Terrestrial Network Integration"</em>.</span></div>
+    <div class="news-item"><span class="news-date">01/2026</span><span class="news-text"><span class="news-badge badge-talk">Oral</span><strong>Italian Networking Workshop (Bardonecchia):</strong> Oral presentation on <em>"Semantic Experiences in the Wild"</em>.</span></div>
+    <div class="news-item"><span class="news-date">12/2025</span><span class="news-text"><span class="news-badge badge-award">Finalist</span><strong>IEEE Globecom 2025 (Taipei):</strong> Presented as world finalist at the ComSoc Four Minute Thesis (4MT) Competition.</span></div>
+    <div class="news-item"><span class="news-date">10/2025</span><span class="news-text"><span class="news-badge badge-talk">Talk</span><strong>IEEE NFV/SDN (Athens):</strong> Paper presentation: <em>"Proximal Policy Optimization for AI-Orchestrated SD-WAN"</em>.</span></div>
+    <div class="news-item"><span class="news-date">05/2025</span><span class="news-text"><span class="news-badge badge-talk">Talk</span><strong>Stanford University (USA):</strong> Invited Talk at CCRMA: <em>"Can Musicians Play Together Over Satellite Internet? The Starlink case"</em>.</span></div>
+    <div class="news-item"><span class="news-date">04/2025</span><span class="news-text"><span class="news-badge badge-talk">Panel</span><strong>10th Workshop on Molecular Communications (Catania):</strong> Invited Panel Speaker on Future Trends: <em>"6G and Beyond"</em>.</span></div>
+    <div class="news-item"><span class="news-date">01/2024</span><span class="news-text"><span class="news-badge badge-award">Speech</span><strong>Senato della Repubblica Italiana:</strong> Delivered an invited institutional speech at the Senate of the Italian Republic.</span></div>
   </div>
 </div>
 
 <!-- INTERESTS & IMPACT -->
 <div class="page" id="page-inter">
   <h1 data-i18n="inter.title">Interests & Impact</h1>
-  <p class="page-tagline" data-i18n="inter.tagline">Public outreach, media creations, and scientific sports engineering[cite: 1].</p>
+  <p class="page-tagline" data-i18n="inter.tagline">Public outreach, media creations, and scientific sports engineering.</p>
 
   <div class="interest-section">
-    <h2>📺 Sports Tech & YouTube Outreach</h2>
-    <p data-i18n="inter.yt.desc">I design, produce, and run a digital community of over 10,000 members focused on breaking down the mathematics, firmware, and telemetry of modern sports wearables. It translates advanced signal processing concepts to a passionate audience[cite: 1].</p>
+    <h2 data-i18n="inter.yt.title">📺 Triathlon Italia & Sports Tech Outreach</h2>
+    <p data-i18n="inter.yt.desc">I am the founder of Triathlon Italia, a YouTube channel and digital community that has become a reference point in the Italian triathlon and endurance-sports world. Through videos, social media, and the blog, I share training culture, race experience, sports technology, and wearable analytics with an active community.</p>
     <div class="yt-card">
       <div class="yt-thumb">YouTube</div>
-      <div class="yt-info"><h3 data-i18n="yt.v1">Luca Borgianni — YouTube Community Creator</h3><p data-i18n="yt.v1.m">10,000+ members · Wearable analytics, FPGA setups, and endurance telemetry tracking[cite: 1].</p></div>
+      <div class="yt-info"><h3 data-i18n="yt.v1">Triathlon Italia — YouTube & Endurance Community</h3><p data-i18n="yt.v1.m">Reference channel for triathlon · Training culture, race stories, sports tech, and endurance telemetry.</p></div>
+    </div>
+    <div class="quick-links" style="margin-top:.75rem">
+      <a href="https://www.youtube.com/@triathlon.italia" target="_blank" class="qlink">▶ YouTube</a>
+      <a href="https://www.instagram.com/triathlon.italia/" target="_blank" class="qlink">📷 Instagram</a>
+      <a href="https://triathlonitalia.com/" target="_blank" class="qlink">✍ Blog</a>
     </div>
   </div>
 
   <hr class="section-rule"/>
 
   <div class="interest-section">
-    <h2>🏊🚴🏃 Competitive Triathlon & Certifications</h2>
-    <p data-i18n="inter.tri.desc">Triathlon is my primary testing ground for the edge computing systems I build for the European Horizon frameworks. It represents the supreme training ground for systemic discipline and biological data management[cite: 1].</p>
+    <h2 data-i18n="inter.tri.title">🏊🚴🏃 Competitive Sport & Triathlon</h2>
+    <p data-i18n="inter.tri.desc">I grew up in competitive sport, starting as an agonistic swimmer before moving into triathlon. I spent three years in the youth sports group of the Fiamme Oro and have competed for many years at regional and national level, later racing with BU Sport Team. This background shaped my discipline, resilience, and long-term connection with endurance sports.</p>
+    <div class="sport-feature">
+      <div class="sport-photo"><img src="luca_triathlon_win.png" alt="Luca Borgianni at a triathlon finish line"></div>
+      <div class="sport-results">
+        <h3 data-i18n="tri.results.title">Selected race results</h3>
+        <div class="result-grid">
+          <div class="result-item"><span class="result-year">2019</span><span data-i18n="tri.res.2019a">2nd overall, Duathlon Pisa</span></div>
+          <div class="result-item"><span class="result-year">2019</span><span data-i18n="tri.res.2019b">2nd overall, Triathlon Sprint Tirrenia</span></div>
+          <div class="result-item"><span class="result-year">2021</span><span data-i18n="tri.res.2021a">1st overall, Triathlon Sprint Empoli</span></div>
+          <div class="result-item"><span class="result-year">2021</span><span data-i18n="tri.res.2021b">2nd overall, Triathlon Olimpico Castiglione della Pescaia</span></div>
+          <div class="result-item"><span class="result-year">2022</span><span data-i18n="tri.res.2022a">1st overall, Triathlon Sprint Lago Brasimone</span></div>
+          <div class="result-item"><span class="result-year">2022</span><span data-i18n="tri.res.2022b">1st overall, Aquathlon Città di Chioggia</span></div>
+          <div class="result-item"><span class="result-year">2022</span><span data-i18n="tri.res.2022c">4th in category, Ironman 70.3 Poreč</span></div>
+          <div class="result-item"><span class="result-year">2023</span><span data-i18n="tri.res.2023a">3rd overall, Triathlon Olimpico Marina di Castagneto Carducci</span></div>
+        </div>
+      </div>
+    </div>
     <div class="tri-stats">
       <div class="tri-stat"><div class="tri-num">FITRI</div><div class="tri-label" data-i18n="tri.label.1">Triathlon Instructor</div></div>
       <div class="tri-stat"><div class="tri-num">FISA</div><div class="tri-label" data-i18n="tri.label.2">Lifeguard Patent</div></div>
@@ -497,20 +540,15 @@ p{margin-bottom:1rem;color:var(--ink2);text-align:justify;}
   <hr class="section-rule"/>
 
   <div class="interest-section">
-    <h2>🎵 Music, Audio Synthesis & Book Chapter</h2>
-    <p data-i18n="inter.music.desc">I am a guitar player, singer, and songwriter[cite: 1]. My artistic background directly feeds into my network latency studies, enabling multi-site real-time synchronous audio jamming across the globe over advanced telecommunication backbones[cite: 1].</p>
-    
-    <div class="music-card">
-      <h3 data-i18n="m1.name">Book Chapter Publication (Mondadori)</h3>
-      <p style="font-size:.88rem;color:var(--ink2);" data-i18n="m1.desc">Co-authored the book chapter <strong>"E.T. Telefono a Fibra ottica"</strong> within the volume <em>"La facoltà di scegliere"</em>, edited by Giulio Deangeli, Mondadori (January 16, 2024). ISBN: 978-8804774464[cite: 1].</p>
-    </div>
+    <h2 data-i18n="inter.music.title">🎵 Music & Songwriting</h2>
+    <p data-i18n="inter.music.desc">I play acoustic guitar and sing, and I have also written and published original songs on YouTube and Spotify. Music remains an important creative part of my life and naturally connects with my research on networked music performance and low-latency audio over advanced telecommunication systems.</p>
     
     <div class="music-card">
       <h3 data-i18n="m2.name">Technical Skills Backbone</h3>
       <p style="font-size:.85rem;color:var(--muted); font-family: monospace;">
         Programming: Python, MATLAB, C++, Java <br>
         Networking: SDN, Edge Computing, LEO Satellite Internet, Quantum Internet, Mininet, JackTrip <br>
-        Machine Learning: Speech Enhancement, Reinforcement Learning, Federated Learning[cite: 1].
+        Machine Learning: Speech Enhancement, Reinforcement Learning, Federated Learning.
       </p>
     </div>
   </div>
@@ -525,41 +563,59 @@ en:{
   "profile.role":"Postdoctoral Researcher<br>Dept. of Information Engineering",
   "sidebar.cv":"Download CV",
   "nav.home":"Home","nav.pub":"Publications","nav.teach":"Experience & Teaching","nav.news":"News & Timeline","nav.inter":"Interests & Impact",
+  "badge.talk":"Pitch","badge.new":"New","badge.award":"Award",
+  "news.1":"Selected as Top 6 presenter at the IEEE ICC 2026 Research Collaboration Pitch Session in Glasgow for industrial R&D leaders.",
+  "news.2":"Appointed as Postdoctoral Researcher for Machine Learning breath sound detection in the TAM project with Stanford Medicine School.",
+  "news.3":"Defended my Ph.D. Thesis on Resilient Networking for 6G and LEO Satellites, graduating <em>cum laude</em> from the University of Pisa.",
+  "news.4":"Selected as Finalist for the prestigious IEEE ComSoc Four Minute Thesis (4MT) Competition at IEEE Globecom 2025 in Taipei.",
   "home.tagline":"Postdoctoral Researcher · Department of Information Engineering · University of Pisa",
-  "home.bio1":"I am a Postdoctoral Researcher at the University of Pisa and an Affiliate Researcher at Stanford University (CCRMA)[cite: 1]. My research thrives at the intersection of Resilient Data-Driven Networking for 6G, Low-Latency Edge AI, and Networked Music Performance using LEO Satellite Internet (Starlink)[cite: 1].",
-  "home.bio2":"Currently, I serve as WP8 Leader within the Horizon Europe project \"EU-TRAINS\", developing Edge AI systems for swimming wearable assessment[cite: 1]. Concurrently, I collaborate with Stanford Medicine School on the TAM project, implementing Machine Learning for automated tracheal breath sound analysis[cite: 1].",
+  "home.bio1":"I am a Postdoctoral Researcher at the University of Pisa and an Affiliate Researcher at Stanford University (CCRMA). My research thrives at the intersection of Resilient Data-Driven Networking for 6G, Low-Latency Edge AI, and Networked Music Performance using LEO Satellite Internet (Starlink).",
+  "home.bio2":"Currently, I serve as WP8 Leader within the Horizon Europe project \"EU-TRAINS\", developing Edge AI systems for swimming wearable assessment. Concurrently, I collaborate with Stanford Medicine School on the TAM project, implementing Machine Learning for automated tracheal breath sound analysis.",
   "home.cv":"Curriculum Vitae","home.email":"Email",
   "home.newsTitle":"Recent Highlights","home.selPubs":"Selected Key Publications","home.allpubs":"→ View All 27 Publications",
   "pub.title":"Complete Publications",
-  "pub.tagline":"Peer-reviewed international journals and conference proceedings[cite: 1].",
+  "pub.tagline":"Peer-reviewed international journals and conference proceedings.",
   "pub.f.all":"All","pub.f.conf":"Conferences","pub.f.jour":"International Journals",
   "pub.label.journals":"International Peer-Reviewed Journals",
   "pub.label.conferences":"Peer-Reviewed Conference Proceedings",
+  "pub.label.books":"Book Chapter",
   "teach.title":"Professional Experience & Teaching",
-  "teach.tagline":"Bridging advanced corporate R&D, international fellowships, and academic lecturing[cite: 1].",
+  "teach.tagline":"Bridging advanced corporate R&D, international fellowships, and academic lecturing.",
   "teach.sect.exp":"Research & Industrial Experience",
   "teach.sect.courses":"Academic Courses & Seminars",
-  "exp.1":"Machine Learning frameworks for automated Tracheal Acoustic Monitoring. Partnered under the TAM project with Stanford University Medicine School[cite: 1].",
-  "exp.2":"Leading Work Package 8 within the Horizon Europe project \"EU-TRAINS\". Designing advanced Edge AI system topologies for swimming wearables communication architectures[cite: 1].",
-  "exp.3":"Directed technical deployment for cybersecurity voice protection, building AI platforms defending against vishing and generative voice deepfakes over VoIP systems[cite: 1].",
-  "exp.4":"Co-advised by Prof. Chris Chafe. Researching Networked Music Performance (NMP) over LEO satellite infrastructure (Starlink) and AI-driven signal processing arrays[cite: 1].",
+  "exp.1":"Machine Learning frameworks for automated Tracheal Acoustic Monitoring. Partnered under the TAM project with Stanford University Medicine School.",
+  "exp.2":"Leading Work Package 8 within the Horizon Europe project \"EU-TRAINS\". Designing advanced Edge AI system topologies for swimming wearables communication architectures.",
+  "exp.3":"Directed technical deployment for cybersecurity voice protection, building AI platforms defending against vishing and generative voice deepfakes over VoIP systems.",
+  "exp.4":"Co-advised by Prof. Chris Chafe. Researching Networked Music Performance (NMP) over LEO satellite infrastructure (Starlink) and AI-driven signal processing arrays.",
   "c1.name":"Cybersecurity and Voice Protection (GATE Project)","c1.meta":"ITS Academy Prodigi · 2026 · 12 hours Lecture Series",
   "c2.name":"Can Musicians Play Together Over Satellite Internet? The Starlink case","c2.meta":"Stanford University · Seminar, Class 220C · May 2025",
   "c3.name":"Network Metrology & FPGA Architectures Laboratory","c3.meta":"University of Pisa · Core M.Sc. Networking Courses · 20h/year (2022-2025)",
   "role.inst":"Guest Lecturer","role.sem":"Invited Speaker","role.ta":"Teaching Assistant",
   "teach.sup":"Supervised Student Theses",
-  "teach.sup.text":"Proudly mentored and supervised several undergraduate and graduate research theses[cite: 1]:",
+  "teach.sup.text":"Proudly mentored and supervised several undergraduate and graduate research theses:",
   "news.title":"Academic Presentations & Timeline",
-  "news.tagline":"Chronological archive of international research talks, pitches, and panel sessions[cite: 1].",
+  "news.tagline":"Chronological archive of international research talks, pitches, and panel sessions.",
   "inter.title":"Interests & Impact",
-  "inter.tagline":"Public outreach, media creations, and scientific sports engineering[cite: 1].",
-  "inter.yt.desc":"I design, produce, and run a digital community of over 10,000 members focused on breaking down the mathematics, firmware, and telemetry of modern sports wearables. It translates advanced signal processing concepts to a passionate audience[cite: 1].",
-  "yt.v1":"Luca Borgianni — YouTube Community Creator","yt.v1.m":"10,000+ members · Wearable analytics, FPGA setups, and endurance telemetry tracking[cite: 1].",
-  "inter.tri.desc":"Triathlon is my primary testing ground for the edge computing systems I build for the European Horizon frameworks. It represents the supreme training ground for systemic discipline and biological data management[cite: 1].",
+  "inter.tagline":"Public outreach, media creations, and scientific sports engineering.",
+  "inter.yt.title":"📺 Triathlon Italia & Sports Tech Outreach",
+  "inter.tri.title":"🏊🚴🏃 Competitive Sport & Triathlon",
+  "inter.music.title":"🎵 Music & Songwriting",
+  "inter.yt.desc":"I am the founder of Triathlon Italia, a YouTube channel and digital community that has become a reference point in the Italian triathlon and endurance-sports world. Through videos, social media, and the blog, I share training culture, race experience, sports technology, and wearable analytics with an active community.",
+  "yt.v1":"Triathlon Italia — YouTube & Endurance Community","yt.v1.m":"Reference channel for triathlon · Training culture, race stories, sports tech, and endurance telemetry.",
+  "inter.tri.desc":"I grew up in competitive sport, starting as an agonistic swimmer before moving into triathlon. I spent three years in the youth sports group of the Fiamme Oro and have competed for many years at regional and national level, later racing with BU Sport Team. This background shaped my discipline, resilience, and long-term connection with endurance sports.",
+  "tri.results.title":"Selected race results",
+  "tri.res.2019a":"2nd overall, Duathlon Pisa",
+  "tri.res.2019b":"2nd overall, Triathlon Sprint Tirrenia",
+  "tri.res.2021a":"1st overall, Triathlon Sprint Empoli",
+  "tri.res.2021b":"2nd overall, Triathlon Olimpico Castiglione della Pescaia",
+  "tri.res.2022a":"1st overall, Triathlon Sprint Lago Brasimone",
+  "tri.res.2022b":"1st overall, Aquathlon Città di Chioggia",
+  "tri.res.2022c":"4th in category, Ironman 70.3 Poreč",
+  "tri.res.2023a":"3rd overall, Triathlon Olimpico Marina di Castagneto Carducci",
   "tri.label.1":"Triathlon Instructor","tri.label.2":"Lifeguard Patent","tri.label.3":"Sub Open Patent",
-  "inter.music.desc":"I am a guitar player, singer, and songwriter[cite: 1]. My artistic background directly feeds into my network latency studies, enabling multi-site real-time synchronous audio jamming across the globe over advanced telecommunication backbones[cite: 1].",
+  "inter.music.desc":"I play acoustic guitar and sing, and I have also written and published original songs on YouTube and Spotify. Music remains an important creative part of my life and naturally connects with my research on networked music performance and low-latency audio over advanced telecommunication systems.",
   "m1.name":"Book Chapter Publication (Mondadori)",
-  "m1.desc":"Co-authored the book chapter \"E.T. Telefono a Fibra ottica\" within the volume \"La facoltà di scegliere\", edited by Giulio Deangeli, Mondadori (January 16, 2024). ISBN: 978-8804774464[cite: 1].",
+  "m1.desc":"Co-authored the book chapter \"E.T. Telefono a Fibra ottica\" within the volume \"La facoltà di scegliere\", edited by Giulio Deangeli, Mondadori (January 16, 2024). ISBN: 978-8804774464.",
   "m2.name":"Technical Skills Backbone",
   "footer.updated":"Last updated: June 2026",
 },
@@ -567,41 +623,59 @@ it:{
   "profile.role":"Assegnista di Ricerca<br>Dip. Ingegneria dell'Informazione",
   "sidebar.cv":"Scarica il CV",
   "nav.home":"Home","nav.pub":"Pubblicazioni","nav.teach":"Esperienza & Didattica","nav.news":"Presentazioni & Timeline","nav.inter":"Impatto & Interessi",
+  "badge.talk":"Pitch","badge.new":"Novità","badge.award":"Premio",
+  "news.1":"Selezionato tra i migliori 6 presenter alla IEEE ICC 2026 Research Collaboration Pitch Session di Glasgow per leader industriali R&D.",
+  "news.2":"Nominato Assegnista di Ricerca per il rilevamento dei suoni respiratori tramite Machine Learning nel progetto TAM con Stanford Medicine School.",
+  "news.3":"Discussione della tesi di dottorato su reti resilienti per 6G e satelliti LEO, con conseguimento del titolo <em>cum laude</em> presso l’Università di Pisa.",
+  "news.4":"Selezionato come finalista per la IEEE ComSoc Four Minute Thesis (4MT) Competition a IEEE Globecom 2025, Taipei.",
   "home.tagline":"Assegnista di Ricerca (Postdoc) · Dipartimento di Ingegneria dell'Informazione · Università di Pisa",
-  "home.bio1":"Sono un Assegnista di Ricerca presso l'Università di Pisa e un Affiliate Researcher presso la Stanford University (CCRMA)[cite: 1]. La mia ricerca unisce reti resilienti basate sui dati per il 6G, Edge AI a bassa latenza e Networked Music Performance su costellazioni satellitari LEO (Starlink)[cite: 1].",
-  "home.bio2":"Attualmente ricopro il ruolo di WP8 Leader nel progetto Horizon Europe \"EU-TRAINS\", sviluppando sistemi Edge AI per wearable nel nuoto[cite: 1]. Parallelamente, collaboro con la Stanford Medicine School al progetto TAM per l'analisi acustica automatizzata del respiro tracheale tramite Machine Learning[cite: 1].",
+  "home.bio1":"Sono un Assegnista di Ricerca presso l'Università di Pisa e un Affiliate Researcher presso la Stanford University (CCRMA). La mia ricerca unisce reti resilienti basate sui dati per il 6G, Edge AI a bassa latenza e Networked Music Performance su costellazioni satellitari LEO (Starlink).",
+  "home.bio2":"Attualmente ricopro il ruolo di WP8 Leader nel progetto Horizon Europe \"EU-TRAINS\", sviluppando sistemi Edge AI per wearable nel nuoto. Parallelamente, collaboro con la Stanford Medicine School al progetto TAM per l'analisi acustica automatizzata del respiro tracheale tramite Machine Learning.",
   "home.cv":"Curriculum Vitae","home.email":"Scrivimi",
   "home.newsTitle":"In Evidenza","home.selPubs":"Pubblicazioni Selezionate","home.allpubs":"→ Vedi Tutte le 27 Pubblicazioni",
   "pub.title":"Tutte le Pubblicazioni",
-  "pub.tagline":"Articoli in riviste internazionali peer-reviewed e atti di convegni[cite: 1].",
+  "pub.tagline":"Articoli in riviste internazionali peer-reviewed e atti di convegni.",
   "pub.f.all":"Tutte","pub.f.conf":"Atti di Conferenza","pub.f.jour":"Riviste Internazionali",
   "pub.label.journals":"Riviste Internazionali Peer-Reviewed",
   "pub.label.conferences":"Atti di Conferenze Internazionali",
+  "pub.label.books":"Capitolo di libro",
   "teach.title":"Esperienza Professionale & Didattica",
-  "teach.tagline":"Un ponte tra la grande R&D aziendale, fellowship internazionali e docenza accademica[cite: 1].",
+  "teach.tagline":"Un ponte tra la grande R&D aziendale, fellowship internazionali e docenza accademica.",
   "teach.sect.exp":"Esperienza di Ricerca & Industriale",
   "teach.sect.courses":"Corsi Accademici & Seminari",
-  "exp.1":"Framework di Machine Learning per il monitoraggio acustico tracheale automatizzato (TAM project) in collaborazione con Stanford Medicine School[cite: 1].",
-  "exp.2":"Responsabile del Work Package 8 all'interno del progetto europeo Horizon \"EU-TRAINS\". Progettazione di topologie Edge AI per wearable acustici nel nuoto[cite: 1].",
-  "exp.3":"Direttore Tecnico dello sviluppo per la protezione vocale informatica. Piattaforme IA contro attacchi vishing e deepfake vocali generativi su VoIP (Programma SERICS - PNRR)[cite: 1].",
-  "exp.4":"Co-supervisionato dal Prof. Chris Chafe. Ricerca su Networked Music Performance (NMP) tramite costellazioni satellitari Starlink e catene di elaborazione del segnale[cite: 1].",
+  "exp.1":"Framework di Machine Learning per il monitoraggio acustico tracheale automatizzato (TAM project) in collaborazione con Stanford Medicine School.",
+  "exp.2":"Responsabile del Work Package 8 all'interno del progetto europeo Horizon \"EU-TRAINS\". Progettazione di topologie Edge AI per wearable acustici nel nuoto.",
+  "exp.3":"Direttore Tecnico dello sviluppo per la protezione vocale informatica. Piattaforme IA contro attacchi vishing e deepfake vocali generativi su VoIP (Programma SERICS - PNRR).",
+  "exp.4":"Co-supervisionato dal Prof. Chris Chafe. Ricerca su Networked Music Performance (NMP) tramite costellazioni satellitari Starlink e catene di elaborazione del segnale.",
   "c1.name":"Cybersecurity e Protezione Vocale (Progetto GATE)","c1.meta":"ITS Academy Prodigi · 2026 · Ciclo di lezioni da 12 ore",
   "c2.name":"Can Musicians Play Together Over Satellite Internet? The Starlink case","c2.meta":"Stanford University · Seminario, Classe 220C · Maggio 2025",
   "c3.name":"Laboratorio di Metrologia di Rete & Architetture FPGA","c3.meta":"Università di Pisa · Corsi di Laurea Magistrale · 20 ore/anno (2022-2025)",
   "role.inst":"Docente Invitato","role.sem":"Relatore Invitato","role.ta":"Co-Docente / TA",
   "teach.sup":"Tesi Magistrali Supervisionate",
-  "teach.sup.text":"Supervisore e mentore per diverse tesi di laurea magistrale e triennale[cite: 1]:",
+  "teach.sup.text":"Supervisore e mentore per diverse tesi di laurea magistrale e triennale:",
   "news.title":"Presentazioni Accademiche & Cronologia",
-  "news.tagline":"Archivio cronologico di talk internazionali, pitch di ricerca e tavole rotonde[cite: 1].",
+  "news.tagline":"Archivio cronologico di talk internazionali, pitch di ricerca e tavole rotonde.",
   "inter.title":"Impatto & Interessi",
-  "inter.tagline":"Divulgazione pubblica, produzioni media e ingegneria dello sport scientifico[cite: 1].",
-  "inter.yt.desc":"Gestisco una community digitale di oltre 10.000 iscritti incentrata sulla scomposizione matematica, firmware e telemetria dei moderni wearable sportivi. Traduco concetti avanzati di elaborazione del segnale per un pubblico di appassionati[cite: 1].",
-  "yt.v1":"Luca Borgianni — Creatore di Community Sports Tech","yt.v1.m":"10.000+ iscritti · Analisi wearable, setup FPGA e tracciamento telemetrico dell'endurance[cite: 1].",
-  "inter.tri.desc":"Il triathlon è il mio campo di prova principale per i sistemi edge computing che progetto nei bandi Horizon Europe. È la palestra perfetta per la disciplina di sistema e il data management biologico[cite: 1].",
+  "inter.tagline":"Divulgazione pubblica, produzioni media e ingegneria dello sport scientifico.",
+  "inter.yt.title":"📺 Triathlon Italia & Divulgazione Sports Tech",
+  "inter.tri.title":"🏊🚴🏃 Sport Agonistico & Triathlon",
+  "inter.music.title":"🎵 Musica & Cantautorato",
+  "inter.yt.desc":"Sono il fondatore di Triathlon Italia, canale YouTube e community digitale diventata un riferimento nel mondo italiano del triathlon e degli sport di endurance. Attraverso video, social, e blog racconto cultura dell’allenamento, gare, tecnologia sportiva e analisi dei wearable a una community molto attiva.",
+  "yt.v1":"Triathlon Italia — YouTube & Community Endurance","yt.v1.m":"Canale di riferimento per il triathlon · Allenamento, gare, sports tech e telemetria endurance.",
+  "inter.tri.desc":"Sono cresciuto nell’agonismo, partendo dal nuoto agonistico e arrivando poi al triathlon. Ho fatto parte per tre anni del gruppo sportivo giovanile delle Fiamme Oro e ho gareggiato per molti anni a livello regionale e nazionale, poi con BU Sport Team. Questo percorso ha formato disciplina, resilienza e un legame profondo con gli sport di endurance.",
+  "tri.results.title":"Risultati sportivi selezionati",
+  "tri.res.2019a":"2° assoluto, Duathlon Pisa",
+  "tri.res.2019b":"2° assoluto, Triathlon Sprint Tirrenia",
+  "tri.res.2021a":"1° assoluto, Triathlon Sprint Empoli",
+  "tri.res.2021b":"2° assoluto, Triathlon Olimpico Castiglione della Pescaia",
+  "tri.res.2022a":"1° assoluto, Triathlon Sprint Lago Brasimone",
+  "tri.res.2022b":"1° assoluto, Aquathlon Città di Chioggia",
+  "tri.res.2022c":"4° di categoria, Ironman 70.3 Poreč",
+  "tri.res.2023a":"3° assoluto, Triathlon Olimpico Marina di Castagneto Carducci",
   "tri.label.1":"Istruttore Triathlon","tri.label.2":"Brevetto Bagnino","tri.label.3":"Brevetto Sub Open",
-  "inter.music.desc":"Sono un chitarrista, cantante e autore[cite: 1]. Il mio background artistico si unisce direttamente ai miei studi sulla latenza di rete, consentendo a musicisti distanti migliaia di chilometri di suonare in tempo reale su backbone di telecomunicazione avanzati[cite: 1].",
+  "inter.music.desc":"Suono la chitarra acustica e canto; ho anche scritto e pubblicato brani originali su YouTube e Spotify. La musica resta una parte creativa importante della mia vita e si collega naturalmente alla mia ricerca sulla Networked Music Performance e sull’audio a bassa latenza su sistemi di telecomunicazione avanzati.",
   "m1.name":"Capitolo di Libro Pubblicato (Mondadori)",
-  "m1.desc":"Co-autore del capitolo di libro \"E.T. Telefono a Fibra ottica\" all'interno del volume \"La facoltà di scegliere\", a cura di Giulio Deangeli, Mondadori (16 Gennaio 2024). ISBN: 978-8804774464[cite: 1].",
+  "m1.desc":"Co-autore del capitolo di libro \"E.T. Telefono a Fibra ottica\" all'interno del volume \"La facoltà di scegliere\", a cura di Giulio Deangeli, Mondadori (16 Gennaio 2024). ISBN: 978-8804774464.",
   "m2.name":"Competenze Tecniche Principali",
   "footer.updated":"Ultimo aggiornamento: Giugno 2026",
 }
@@ -617,9 +691,12 @@ function setLang(l){
   });
   document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('active',b.textContent===l.toUpperCase()));
   
-  // Gestione speciale visibilità gruppi pubblicazioni basata sul filtro attivo
-  const activeFilter = document.querySelector('.filter-btn.active').getAttribute('onclick').match(/'([^']+)'/)[1];
-  filterPubs(document.querySelector('.filter-btn.active'), activeFilter);
+  // Mantiene coerente il filtro pubblicazioni dopo il cambio lingua
+  const activeBtn = document.querySelector('.filter-btn.active');
+  if (activeBtn) {
+    const match = activeBtn.getAttribute('onclick')?.match(/'([^']+)'/);
+    filterPubs(activeBtn, match ? match[1] : 'all');
+  }
 }
 
 function go(id){
