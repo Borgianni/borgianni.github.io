@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Your Name — Academic Page</title>
+<title>Luca Borgianni, Ph.D. — Personal Website</title>
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet"/>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
@@ -32,6 +32,9 @@ ul{list-style:none;}
   width:88px;height:88px;border-radius:50%;background:var(--bg2);
   border:2px solid var(--border);display:flex;align-items:center;
   justify-content:center;font-size:2rem;margin-bottom:1.25rem;overflow:hidden;
+}
+.profile-photo img{
+  width:100%;height:100%;object-fit:cover;
 }
 .sidebar-name{font-family:var(--ff-serif);font-size:1.15rem;font-weight:600;color:var(--ink);line-height:1.25;margin-bottom:.3rem;}
 .sidebar-role{font-size:.82rem;color:var(--muted);line-height:1.45;margin-bottom:.2rem;}
@@ -82,7 +85,8 @@ p{margin-bottom:1rem;color:var(--ink2);}
 
 /* HOME */
 .home-intro{display:flex;gap:2.5rem;align-items:flex-start;margin-bottom:2.5rem;}
-.home-photo{width:110px;height:110px;border-radius:50%;flex-shrink:0;background:var(--bg2);border:2px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:2.5rem;}
+.home-photo{width:110px;height:110px;border-radius:50%;flex-shrink:0;background:var(--bg2);border:2px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:2.5rem;overflow:hidden;}
+.home-photo img{width:100%;height:100%;object-fit:cover;}
 .home-bio p:first-child{font-size:1.05rem;}
 .news-list{display:flex;flex-direction:column;}
 .news-item{display:flex;gap:1.5rem;padding:.9rem 0;border-bottom:1px solid var(--border);align-items:baseline;}
@@ -95,7 +99,7 @@ p{margin-bottom:1rem;color:var(--ink2);}
 .badge-award{background:#fdf0f0;color:#b03030;}
 .badge-new{background:var(--blue-lt);color:var(--blue);}
 .quick-links{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:1.75rem;}
-.qlink{display:inline-flex;align-items:center;gap:.4rem;padding:.5rem 1rem;border-radius:6px;font-size:.82rem;font-weight:500;border:1px solid var(--border);color:var(--ink2);transition:all .18s;background:var(--white);}
+.qlink{display:inline-flex;align-items:center;gap:.4rem;padding Rama:.5rem 1rem;border-radius:6px;font-size:.82rem;font-weight:500;border:1px solid var(--border);color:var(--ink2);transition:all .18s;background:var(--white);}
 .qlink:hover{border-color:var(--blue);color:var(--blue);text-decoration:none;}
 .qlink.primary{background:var(--blue);color:var(--white);border-color:var(--blue);}
 .qlink.primary:hover{background:#163870;}
@@ -118,7 +122,7 @@ p{margin-bottom:1rem;color:var(--ink2);}
 .venue-jour{background:#e8f0e8;color:#2a6e2a;}
 .venue-work{background:#fef0e6;color:#c0620a;}
 .pub-links{display:flex;gap:.4rem;margin-top:.6rem;flex-wrap:wrap;}
-.pub-link{font-size:.75rem;font-weight:600;padding:.2rem .6rem;border:1px solid var(--border);border-radius:3px;color:var(--muted);transition:all .15s;}
+.pub-link{font-size:.75rem;font-weight:600;padding Tram:.2rem .6rem;border:1px solid var(--border);border-radius:3px;color:var(--muted);transition:all .15s;}
 .pub-link:hover{color:var(--blue);border-color:var(--blue);text-decoration:none;}
 
 /* TEACHING */
@@ -142,7 +146,7 @@ p{margin-bottom:1rem;color:var(--ink2);}
 .interest-section h2{margin-top:0;}
 .yt-card{display:flex;gap:1.25rem;align-items:flex-start;padding:1rem 1.25rem;border:1px solid var(--border);border-radius:6px;background:var(--white);margin-bottom:.75rem;transition:border-color .2s;}
 .yt-card:hover{border-color:#c5cadf;}
-.yt-thumb{width:120px;height:68px;border-radius:4px;flex-shrink:0;background:linear-gradient(135deg,#c5d5f0,#8aaee0);display:flex;align-items:center;justify-content:center;font-size:1.5rem;}
+.yt-thumb{width:120px;height:68px;border-radius:4px;flex-shrink:0;background:linear-gradient(135deg,#db4437,#e66a5e);display:flex;align-items:center;justify-content:center;font-size:1.5rem;color:white;font-weight:bold;}
 .yt-info h3{font-size:.92rem;margin-bottom:.2rem;}
 .yt-info p{font-size:.8rem;margin:0;color:var(--muted);}
 .yt-channel-link{display:inline-flex;align-items:center;gap:.4rem;margin-top:1rem;font-size:.85rem;font-weight:500;color:var(--blue);}
@@ -185,10 +189,10 @@ p{margin-bottom:1rem;color:var(--ink2);}
 
 <!-- SIDEBAR -->
 <aside id="sidebar">
-  <div class="profile-photo">🎓</div>
-  <div class="sidebar-name">Your Full Name</div>
-  <div class="sidebar-role" data-i18n="profile.role">Assistant Professor<br>Department of Computer Science</div>
-  <div class="sidebar-uni">University of Something</div>
+  <div class="profile-photo"><img src="image_718be1.jpg" alt="Luca Borgianni"></div>
+  <div class="sidebar-name">Luca Borgianni, Ph.D.</div>
+  <div class="sidebar-role" data-i18n="profile.role">Postdoctoral Researcher<br>Dept. of Information Engineering</div>
+  <div class="sidebar-uni">University of Pisa</div>
   <div class="lang-toggle">
     <button class="lang-btn active" onclick="setLang('en')">EN</button>
     <button class="lang-btn" onclick="setLang('it')">IT</button>
@@ -203,11 +207,11 @@ p{margin-bottom:1rem;color:var(--ink2);}
   </ul></nav>
   <div class="sidebar-divider"></div>
   <div class="sidebar-contacts">
-    <a href="mailto:you@university.edu">✉ you@university.edu</a>
-    <a href="#" target="_blank">📄 <span data-i18n="sidebar.cv">Download CV</span></a>
-    <a href="https://scholar.google.com" target="_blank">🔗 Google Scholar</a>
-    <a href="https://github.com" target="_blank">🐙 GitHub</a>
-    <a href="https://linkedin.com" target="_blank">💼 LinkedIn</a>
+    <a href="mailto:luca.borgianni@unipi.it">✉ luca.borgianni@unipi.it</a>
+    <a href="CV_Borgianni (11)_3.pdf" target="_blank">📄 <span data-i18n="sidebar.cv">Download CV</span></a>
+    <a href="#" target="_blank">🔗 Google Scholar</a>
+    <a href="https://github.com/borgianni" target="_blank">🐙 GitHub</a>
+    <a href="#" target="_blank">💼 LinkedIn</a>
   </div>
 </aside>
 
@@ -229,8 +233,8 @@ p{margin-bottom:1rem;color:var(--ink2);}
   <a href="#news"  onclick="go('news');toggleNav()"> <span>📣</span> <span data-i18n="nav.news">News</span></a>
   <a href="#inter" onclick="go('inter');toggleNav()"><span>✦</span>  <span data-i18n="nav.inter">Interests</span></a>
   <div class="mobile-contact-row">
-    <a href="mailto:you@university.edu">✉ Email</a>
-    <a href="#">📄 CV</a><a href="#">Scholar</a><a href="#">GitHub</a>
+    <a href="mailto:luca.borgianni@unipi.it">✉ Email</a>
+    <a href="CV_Borgianni (11)_3.pdf" target="_blank">📄 CV</a><a href="#">Scholar</a><a href="https://github.com/borgianni">GitHub</a>
   </div>
 </div>
 
@@ -240,18 +244,18 @@ p{margin-bottom:1rem;color:var(--ink2);}
 <!-- HOME -->
 <div class="page active" id="page-home">
   <div class="home-intro">
-    <div class="home-photo">🎓</div>
+    <div class="home-photo"><img src="image_718be1.jpg" alt="Luca Borgianni"></div>
     <div class="home-bio">
-      <h1>Your Full Name</h1>
-      <p class="page-tagline" data-i18n="home.tagline">Assistant Professor · Department of Computer Science · University of Something</p>
-      <p data-i18n="home.bio1">I am a researcher working on [your main research area]. My work focuses on [specific problem], with applications in [domain]. I am particularly interested in [specific angle that makes your work unique].</p>
-      <p data-i18n="home.bio2">Before joining [current institution], I was a postdoctoral researcher at [place] and received my PhD from [university] in [year], advised by [advisor].</p>
+      <h1>Luca Borgianni, Ph.D.</h1>
+      <p class="page-tagline" data-i18n="home.tagline">Postdoctoral Researcher · Dept. of Information Engineering · University of Pisa</p>
+      <p data-i18n="home.bio1">I am a Postdoctoral Researcher at the University of Pisa and an Affiliate Researcher at Stanford University (CCRMA). My work is focused on Resilient Data-Driven Networking for 6G, Low-Latency Edge AI, and Networked Music Performance using LEO Satellite Internet (Starlink).</p>
+      <p data-i18n="home.bio2">Currently, I lead Edge AI systems development and in-water communication architectures as WP8 Leader within the Horizon Europe project "EU-TRAINS". Concurrently, I collaborate with Stanford Medicine on real-time breath sound processing using Machine Learning (TAM project).</p>
       <div class="quick-links">
-        <a href="#" class="qlink primary">📄 <span data-i18n="home.cv">Curriculum Vitae</span></a>
+        <a href="CV_Borgianni (11)_3.pdf" target="_blank" class="qlink primary">📄 <span data-i18n="home.cv">Curriculum Vitae</span></a>
         <a href="#" class="qlink" onclick="go('pub');return false">📚 <span data-i18n="nav.pub">Publications</span></a>
-        <a href="mailto:you@university.edu" class="qlink">✉ <span data-i18n="home.email">Email</span></a>
-        <a href="https://scholar.google.com" target="_blank" class="qlink">🔗 Scholar</a>
-        <a href="https://github.com" target="_blank" class="qlink">🐙 GitHub</a>
+        <a href="mailto:luca.borgianni@unipi.it" class="qlink">✉ <span data-i18n="home.email">Email</span></a>
+        <a href="#" target="_blank" class="qlink">🔗 Scholar</a>
+        <a href="https://github.com/borgianni" target="_blank" class="qlink">🐙 GitHub</a>
       </div>
     </div>
   </div>
@@ -260,101 +264,104 @@ p{margin-bottom:1rem;color:var(--ink2);}
   <h2 data-i18n="home.newsTitle">Recent News</h2>
   <div class="news-list">
     <div class="news-item">
-      <span class="news-date">Dec 2024</span>
-      <span class="news-text"><span class="news-badge badge-pub" data-i18n="badge.pub">Paper</span><span data-i18n="news.1">Our paper <em>"Title of your paper"</em> was accepted at <a href="#">Conference Name 2025</a>.</span></span>
+      <span class="news-date">May 2026</span>
+      <span class="news-text"><span class="news-badge badge-talk" data-i18n="badge.talk">Talk</span><span data-i18n="news.1">Selected as Top 6 presenter at the IEEE ICC 2026 Research Collaboration Pitch Session in Glasgow.</span></span>
     </div>
     <div class="news-item">
-      <span class="news-date">Oct 2024</span>
-      <span class="news-text"><span class="news-badge badge-talk" data-i18n="badge.talk">Talk</span><span data-i18n="news.2">Invited talk at <a href="#">Workshop Name</a>, part of Conference 2024.</span></span>
+      <span class="news-date">Apr 2026</span>
+      <span class="news-text"><span class="news-badge badge-new" data-i18n="badge.new">New</span><span data-i18n="news.2">Began my role as Postdoctoral Researcher working on Machine Learning for Breath Sound detection (TAM project).</span></span>
     </div>
     <div class="news-item">
-      <span class="news-date">Sep 2024</span>
-      <span class="news-text"><span class="news-badge badge-award" data-i18n="badge.award">Award</span><span data-i18n="news.3">Received the [Award Name] for outstanding research contributions.</span></span>
+      <span class="news-date">Feb 2026</span>
+      <span class="news-text"><span class="news-badge badge-award" data-i18n="badge.award">Award</span><span data-i18n="news.3">Successfully defended my Ph.D. Thesis on Resilient 6G Networks, graduating <em>cum laude</em>.</span></span>
     </div>
     <div class="news-item">
-      <span class="news-date">Jun 2024</span>
-      <span class="news-text"><span class="news-badge badge-new" data-i18n="badge.new">New</span><span data-i18n="news.4">Joined the [Research Group / Lab] as a new member.</span></span>
+      <span class="news-date">Dec 2025</span>
+      <span class="news-text"><span class="news-badge badge-award" data-i18n="badge.award">Award</span><span data-i18n="news.4">Selected as Finalist for the IEEE ComSoc Four Minute Thesis (4MT) Competition at IEEE Globecom 2025.</span></span>
     </div>
   </div>
 
   <hr class="section-rule"/>
   <h2 data-i18n="home.selPubs">Selected Publications</h2>
   <div class="pub-entry">
-    <h3>Title of Your Most Important Paper: A Study on Something Very Interesting</h3>
-    <div class="pub-authors"><strong>Your Name</strong>, Co-Author One, Co-Author Two</div>
-    <div class="pub-venue">Conference on Very Important Things (CVIT) 2024 <span class="pub-venue-badge venue-conf">Conference</span></div>
+    <h3>A Comprehensive Evaluation of Networked Music Performance using LEO Satellite Internet: The Starlink Use Case</h3>
+    <div class="pub-authors"><strong>L. Borgianni</strong>, D. Adami, M. Bosi, S. Giordano, C. Chafe</div>
+    <div class="pub-venue">IEEE Transactions on Network and Service Management, 2025 <span class="pub-venue-badge venue-jour">Journal</span></div>
     <div class="pub-links">
-      <a href="#" class="pub-link">PDF</a><a href="#" class="pub-link">Code</a><a href="#" class="pub-link">arXiv</a>
+      <a href="#" class="pub-link">Publisher Link</a><a href="#" class="pub-link">PDF</a>
     </div>
   </div>
   <div class="pub-entry">
-    <h3>Another Key Paper About Your Research Focus</h3>
-    <div class="pub-authors">Co-Author One, <strong>Your Name</strong>, Co-Author Three</div>
-    <div class="pub-venue">Journal of Important Results, Vol. 42, 2023 <span class="pub-venue-badge venue-jour">Journal</span></div>
+    <h3>A Comprehensive Survey on Software-Defined Wide Area Network</h3>
+    <div class="pub-authors">S. Troia, <strong>L. Borgianni</strong>, S. Giordano, G. Maier</div>
+    <div class="pub-venue">IEEE Communications Surveys & Tutorials, 2025 <span class="pub-venue-badge venue-jour">Journal</span></div>
     <div class="pub-links">
-      <a href="#" class="pub-link">PDF</a><a href="#" class="pub-link">DOI</a>
+      <a href="#" class="pub-link">Publisher Link</a>
     </div>
   </div>
   <p style="margin-top:1rem"><a href="#" onclick="go('pub');return false;" data-i18n="home.allpubs">→ All publications</a></p>
-  <div class="page-footer" data-i18n="footer.updated">Last updated: December 2024</div>
+  <div class="page-footer" data-i18n="footer.updated">Last updated: June 2026</div>
 </div>
 
 <!-- PUBLICATIONS -->
 <div class="page" id="page-pub">
   <h1 data-i18n="pub.title">Publications</h1>
-  <p class="page-tagline" data-i18n="pub.tagline">Peer-reviewed papers, preprints, and theses.</p>
+  <p class="page-tagline" data-i18n="pub.tagline">Peer-reviewed international journals and conference proceedings.</p>
   <div class="pub-filters">
     <button class="filter-btn active" onclick="filterPubs(this,'all')"  data-i18n="pub.f.all">All</button>
     <button class="filter-btn"        onclick="filterPubs(this,'conf')" data-i18n="pub.f.conf">Conferences</button>
     <button class="filter-btn"        onclick="filterPubs(this,'jour')" data-i18n="pub.f.jour">Journals</button>
-    <button class="filter-btn"        onclick="filterPubs(this,'work')" data-i18n="pub.f.work">Workshops</button>
+  </div>
+
+  <div class="pub-year-group">
+    <div class="pub-year-label">2026</div>
+    <div class="pub-entry" data-type="jour">
+      <h3>Drone OPERA: An ns-3 energy-aware module for on-board computing in UAV ad hoc networks</h3>
+      <div class="pub-authors">M. Della Bartola, <strong>L. Borgianni</strong>, D. Adami, S. Giordano</div>
+      <div class="pub-venue">Ad Hoc Networks (Elsevier), 2026 <span class="pub-venue-badge venue-jour">Journal</span></div>
+    </div>
+    <div class="pub-entry" data-type="conf">
+      <h3>Evaluating LEO Satellite Internet in Aeronautical Mobility: a Study of Starlink from Hawaii to Japan</h3>
+      <div class="pub-authors"><strong>L. Borgianni</strong>, D. Adami, S. Giordano</div>
+      <div class="pub-venue">International Conference on Computing, Networking and Communications (ICNC), 2026 <span class="pub-venue-badge venue-conf">Conference</span></div>
+    </div>
+    <div class="pub-entry" data-type="conf">
+      <h3>Policy-Driven SD-WAN for Hybrid Terrestrial and Non-Terrestrial 6G Connectivity</h3>
+      <div class="pub-authors"><strong>L. Borgianni</strong>, E. Bellini, A. Giorgetti, D. Adami, S. Giordano</div>
+      <div class="pub-venue">International Conference on Computing, Networking and Communications (ICNC), 2026 <span class="pub-venue-badge venue-conf">Conference</span></div>
+    </div>
+  </div>
+
+  <div class="pub-year-group">
+    <div class="pub-year-label">2025</div>
+    <div class="pub-entry" data-type="jour">
+      <h3>A Comprehensive Evaluation of Networked Music Performance using LEO Satellite Internet: The Starlink Use Case</h3>
+      <div class="pub-authors"><strong>L. Borgianni</strong>, D. Adami, M. Bosi, S. Giordano, C. Chafe</div>
+      <div class="pub-venue">IEEE Transactions on Network and Service Management, 2025 <span class="pub-venue-badge venue-jour">Journal</span></div>
+    </div>
+    <div class="pub-entry" data-type="jour">
+      <h3>A Comprehensive Survey on Software-Defined Wide Area Network</h3>
+      <div class="pub-authors">S. Troia, <strong>L. Borgianni</strong>, S. Giordano, G. Maier</div>
+      <div class="pub-venue">IEEE Communications Surveys & Tutorials, 2025 <span class="pub-venue-badge venue-jour">Journal</span></div>
+    </div>
+    <div class="pub-entry" data-type="conf">
+      <h3>Monitoring Wildlife in Remote Areas through LEO Satellites within a Cloud Continuum Perspective</h3>
+      <div class="pub-authors">M. A. Rahman, <strong>L. Borgianni</strong>, E. Marku, S. Mathew, et al.</div>
+      <div class="pub-venue">IEEE Global Communications Conference (Globecom), 2025 <span class="pub-venue-badge venue-conf">Conference</span></div>
+    </div>
   </div>
 
   <div class="pub-year-group">
     <div class="pub-year-label">2024</div>
-    <div class="pub-entry" data-type="conf">
-      <h3>Full Title of Conference Paper One: A Study on Important Problem with Novel Method</h3>
-      <div class="pub-authors"><strong>Your Name</strong>, Alice Rossi, Bob Bianchi</div>
-      <div class="pub-venue">NeurIPS 2024 <span class="pub-venue-badge venue-conf">Conference</span></div>
-      <div class="pub-links"><a href="#" class="pub-link">PDF</a><a href="#" class="pub-link">Code</a><a href="#" class="pub-link">arXiv</a><a href="#" class="pub-link">Poster</a></div>
+    <div class="pub-entry" data-type="jour">
+      <h3>Democratizing Networked Music Performance with a RL-based SD-WAN</h3>
+      <div class="pub-authors"><strong>L. Borgianni</strong>, S. Giordano, C. Chafe</div>
+      <div class="pub-venue">IEEE Communications Magazine, 2024 <span class="pub-venue-badge venue-jour">Journal</span></div>
     </div>
     <div class="pub-entry" data-type="jour">
-      <h3>Your Best Journal Article: Contributions to the Field of Something</h3>
-      <div class="pub-authors">Alice Rossi, <strong>Your Name</strong>, Carlo Verdi</div>
-      <div class="pub-venue">Nature Machine Intelligence, 2024 <span class="pub-venue-badge venue-jour">Journal</span></div>
-      <div class="pub-links"><a href="#" class="pub-link">PDF</a><a href="#" class="pub-link">DOI</a></div>
-    </div>
-    <div class="pub-entry" data-type="work">
-      <h3>Workshop Paper: Preliminary Results on a Novel Direction</h3>
-      <div class="pub-authors"><strong>Your Name</strong>, Alice Rossi</div>
-      <div class="pub-venue">ICML Workshop on [Topic] 2024 <span class="pub-venue-badge venue-work">Workshop</span></div>
-      <div class="pub-links"><a href="#" class="pub-link">PDF</a></div>
-    </div>
-  </div>
-
-  <div class="pub-year-group">
-    <div class="pub-year-label">2023</div>
-    <div class="pub-entry" data-type="conf">
-      <h3>Another Good Conference Paper From Last Year</h3>
-      <div class="pub-authors"><strong>Your Name</strong>, Bob Bianchi, Daria Neri</div>
-      <div class="pub-venue">ICML 2023 <span class="pub-venue-badge venue-conf">Conference</span></div>
-      <div class="pub-links"><a href="#" class="pub-link">PDF</a><a href="#" class="pub-link">Code</a><a href="#" class="pub-link">Slides</a></div>
-    </div>
-    <div class="pub-entry" data-type="jour">
-      <h3>Journal Paper 2023: Your Sustained Research Contribution</h3>
-      <div class="pub-authors">Carlo Verdi, <strong>Your Name</strong></div>
-      <div class="pub-venue">IEEE Transactions on Something, 2023 <span class="pub-venue-badge venue-jour">Journal</span></div>
-      <div class="pub-links"><a href="#" class="pub-link">PDF</a><a href="#" class="pub-link">DOI</a></div>
-    </div>
-  </div>
-
-  <div class="pub-year-group">
-    <div class="pub-year-label">2022</div>
-    <div class="pub-entry" data-type="conf">
-      <h3>PhD-era Paper: Your First Major Research Contribution</h3>
-      <div class="pub-authors"><strong>Your Name</strong>, PhD Advisor Name</div>
-      <div class="pub-venue">ICLR 2022 <span class="pub-venue-badge venue-conf">Conference</span></div>
-      <div class="pub-links"><a href="#" class="pub-link">PDF</a><a href="#" class="pub-link">Code</a><a href="#" class="pub-link">arXiv</a></div>
+      <h3>Quantum Networking for Secure and Reliable Communication in Space Exploration</h3>
+      <div class="pub-authors"><strong>L. Borgianni</strong>, D. Adami, S. Giordano</div>
+      <div class="pub-venue">IEEE Communications Magazine, 2024 <span class="pub-venue-badge venue-jour">Journal</span></div>
     </div>
   </div>
   <div class="page-footer" data-i18n="pub.scholar">Full list also available on <a href="#">Google Scholar</a>.</div>
@@ -363,137 +370,100 @@ p{margin-bottom:1rem;color:var(--ink2);}
 <!-- TEACHING -->
 <div class="page" id="page-teach">
   <h1 data-i18n="teach.title">Teaching</h1>
-  <p class="page-tagline" data-i18n="teach.tagline">Courses, seminars, and student supervision.</p>
+  <p class="page-tagline" data-i18n="teach.tagline">Academic lecturing, student mentoring, and laboratory design.</p>
 
-  <h2 data-i18n="teach.current">Current Courses</h2>
+  <h2 data-i18n="teach.current">Lectures & Seminars</h2>
   <div class="course-list">
     <div class="course-item">
-      <span class="course-code">CS 401</span>
-      <div style="flex:1"><div class="course-name" data-i18n="c1.name">Machine Learning — Theory and Practice</div><div class="course-meta" data-i18n="c1.meta">Bachelor's · Spring 2025 · 6 ECTS · 120 students</div></div>
-      <span class="course-role" data-i18n="role.inst">Instructor</span>
+      <span class="course-code">ITS Academy</span>
+      <div style="flex:1"><div class="course-name" data-i18n="c1.name">Cybersecurity and Voice Protection (GATE Project)</div><div class="course-meta" data-i18n="c1.meta">ITS Academy Prodigi, Pisa · 2026 · 12 hours</div></div>
+      <span class="course-role" data-i18n="role.inst">Guest Lecturer</span>
     </div>
     <div class="course-item">
-      <span class="course-code">CS 512</span>
-      <div style="flex:1"><div class="course-name" data-i18n="c2.name">Advanced Deep Learning</div><div class="course-meta" data-i18n="c2.meta">Master's · Fall 2024 · 9 ECTS · 45 students</div></div>
-      <span class="course-role" data-i18n="role.inst">Instructor</span>
+      <span class="course-code">STANFORD</span>
+      <div style="flex:1"><div class="course-name" data-i18n="c2.name">Can Musicians Play Together Over Satellite Internet? The Starlink case</div><div class="course-meta" data-i18n="c2.meta">Stanford University · Seminar, Class 220C · May 2025</div></div>
+      <span class="course-role" data-i18n="role.sem">Invited Speaker</span>
     </div>
     <div class="course-item">
-      <span class="course-code">CS 610</span>
-      <div style="flex:1"><div class="course-name" data-i18n="c3.name">Research Methods in Computer Science</div><div class="course-meta" data-i18n="c3.meta">PhD · Fall 2024 · Seminar series</div></div>
-      <span class="course-role" data-i18n="role.sem">Seminar</span>
+      <span class="course-code">UNIPI</span>
+      <div style="flex:1"><div class="course-name" data-i18n="c3.name">Network Metrology — Mininet Laboratory</div><div class="course-meta" data-i18n="c3.meta">University of Pisa · M.Sc. Level · 20 hours/year</div></div>
+      <span class="course-role" data-i18n="role.ta">Teaching Assistant</span>
     </div>
   </div>
 
-  <h2 data-i18n="teach.past">Past Courses</h2>
-  <div class="course-list">
-    <div class="course-item">
-      <span class="course-code">CS 301</span>
-      <div style="flex:1"><div class="course-name" data-i18n="c4.name">Introduction to Algorithms</div><div class="course-meta" data-i18n="c4.meta">Bachelor's · Spring 2023 · Teaching Assistant</div></div>
-      <span class="course-role" data-i18n="role.ta">TA</span>
-    </div>
-    <div class="course-item">
-      <span class="course-code">CS 450</span>
-      <div style="flex:1"><div class="course-name" data-i18n="c5.name">Data Science and Visualization</div><div class="course-meta" data-i18n="c5.meta">Bachelor's · Fall 2022 · Teaching Assistant</div></div>
-      <span class="course-role" data-i18n="role.ta">TA</span>
-    </div>
-  </div>
-
-  <h2 data-i18n="teach.sup">Student Supervision</h2>
-  <p data-i18n="teach.sup.text">I am currently advising [N] PhD students and [N] Master's thesis students. I welcome motivated students interested in [your research areas]. Please read my recent papers before reaching out, and include a brief description of your research interests in your email.</p>
-  <a href="mailto:you@university.edu" class="qlink" style="margin-top:.5rem;display:inline-flex" data-i18n="teach.contact">→ Contact me about supervision</a>
+  <h2 data-i18n="teach.sup">Supervised Master's Theses</h2>
+  <p data-i18n="teach.sup.text">I have the privilege of supervising outstanding students in Computer Science and Telecommunications Engineering. Selected advised theses include:</p>
+  <ul style="margin-left: 1.5rem; list-style-type: disc; margin-bottom: 2rem; color: var(--ink2); font-size: 0.95rem;">
+    <li>"Dynamic tunnel Selection in SD-WAN using PPO-based Reinforcement Learning" — Delaram Ghadir</li>
+    <li>"Deep Q-Learning for Enhanced SD-WAN Performance and Reliability in Rural Areas" — Setayesh Ghadir</li>
+    <li>"Emulating and Evaluating Starlink-like LEO Satellite Networks Using Mininet and Real-Time Traffic Traces" — Sagar Kumar</li>
+    <li>"Semantic Communication at the edge for wildlife surveillance" — Federico Cheli</li>
+  </ul>
 
   <hr class="section-rule"/>
   <div class="office-box">
-    <h3 data-i18n="teach.office">Office Hours</h3>
-    <p data-i18n="teach.office.time">📅 Tuesdays 14:00–16:00 and by appointment</p>
-    <p data-i18n="teach.office.loc">📍 Room 3.14, Building Name, Campus</p>
-    <p data-i18n="teach.office.note">Students enrolled in my courses can also book a slot via the course portal.</p>
+    <h3 data-i18n="teach.office">Institutional & Outreach Service</h3>
+    <p>🎓 <strong>Track Chair:</strong> AI-Native Connectivity & Distributed Intelligence, IEEE COINS 2026.</p>
+    <p>🇪🇺 <strong>Regional Representative:</strong> IEEE ComSoc Young Professionals (YP) EMEA (2026-Present).</p>
+    <p>🏛 <strong>Institutional Speech:</strong> Invited Speech at the Senate of the Italian Republic (Senato della Repubblica Italiana), Jan 2024.</p>
   </div>
-  <div class="page-footer"></div>
 </div>
 
 <!-- NEWS -->
 <div class="page" id="page-news">
-  <h1 data-i18n="news.title">News</h1>
-  <p class="page-tagline" data-i18n="news.tagline">Updates on research, talks, awards, and activities.</p>
+  <h1 data-i18n="news.title">News & Timeline</h1>
+  <p class="page-tagline" data-i18n="news.tagline">Full log of academic and institutional presentations.</p>
   <div class="news-list news-full">
-    <div class="news-item"><span class="news-date">Dec 2024</span><span class="news-text"><span class="news-badge badge-pub" data-i18n="badge.pub">Paper</span><span data-i18n="nf.1">Our paper <em>"Your Paper Title"</em> was accepted at <a href="#">Conference 2025</a>. Preprint and code available soon.</span></span></div>
-    <div class="news-item"><span class="news-date">Nov 2024</span><span class="news-text"><span class="news-badge badge-talk" data-i18n="badge.talk">Talk</span><span data-i18n="nf.2">Gave an invited talk at [Workshop] @ [Conference]. Slides available <a href="#">here</a>.</span></span></div>
-    <div class="news-item"><span class="news-date">Oct 2024</span><span class="news-text"><span class="news-badge badge-award" data-i18n="badge.award">Award</span><span data-i18n="nf.3">Honoured to receive the [Award Name] from [Organization].</span></span></div>
-    <div class="news-item"><span class="news-date">Sep 2024</span><span class="news-text"><span class="news-badge badge-pub" data-i18n="badge.pub">Paper</span><span data-i18n="nf.4">New preprint: <em>"Title of Preprint"</em>. <a href="#">arXiv link</a>.</span></span></div>
-    <div class="news-item"><span class="news-date">Jul 2024</span><span class="news-text"><span class="news-badge badge-talk" data-i18n="badge.talk">Talk</span><span data-i18n="nf.5">Attended and presented at [Conference Name] in [City, Country].</span></span></div>
-    <div class="news-item"><span class="news-date">Jun 2024</span><span class="news-text"><span class="news-badge badge-new" data-i18n="badge.new">New</span><span data-i18n="nf.6">Started as Associate Editor at [Journal Name].</span></span></div>
-    <div class="news-item"><span class="news-date">Apr 2024</span><span class="news-text"><span class="news-badge badge-pub" data-i18n="badge.pub">Paper</span><span data-i18n="nf.7">Paper accepted at [Workshop @ Conference]. <a href="#">Paper</a>.</span></span></div>
-    <div class="news-item"><span class="news-date">Jan 2024</span><span class="news-text"><span class="news-badge badge-new" data-i18n="badge.new">New</span><span data-i18n="nf.8">New grant: [Project Name] funded by [Agency]. 3-year project on [topic].</span></span></div>
+    <div class="news-item"><span class="news-date">May 2026</span><span class="news-text"><span class="news-badge badge-talk" data-i18n="badge.talk">Pitch</span><span data-i18n="nf.1">Delivered the Invited Pitch on "Semantic Communication Framework for Deepfake Voice Detection" at IEEE ICC 2026, Glasgow.</span></span></div>
+    <div class="news-item"><span class="news-date">May 2026</span><span class="news-text"><span class="news-badge badge-pub" data-i18n="badge.pub">Paper</span><span data-i18n="nf.2">Presented "An AI-Driven SD-WAN Deployment for LEO Satellite and Terrestrial Network Integration" at IEEE/IFIP NOMS 2026, Rome.</span></span></div>
+    <div class="news-item"><span class="news-date">Jan 2026</span><span class="news-text"><span class="news-badge badge-talk" data-i18n="badge.talk">Oral</span><span data-i18n="nf.3">Presented "Semantic Experiences in the Wild" at the Italian Networking Workshop 2026, Bardonecchia.</span></span></div>
+    <div class="news-item"><span class="news-date">Dec 2025</span><span class="news-text"><span class="news-badge badge-award" data-i18n="badge.award">Finalist</span><span data-i18n="nf.4">Honored to present as a Finalist at the IEEE ComSoc 4MT Competition at Globecom, Taipei.</span></span></div>
+    <div class="news-item"><span class="news-date">May 2025</span><span class="news-text"><span class="news-badge badge-talk" data-i18n="badge.talk">Talk</span><span data-i18n="nf.5">Delivered an Invited Talk at Stanford University on Starlink deployment for Networked Music Performance.</span></span></div>
   </div>
-  <div class="page-footer"></div>
 </div>
 
 <!-- INTERESTS -->
 <div class="page" id="page-inter">
-  <h1 data-i18n="inter.title">Interests</h1>
-  <p class="page-tagline" data-i18n="inter.tagline">Beyond the lab — what keeps me going.</p>
+  <h1 data-i18n="inter.title">Interests & Outreach</h1>
+  <p class="page-tagline" data-i18n="inter.tagline">Beyond the engineering lab — blending technology, music, and sports endurance.</p>
 
   <div class="interest-section">
-    <h2>📺 YouTube</h2>
-    <p data-i18n="inter.yt.desc">I run a YouTube channel where I talk about [topics — e.g. AI, research, tutorials]. I try to make research accessible and fun for everyone, from students to curious minds.</p>
+    <h2>📺 Sports Tech & YouTube</h2>
+    <p data-i18n="inter.yt.desc">I run a YouTube community of over 10,000 members where I actively analyze sports technology, wearable analytics, and endurance engineering. It serves as my primary vehicle for scientific outreach.</p>
     <div class="yt-card">
-      <div class="yt-thumb">▶</div>
-      <div class="yt-info"><h3 data-i18n="yt.v1">Video Title One — Your Most Watched Video</h3><p data-i18n="yt.v1.m">42K views · Tutorial</p></div>
+      <div class="yt-thumb">YouTube</div>
+      <div class="yt-info"><h3 data-i18n="yt.v1">Luca Borgianni — Sports Tech Creator</h3><p data-i18n="yt.v1.m">10K+ Subscribers · Wearable Analytics & Gear Reviews</p></div>
     </div>
-    <div class="yt-card">
-      <div class="yt-thumb" style="background:linear-gradient(135deg,#c0e0d0,#80b8a0)">▶</div>
-      <div class="yt-info"><h3 data-i18n="yt.v2">Video Title Two — A Deep Dive Into Something</h3><p data-i18n="yt.v2.m">18K views · Research explainer</p></div>
-    </div>
-    <div class="yt-card">
-      <div class="yt-thumb" style="background:linear-gradient(135deg,#e0d0c0,#c0a880)">▶</div>
-      <div class="yt-info"><h3 data-i18n="yt.v3">Video Title Three — Beginner's Guide</h3><p data-i18n="yt.v3.m">9K views · Guide</p></div>
-    </div>
-    <a href="https://youtube.com/@yourchannel" target="_blank" class="yt-channel-link">▶ <span data-i18n="inter.yt.cta">Visit the channel</span></a>
   </div>
 
   <hr class="section-rule"/>
 
   <div class="interest-section">
-    <h2>🏊🚴🏃 Triathlon</h2>
-    <p data-i18n="inter.tri.desc">I started triathlon in [year] and have since competed in several races across Italy and Europe. It's the perfect antidote to a sedentary research lifestyle — and the best teacher of patience and planning.</p>
+    <h2>🏊🚴🏃 Triathlon & Endurance</h2>
+    <p data-i18n="inter.tri.desc">I am a certified Triathlon Instructor and active endurance athlete. This discipline perfectly maps onto my research philosophy: resilience under demanding conditions, structural planning, and data-driven performance tuning.</p>
     <div class="tri-stats">
-      <div class="tri-stat"><div class="tri-num">12</div><div class="tri-label" data-i18n="tri.races">Races completed</div></div>
-      <div class="tri-stat"><div class="tri-num">3</div><div class="tri-label" data-i18n="tri.half">Half IronMan</div></div>
-      <div class="tri-stat"><div class="tri-num">1</div><div class="tri-label" data-i18n="tri.full">Full IronMan</div></div>
-    </div>
-    <div class="race-list">
-      <div class="race-item"><div><div class="race-name">IronMan 70.3 [City] 2024</div><div class="race-detail">1.9km swim · 90km bike · 21km run</div></div><div class="race-time">4:52:33</div></div>
-      <div class="race-item"><div><div class="race-name">Olympic Triathlon [City] 2023</div><div class="race-detail">1.5km swim · 40km bike · 10km run</div></div><div class="race-time">2:11:07</div></div>
-      <div class="race-item"><div><div class="race-name">Sprint Triathlon [City] 2023</div><div class="race-detail">750m swim · 20km bike · 5km run</div></div><div class="race-time">1:02:44</div></div>
+      <div class="tri-stat"><div class="tri-num">10K+</div><div class="tri-label" data-i18n="tri.races">Community Members</div></div>
+      <div class="tri-stat"><div class="tri-num">FISA</div><div class="tri-label" data-i18n="tri.half">Lifeguard Patent</div></div>
+      <div class="tri-stat"><div class="tri-num">WASE</div><div class="tri-label" data-i18n="tri.full">Sub Open Patent</div></div>
     </div>
   </div>
 
   <hr class="section-rule"/>
 
   <div class="interest-section">
-    <h2>🎵 <span data-i18n="inter.music.title">Music</span></h2>
-    <p data-i18n="inter.music.desc">I play [instrument] and occasionally produce my own tracks. Music is my other form of research — a space for experimentation without deadlines.</p>
+    <h2>🎵 Music & Audio Signal Processing</h2>
+    <p data-i18n="inter.music.desc">As a guitar player, singer, and songwriter, music is my artistic anchor. It directly drives my scientific interest in ultra-low latency frameworks, edge computing synthesis, and JackTrip network performance tested during my tenure at Stanford CCRMA.</p>
     <div class="music-card">
-      <h3 data-i18n="m1.name">Track / EP Title One</h3>
-      <p style="font-size:.85rem;color:var(--muted);margin-bottom:.35rem" data-i18n="m1.desc">A short description of this piece — its mood, inspiration, or how it was made.</p>
-      <div class="genre-row"><span class="genre-tag">Electronic</span><span class="genre-tag">Ambient</span><span class="genre-tag">2024</span></div>
-      <div class="music-links"><a href="#" class="music-link">Spotify</a><a href="#" class="music-link">SoundCloud</a><a href="#" class="music-link">YouTube</a></div>
+      <h3 data-i18n="m1.name">Networked Music Performance (NMP) Project</h3>
+      <p style="font-size:.85rem;color:var(--muted);margin-bottom:.35rem" data-i18n="m1.desc">Exploring whether musicians can synchronously jam over satellite arrays, backed by RL-driven SD-WAN infrastructures.</p>
+      <div class="genre-row"><span class="genre-tag">JackTrip</span><span class="genre-tag">LEO Satellites</span><span class="genre-tag">Audio Synthesis</span></div>
     </div>
     <div class="music-card">
-      <h3 data-i18n="m2.name">Track / EP Title Two</h3>
-      <p style="font-size:.85rem;color:var(--muted);margin-bottom:.35rem" data-i18n="m2.desc">Another description — what instruments are used, what feeling you were going for.</p>
-      <div class="genre-row"><span class="genre-tag">Post-rock</span><span class="genre-tag">Instrumental</span><span class="genre-tag">2023</span></div>
-      <div class="music-links"><a href="#" class="music-link">Spotify</a><a href="#" class="music-link">Bandcamp</a></div>
-    </div>
-    <div class="music-card">
-      <h3 data-i18n="m3.name">Track / EP Title Three</h3>
-      <p style="font-size:.85rem;color:var(--muted);margin-bottom:.35rem" data-i18n="m3.desc">Your most personal or experimental piece — what makes it different from the others.</p>
-      <div class="genre-row"><span class="genre-tag">Jazz-fusion</span><span class="genre-tag">Live recording</span><span class="genre-tag">2022</span></div>
-      <div class="music-links"><a href="#" class="music-link">SoundCloud</a><a href="#" class="music-link">YouTube</a></div>
+      <h3 data-i18n="m2.name">Book Chapter Publication</h3>
+      <p style="font-size:.85rem;color:var(--muted);margin-bottom:.35rem" data-i18n="m2.desc">"E.T. Telefono a Fibra ottica" in <em>La facoltà di scegliere</em>, edited by Giulio Deangeli, Mondadori (2024).</p>
+      <div class="genre-row"><span class="genre-tag">Mondadori</span><span class="genre-tag">Outreach</span><span class="genre-tag">ISBN Co-Author</span></div>
     </div>
   </div>
-  <div class="page-footer"></div>
 </div>
 
 </main>
@@ -502,116 +472,88 @@ p{margin-bottom:1rem;color:var(--ink2);}
 <script>
 const T={
 en:{
-  "profile.role":"Assistant Professor<br>Department of Computer Science",
+  "profile.role":"Postdoctoral Researcher<br>Dept. of Information Engineering",
   "sidebar.cv":"Download CV",
   "nav.home":"Home","nav.pub":"Publications","nav.teach":"Teaching","nav.news":"News","nav.inter":"Interests",
-  "home.tagline":"Assistant Professor · Department of Computer Science · University of Something",
-  "home.bio1":"I am a researcher working on [your main research area]. My work focuses on [specific problem], with applications in [domain]. I am particularly interested in [specific angle that makes your work unique].",
-  "home.bio2":"Before joining [current institution], I was a postdoctoral researcher at [place] and received my PhD from [university] in [year], advised by [advisor].",
+  "home.tagline":"Postdoctoral Researcher · Department of Information Engineering · University of Pisa",
+  "home.bio1":"I am a Postdoctoral Researcher at the University of Pisa and an Affiliate Researcher at Stanford University (CCRMA). My work is focused on Resilient Data-Driven Networking for 6G, Low-Latency Edge AI, and Networked Music Performance using LEO Satellite Internet (Starlink).",
+  "home.bio2":"Currently, I lead Edge AI systems development and in-water communication architectures as WP8 Leader within the Horizon Europe project \"EU-TRAINS\". Concurrently, I collaborate with Stanford Medicine on real-time breath sound processing using Machine Learning (TAM project).",
   "home.cv":"Curriculum Vitae","home.email":"Email",
   "home.newsTitle":"Recent News","home.selPubs":"Selected Publications","home.allpubs":"→ All publications",
   "badge.pub":"Paper","badge.talk":"Talk","badge.award":"Award","badge.new":"New",
-  "news.1":"Our paper <em>\"Title of your paper\"</em> was accepted at <a href='#'>Conference Name 2025</a>.",
-  "news.2":"Invited talk at <a href='#'>Workshop Name</a>, part of Conference 2024.",
-  "news.3":"Received the [Award Name] for outstanding research contributions.",
-  "news.4":"Joined the [Research Group / Lab] as a new member.",
-  "pub.title":"Publications","pub.tagline":"Peer-reviewed papers, preprints, and theses.",
-  "pub.f.all":"All","pub.f.conf":"Conferences","pub.f.jour":"Journals","pub.f.work":"Workshops",
+  "news.1":"Selected as Top 6 presenter at the IEEE ICC 2026 Research Collaboration Pitch Session in Glasgow.",
+  "news.2":"Began my role as Postdoctoral Researcher working on Machine Learning for Breath Sound detection (TAM project).",
+  "news.3":"Successfully defended my Ph.D. Thesis on Resilient 6G Networks, graduating <em>cum laude</em>.",
+  "news.4":"Selected as Finalist for the IEEE ComSoc Four Minute Thesis (4MT) Competition at IEEE Globecom 2025.",
+  "pub.title":"Publications","pub.tagline":"Peer-reviewed international journals and conference proceedings.",
+  "pub.f.all":"All","pub.f.conf":"Conferences","pub.f.jour":"Journals",
   "pub.scholar":"Full list also available on <a href='#'>Google Scholar</a>.",
-  "teach.title":"Teaching","teach.tagline":"Courses, seminars, and student supervision.",
-  "teach.current":"Current Courses","teach.past":"Past Courses",
+  "teach.title":"Teaching & Leadership","teach.tagline":"Academic lecturing, student mentoring, and laboratory design.",
+  "teach.current":"Lectures & Seminars","teach.past":"Past Contributions",
   "teach.sup":"Student Supervision",
-  "teach.sup.text":"I am currently advising [N] PhD students and [N] Master's thesis students. I welcome motivated students interested in [your research areas]. Please read my recent papers before reaching out.",
-  "teach.contact":"→ Contact me about supervision",
-  "teach.office":"Office Hours",
-  "teach.office.time":"📅 Tuesdays 14:00–16:00 and by appointment",
-  "teach.office.loc":"📍 Room 3.14, Building Name, Campus",
-  "teach.office.note":"Students can also book a slot via the course portal.",
-  "c1.name":"Machine Learning — Theory and Practice","c1.meta":"Bachelor's · Spring 2025 · 6 ECTS · 120 students",
-  "c2.name":"Advanced Deep Learning","c2.meta":"Master's · Fall 2024 · 9 ECTS · 45 students",
-  "c3.name":"Research Methods in Computer Science","c3.meta":"PhD · Fall 2024 · Seminar series",
-  "c4.name":"Introduction to Algorithms","c4.meta":"Bachelor's · Spring 2023 · Teaching Assistant",
-  "c5.name":"Data Science and Visualization","c5.meta":"Bachelor's · Fall 2022 · Teaching Assistant",
-  "role.inst":"Instructor","role.sem":"Seminar","role.ta":"TA",
-  "news.title":"News","news.tagline":"Updates on research, talks, awards, and activities.",
-  "nf.1":"Our paper <em>\"Your Paper Title\"</em> was accepted at <a href='#'>Conference 2025</a>. Preprint and code available soon.",
-  "nf.2":"Gave an invited talk at [Workshop] @ [Conference]. Slides available <a href='#'>here</a>.",
-  "nf.3":"Honoured to receive the [Award Name] from [Organization].",
-  "nf.4":"New preprint: <em>\"Title of Preprint\"</em>. <a href='#'>arXiv link</a>.",
-  "nf.5":"Attended and presented at [Conference Name] in [City, Country].",
-  "nf.6":"Started as Associate Editor at [Journal Name].",
-  "nf.7":"Paper accepted at [Workshop @ Conference]. <a href='#'>Paper</a>.",
-  "nf.8":"New grant: [Project Name] funded by [Agency]. 3-year project on [topic].",
-  "inter.title":"Interests","inter.tagline":"Beyond the lab — what keeps me going.",
-  "inter.yt.desc":"I run a YouTube channel where I talk about [topics]. I try to make research accessible and fun for everyone.",
-  "yt.v1":"Video Title One — Your Most Watched Video","yt.v1.m":"42K views · Tutorial",
-  "yt.v2":"Video Title Two — A Deep Dive","yt.v2.m":"18K views · Research explainer",
-  "yt.v3":"Video Title Three — Beginner's Guide","yt.v3.m":"9K views · Guide",
-  "inter.yt.cta":"Visit the channel",
-  "inter.tri.desc":"I started triathlon in [year] and have since competed in several races across Italy and Europe. The best teacher of patience and planning.",
-  "tri.races":"Races completed","tri.half":"Half IronMan","tri.full":"Full IronMan",
-  "inter.music.title":"Music",
-  "inter.music.desc":"I play [instrument] and produce my own tracks. Music is my other form of research — experimentation without deadlines.",
-  "m1.name":"Track / EP Title One","m1.desc":"Mood, inspiration, and how it was made.",
-  "m2.name":"Track / EP Title Two","m2.desc":"Instruments used and feeling you were going for.",
-  "m3.name":"Track / EP Title Three","m3.desc":"Your most personal or experimental piece.",
-  "footer.updated":"Last updated: December 2024",
+  "teach.sup.text":"I have the privilege of supervising outstanding students in Computer Science and Telecommunications Engineering. Selected advised theses include:",
+  "c1.name":"Cybersecurity and Voice Protection (GATE Project)","c1.meta":"ITS Academy Prodigi, Pisa · 2026 · 12 hours",
+  "c2.name":"Can Musicians Play Together Over Satellite Internet? The Starlink case","c2.meta":"Stanford University · Seminar, Class 220C · May 2025",
+  "c3.name":"Network Metrology — Mininet Laboratory","c3.meta":"University of Pisa · M.Sc. Level · 20 hours/year",
+  "role.inst":"Lecturer","role.sem":"Seminar","role.ta":"TA",
+  "news.title":"News & Timeline","news.tagline":"Full log of academic and institutional presentations.",
+  "nf.1":"Delivered the Invited Pitch on \"Semantic Communication Framework for Deepfake Voice Detection\" at IEEE ICC 2026, Glasgow.",
+  "nf.2":"Presented \"An AI-Driven SD-WAN Deployment for LEO Satellite and Terrestrial Network Integration\" at IEEE/IFIP NOMS 2026, Rome.",
+  "nf.3":"Presented \"Semantic Experiences in the Wild\" at the Italian Networking Workshop 2026, Bardonecchia.",
+  "nf.4":"Honored to present as a Finalist at the IEEE ComSoc 4MT Competition at Globecom, Taipei.",
+  "nf.5":"Delivered an Invited Talk at Stanford University on Starlink deployment for Networked Music Performance.",
+  "inter.title":"Interests & Outreach","inter.tagline":"Beyond the engineering lab — blending technology, music, and sports endurance.",
+  "inter.yt.desc":"I run a YouTube community of over 10,000 members where I actively analyze sports technology, wearable analytics, and endurance engineering. It serves as my primary vehicle for scientific outreach.",
+  "yt.v1":"Luca Borgianni — Sports Tech Creator","yt.v1.m":"10K+ Subscribers · Wearable Analytics & Gear Reviews",
+  "inter.tri.desc":"I am a certified Triathlon Instructor and active endurance athlete. This discipline perfectly maps onto my research philosophy: resilience under demanding conditions, structural planning, and data-driven performance tuning.",
+  "tri.races":"Community Members","tri.half":"Lifeguard Patent","tri.full":"Instructor",
+  "inter.music.title":"Music & Audio Signal Processing",
+  "inter.music.desc":"As a guitar player, singer, and songwriter, music is my artistic anchor. It directly drives my scientific interest in ultra-low latency frameworks, edge computing synthesis, and JackTrip network performance tested during my tenure at Stanford CCRMA.",
+  "m1.name":"Networked Music Performance (NMP) Project","m1.desc":"Exploring whether musicians can synchronously jam over satellite arrays, backed by RL-driven SD-WAN infrastructures.",
+  "m2.name":"Book Chapter Publication","m2.desc":"\"E.T. Telefono a Fibra ottica\" in La facoltà di scegliere, edited by Giulio Deangeli, Mondadori (2024).",
+  "footer.updated":"Last updated: June 2026",
 },
 it:{
-  "profile.role":"Professore Associato<br>Dipartimento di Informatica",
+  "profile.role":"Assegnista di Ricerca<br>Dip. Ingegneria dell'Informazione",
   "sidebar.cv":"Scarica il CV",
   "nav.home":"Home","nav.pub":"Pubblicazioni","nav.teach":"Didattica","nav.news":"Novità","nav.inter":"Interessi",
-  "home.tagline":"Professore Associato · Dipartimento di Informatica · Università di Something",
-  "home.bio1":"Sono un ricercatore che lavora su [il tuo ambito di ricerca]. Il mio lavoro si concentra su [problema specifico], con applicazioni in [dominio].",
-  "home.bio2":"Prima di unirmi a [istituzione attuale], ero ricercatore postdottorale presso [luogo] e ho conseguito il dottorato presso [università] nel [anno], con il Prof. [supervisore].",
+  "home.tagline":"Assegnista di Ricerca · Dipartimento di Ingegneria dell'Informazione · Università di Pisa",
+  "home.bio1":"Sono un Assegnista di Ricerca (Postdoc) presso l'Università di Pisa e Affiliate Researcher presso la Stanford University (CCRMA). La mia ricerca si concentra su reti 6G resilienti basate sui dati, Edge AI a bassa latenza e Networked Music Performance su internet satellitare LEO (Starlink).",
+  "home.bio2":"Attualmente guido lo sviluppo di sistemi Edge AI e architetture di comunicazione subacquea come WP8 Leader all'interno del progetto Horizon Europe \"EU-TRAINS\". Parallelamente, collaboro con la Stanford Medicine sull'elaborazione del suono respiratorio in tempo reale tramite Machine Learning (progetto TAM).",
   "home.cv":"Curriculum Vitae","home.email":"Scrivimi",
   "home.newsTitle":"Ultime Novità","home.selPubs":"Pubblicazioni Selezionate","home.allpubs":"→ Tutte le pubblicazioni",
   "badge.pub":"Articolo","badge.talk":"Talk","badge.award":"Premio","badge.new":"Nuovo",
-  "news.1":"Il nostro articolo <em>\"Titolo del tuo articolo\"</em> è stato accettato a <a href='#'>Conference Name 2025</a>.",
-  "news.2":"Talk su invito a <a href='#'>Workshop Name</a>, parte di Conference 2024.",
-  "news.3":"Ricevuto il premio [Nome Premio] per i contributi alla ricerca.",
-  "news.4":"Entrato a far parte del [Gruppo di Ricerca / Lab] come nuovo membro.",
-  "pub.title":"Pubblicazioni","pub.tagline":"Articoli peer-reviewed, preprint e tesi.",
-  "pub.f.all":"Tutte","pub.f.conf":"Conferenze","pub.f.jour":"Riviste","pub.f.work":"Workshop",
+  "news.1":"Selezionato come Top 6 presenter all'IEEE ICC 2026 Research Collaboration Pitch Session a Glasgow.",
+  "news.2":"Iniziato il mio ruolo come Postdoc sul Machine Learning applicato al rilevamento dei suoni respiratori (progetto TAM).",
+  "news.3":"Ho difeso con successo la tesi di dottorato sulle reti 6G resilienti, conseguendo il titolo <em>cum laude</em>.",
+  "news.4":"Selezionato come finalista per la IEEE ComSoc Four Minute Thesis (4MT) Competition a IEEE Globecom 2025.",
+  "pub.title":"Pubblicazioni","pub.tagline":"Articoli in riviste internazionali peer-reviewed e atti di conferenze.",
+  "pub.f.all":"Tutte","pub.f.conf":"Conferenze","pub.f.jour":"Riviste",
   "pub.scholar":"Lista completa disponibile anche su <a href='#'>Google Scholar</a>.",
-  "teach.title":"Didattica","teach.tagline":"Corsi, seminari e supervisione degli studenti.",
-  "teach.current":"Corsi Attuali","teach.past":"Corsi Passati",
+  "teach.title":"Didattica e Servizio","teach.tagline":"Corsi accademici, tutoraggio studenti e progettazione di laboratori.",
+  "teach.current":"Lezioni e Seminari","teach.past":"Contributi Passati",
   "teach.sup":"Supervisione Studenti",
-  "teach.sup.text":"Sto supervisionando [N] dottorandi e [N] tesi magistrali. Accetto studenti motivati interessati a [i tuoi ambiti]. Si prega di leggere i miei lavori recenti prima di contattarmi.",
-  "teach.contact":"→ Contattami per la supervisione",
-  "teach.office":"Ricevimento",
-  "teach.office.time":"📅 Martedì 14:00–16:00 e su appuntamento",
-  "teach.office.loc":"📍 Stanza 3.14, Edificio, Campus",
-  "teach.office.note":"Gli studenti possono prenotare tramite il portale del corso.",
-  "c1.name":"Machine Learning — Teoria e Pratica","c1.meta":"Triennale · Primavera 2025 · 6 CFU · 120 studenti",
-  "c2.name":"Deep Learning Avanzato","c2.meta":"Magistrale · Autunno 2024 · 9 CFU · 45 studenti",
-  "c3.name":"Metodi di Ricerca in Informatica","c3.meta":"Dottorato · Autunno 2024 · Ciclo di seminari",
-  "c4.name":"Introduzione agli Algoritmi","c4.meta":"Triennale · Primavera 2023 · Tutor didattico",
-  "c5.name":"Data Science e Visualizzazione","c5.meta":"Triennale · Autunno 2022 · Tutor didattico",
-  "role.inst":"Docente","role.sem":"Seminario","role.ta":"Tutore",
-  "news.title":"Novità","news.tagline":"Aggiornamenti su ricerca, talk, premi e attività.",
-  "nf.1":"Il nostro articolo <em>\"Titolo del tuo articolo\"</em> è stato accettato a <a href='#'>Conference 2025</a>. Preprint e codice disponibili a breve.",
-  "nf.2":"Ho tenuto un talk su invito a [Workshop] @ [Conference]. Slide disponibili <a href='#'>qui</a>.",
-  "nf.3":"Onorato di ricevere il [Nome Premio] da [Organizzazione].",
-  "nf.4":"Nuovo preprint: <em>\"Titolo del Preprint\"</em>. <a href='#'>Link arXiv</a>.",
-  "nf.5":"Partecipato e presentato a [Nome Conferenza] a [Città, Paese].",
-  "nf.6":"Iniziato come Associate Editor per [Nome Rivista].",
-  "nf.7":"Articolo accettato a [Workshop @ Conferenza]. <a href='#'>Articolo</a>.",
-  "nf.8":"Nuovo finanziamento: [Nome Progetto] da [Ente]. Progetto triennale su [argomento].",
-  "inter.title":"Interessi","inter.tagline":"Fuori dal laboratorio — quello che mi dà energia.",
-  "inter.yt.desc":"Gestisco un canale YouTube dove parlo di [argomenti]. Cerco di rendere la ricerca accessibile e coinvolgente per tutti.",
-  "yt.v1":"Titolo Video Uno — Il tuo video più visto","yt.v1.m":"42K visualizzazioni · Tutorial",
-  "yt.v2":"Titolo Video Due — Un'analisi approfondita","yt.v2.m":"18K visualizzazioni · Divulgazione",
-  "yt.v3":"Titolo Video Tre — Guida per principianti","yt.v3.m":"9K visualizzazioni · Guida",
-  "inter.yt.cta":"Visita il canale",
-  "inter.tri.desc":"Ho iniziato il triathlon nel [anno] e da allora ho gareggiato in diverse gare in Italia e in Europa. Il miglior maestro di pazienza e pianificazione.",
-  "tri.races":"Gare completate","tri.half":"Half IronMan","tri.full":"Full IronMan",
-  "inter.music.title":"Musica",
-  "inter.music.desc":"Suono [strumento] e produco i miei brani. La musica è la mia altra forma di ricerca — sperimentazione senza scadenze.",
-  "m1.name":"Titolo Traccia / EP Uno","m1.desc":"Mood, ispirazione e come è stato realizzato.",
-  "m2.name":"Titolo Traccia / EP Due","m2.desc":"Strumenti usati e sensazione che si voleva trasmettere.",
-  "m3.name":"Titolo Traccia / EP Tre","m3.desc":"Il tuo brano più personale o sperimentale.",
-  "footer.updated":"Ultimo aggiornamento: Dicembre 2024",
+  "teach.sup.text":"Ho il privilegio di supervisionare studenti eccellenti nei corsi di laurea magistrale in Informatica e Ingegneria delle Telecomunicazioni. Le tesi selezionate includono:",
+  "c1.name":"Cybersecurity and Voice Protection (GATE Project)","c1.meta":"ITS Academy Prodigi, Pisa · 2026 · 12 ore",
+  "c2.name":"Can Musicians Play Together Over Satellite Internet? The Starlink case","c2.meta":"Stanford University · Seminario, Classe 220C · Maggio 2025",
+  "c3.name":"Metrologia delle Reti — Laboratorio Mininet","c3.meta":"Università di Pisa · Livello Laurea Magistrale · 20 ore/anno",
+  "role.inst":"Docente","role.sem":"Seminario","role.ta":"Co-Docente",
+  "news.title":"News e Cronologia","news.tagline":"Registro completo delle presentazioni accademiche e istituzionali.",
+  "nf.1":"Presentato l'Invited Pitch su \"Semantic Communication Framework for Deepfake Voice Detection\" all'IEEE ICC 2026, Glasgow.",
+  "nf.2":"Presentato \"An AI-Driven SD-WAN Deployment for LEO Satellite and Terrestrial Network Integration\" all'IEEE/IFIP NOMS 2026, Roma.",
+  "nf.3":"Presentato \"Semantic Experiences in the Wild\" all'Italian Networking Workshop 2026, Bardonecchia.",
+  "nf.4":"Onorato di presentare come finalista alla IEEE ComSoc 4MT Competition a Globecom, Taipei.",
+  "nf.5":"Tenuto un Invited Talk alla Stanford University sul deployment di Starlink per la Networked Music Performance.",
+  "inter.title":"Interessi e Divulgazione","inter.tagline":"Oltre il laboratorio di ingegneria — unendo tecnologia, musica e sport di resistenza.",
+  "inter.yt.desc":"Gestisco una community YouTube di oltre 10.000 iscritti in cui analizzo attivamente la tecnologia sportiva, la wearable analytics e l'ingegneria applicata all'endurance. È il mio principale canale di divulgazione scientifica.",
+  "yt.v1":"Luca Borgianni — Creator Sports Tech","yt.v1.m":"10K+ Iscritti · Analisi Wearable & Recensioni Gear",
+  "inter.tri.desc":"Sono un istruttore certificato di triathlon e atleta praticante. Questa disciplina si mappa perfettamente sulla mia filosofia di ricerca: resilienza in condizioni difficili, pianificazione strutturale e ottimizzazione delle performance basata sui dati.",
+  "tri.races":"Membri Community","tri.half":"Brevetto Bagnino","tri.full":"Istruttore",
+  "inter.music.title":"Musica & Elaborazione Segnali Audio",
+  "inter.music.desc":"Come chitarrista, cantante e autore, la musica è il mio ancoraggio artistico. Alimenta direttamente il mio interesse scientifico per i framework a bassissima latenza, la sintesi edge computing e le prestazioni della rete JackTrip testate durante il mio periodo a Stanford CCRMA.",
+  "m1.name":"Progetto Networked Music Performance (NMP)","m1.desc":"Analisi della possibilità per i musicisti di suonare in modo sincrono su costellazioni satellitari, supportati da infrastrutture SD-WAN basate su RL.",
+  "m2.name":"Capitolo di Libro Pubblicato","m2.desc":"\"E.T. Telefono a Fibra ottica\" in La facoltà di scegliere, a cura di Giulio Deangeli, Mondadori (2024).",
+  "footer.updated":"Ultimo aggiornamento: Giugno 2026",
 }};
 
 let lang='en';
@@ -631,8 +573,8 @@ function go(id){
   document.querySelectorAll('#mobile-nav a').forEach(a=>a.classList.remove('active'));
   const page=document.getElementById('page-'+id);
   if(page){page.classList.add('active');window.scrollTo(0,0);}
-  document.querySelectorAll(`.nav-link[href="#${id}"]`).forEach(a=>a.classList.add('active'));
-  document.querySelectorAll(`#mobile-nav a[href="#${id}"]`).forEach(a=>a.classList.add('active'));
+  document.querySelectorAll(`.nav-link[href="#${id}"]`).forEach(a=>a.add('active'));
+  document.querySelectorAll(`#mobile-nav a[href="#${id}"]`).forEach(a=>a.add('active'));
   history.replaceState(null,'','#'+id);
 }
 
