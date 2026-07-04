@@ -3,19 +3,19 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Luca Borgianni, Ph.D. — AI Systems Architect</title>
-<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<title>Luca Borgianni, Ph.D. — AI Systems & Infrastructure Architect</title>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 :root{
-  --bg:#f7f6f2;--bg2:#efede8;--ink:#1a1917;--ink2:#3a3834;--muted:#7a776f;
-  --border:#dedad3;--blue:#1d4480;--blue-lt:#e8eef7;--accent:#b84c2b;
+  --bg:#f8f9fa;--bg2:#e9ecef;--ink:#121212;--ink2:#333333;--muted:#6c757d;
+  --border:#dee2e6;--blue:#0f172a;--blue-lt:#f1f5f9;--accent:#2563eb;
   --white:#ffffff;--ff-serif:'Lora',Georgia,serif;--ff-sans:'Source Sans 3',system-ui,sans-serif;
   --sidebar:280px;
 }
 html{scroll-behavior:smooth;}
 body{background:var(--bg);color:var(--ink);font-family:var(--ff-sans);font-size:16px;line-height:1.7;min-height:100vh;}
-a{color:var(--blue);text-decoration:none;}
+a{color:var(--accent);text-decoration:none;}
 a:hover{text-decoration:underline;}
 ul{list-style:none;}
 
@@ -29,7 +29,7 @@ ul{list-style:none;}
   display:flex;flex-direction:column;padding:2.5rem 1.75rem;overflow-y:auto;z-index:50;
 }
 .profile-photo{
-  width:105px;height:105px;border-radius:50%;background:var(--bg2);
+  width:110px;height:110px;border-radius:50%;background:var(--bg2);
   border:2px solid var(--border);display:flex;align-items:center;
   justify-content:center;font-size:2rem;margin-bottom:1.25rem;overflow:hidden;
 }
@@ -37,27 +37,27 @@ ul{list-style:none;}
   width:100%;height:100%;object-fit:cover;display:block;
 }
 .profile-photo img:not([src]),.home-photo img:not([src]){display:none;}
-.sidebar-name{font-family:var(--ff-serif);font-size:1.25rem;font-weight:600;color:var(--ink);line-height:1.25;margin-bottom:.3rem;}
-.sidebar-role{font-size:.85rem;font-weight:600;color:var(--ink2);line-height:1.45;margin-bottom:.2rem;}
-.sidebar-uni{font-size:.8rem;color:var(--muted);font-weight:400;margin-bottom:1.5rem;}
+.sidebar-name{font-family:var(--ff-serif);font-size:1.3rem;font-weight:600;color:var(--ink);line-height:1.2;margin-bottom:.3rem;}
+.sidebar-role{font-size:.85rem;font-weight:700;color:var(--accent);line-height:1.45;margin-bottom:.2rem; letter-spacing: 0.02em;}
+.sidebar-uni{font-size:.8rem;color:var(--muted);font-weight:500;margin-bottom:1.5rem;}
 .sidebar-divider{height:1px;background:var(--border);margin:1rem 0;}
 nav ul{display:flex;flex-direction:column;gap:.15rem;}
 nav ul li a{
   display:flex;align-items:center;gap:.65rem;padding:.55rem .75rem;border-radius:6px;
-  font-size:.9rem;font-weight:500;color:var(--ink2);transition:background .18s,color .18s;white-space:nowrap;
+  font-size:.9rem;font-weight:600;color:var(--ink2);transition:background .18s,color .18s;white-space:nowrap;
 }
 nav ul li a:hover{background:var(--bg);color:var(--ink);text-decoration:none;}
-nav ul li a.active{background:var(--blue-lt);color:var(--blue);font-weight:600;}
-nav ul li a .nav-icon{font-size:.95rem;opacity:.7;width:18px;text-align:center;}
+nav ul li a.active{background:var(--blue-lt);color:var(--blue);font-weight:700;}
+nav ul li a .nav-icon{font-size:.95rem;opacity:.8;width:18px;text-align:center;color:var(--accent);}
 .sidebar-contacts{margin-top:auto;display:flex;flex-direction:column;gap:.5rem;}
-.sidebar-contacts a{font-size:.8rem;color:var(--muted);display:flex;align-items:center;gap:.5rem;transition:color .18s;}
-.sidebar-contacts a:hover{color:var(--blue);text-decoration:none;}
+.sidebar-contacts a{font-size:.8rem;color:var(--muted);display:flex;align-items:center;gap:.5rem;transition:color .18s;font-weight:500;}
+.sidebar-contacts a:hover{color:var(--accent);text-decoration:none;}
 .lang-toggle{display:flex;margin-top:1rem;border:1px solid var(--border);border-radius:6px;overflow:hidden;align-self:flex-start;}
-.lang-btn{padding:.3rem .75rem;border:none;background:transparent;font-family:var(--ff-sans);font-size:.75rem;font-weight:600;letter-spacing:.06em;cursor:pointer;color:var(--muted);transition:all .18s;}
+.lang-btn{padding:.3rem .75rem;border:none;background:transparent;font-family:var(--ff-sans);font-size:.75rem;font-weight:700;letter-spacing:.06em;cursor:pointer;color:var(--muted);transition:all .18s;}
 .lang-btn.active{background:var(--blue);color:var(--white);}
 
 /* MAIN */
-#main{margin-left:var(--sidebar);flex:1;min-height:100vh;}
+#main{margin-left:var(--sidebar);flex:1;min-height:100vh;background:var(--white);}
 
 /* MOBILE */
 #topbar{display:none;position:fixed;top:0;left:0;right:0;z-index:100;background:var(--white);border-bottom:1px solid var(--border);padding:.9rem 1.25rem;align-items:center;justify-content:space-between;}
@@ -66,73 +66,71 @@ nav ul li a .nav-icon{font-size:.95rem;opacity:.7;width:18px;text-align:center;}
 .burger span{display:block;width:22px;height:2px;background:var(--ink);margin:4px 0;border-radius:2px;}
 #mobile-nav{display:none;position:fixed;top:55px;left:0;right:0;bottom:0;background:var(--white);z-index:99;padding:1.5rem;flex-direction:column;gap:.25rem;overflow-y:auto;}
 #mobile-nav.open{display:flex;}
-#mobile-nav a{display:flex;align-items:center;gap:.75rem;padding:.75rem 1rem;border-radius:8px;font-size:1rem;font-weight:500;color:var(--ink2);transition:background .15s;}
+#mobile-nav a{display:flex;align-items:center;gap:.75rem;padding:.75rem 1rem;border-radius:8px;font-size:1rem;font-weight:600;color:var(--ink2);transition:background .15s;}
 #mobile-nav a:hover,#mobile-nav a.active{background:var(--blue-lt);color:var(--blue);text-decoration:none;}
 .mobile-contact-row{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.5rem;}
-.mobile-contact-row a{font-size:.85rem;color:var(--muted);padding:.4rem .8rem;border:1px solid var(--border);border-radius:4px;}
+.mobile-contact-row a{font-size:.85rem;color:var(--muted);padding:.4rem .8rem;border:1px solid var(--border);border-radius:4px;font-weight:600;}
 
 /* PAGES */
-.page{display:none;padding:4rem 5rem;max-width:900px;}
+.page{display:none;padding:4.5rem 5.5rem;max-width:1000px;}
 .page.active{display:block;animation:fadeUp .35s ease both;}
-@keyframes fadeUp{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:translateY(0);}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(15px);}to{opacity:1;transform:translateY(0);}}
 
 /* TYPOGRAPHY */
-h1{font-family:var(--ff-serif);font-size:2.4rem;font-weight:600;color:var(--ink);line-height:1.2;margin-bottom:.5rem;}
-h2{font-family:var(--ff-serif);font-size:1.6rem;font-weight:500;color:var(--ink);margin:3rem 0 1.2rem;border-bottom:1px solid var(--border);padding-bottom:0.4rem;}
-h3{font-family:var(--ff-sans);font-size:1.05rem;font-weight:600;color:var(--ink);}
-.page-tagline{font-size:1.1rem;color:var(--muted);margin-bottom:2rem;font-style:italic;font-family:var(--ff-serif);}
-.section-rule{border:none;border-top:1px solid var(--border);margin:3rem 0;}
-p{margin-bottom:1.2rem;color:var(--ink2);text-align:justify;}
+h1{font-family:var(--ff-serif);font-size:2.6rem;font-weight:600;color:var(--ink);line-height:1.15;margin-bottom:.5rem;letter-spacing:-0.02em;}
+h2{font-family:var(--ff-sans);font-size:1.5rem;font-weight:700;color:var(--ink);margin:3.5rem 0 1.5rem;border-bottom:2px solid var(--bg2);padding-bottom:0.5rem;letter-spacing:-0.01em;}
+h3{font-family:var(--ff-sans);font-size:1.1rem;font-weight:700;color:var(--ink);}
+.page-tagline{font-size:1.25rem;color:var(--accent);margin-bottom:2.5rem;font-weight:500;letter-spacing:-0.01em;}
+.section-rule{border:none;border-top:1px solid var(--border);margin:3.5rem 0;}
+p{margin-bottom:1.2rem;color:var(--ink2);text-align:justify;font-size:1.05rem;}
 
-/* HOME - VISION ELEMENTS */
-.home-intro{display:flex;gap:3rem;align-items:flex-start;margin-bottom:3rem;}
-.home-photo{width:140px;height:140px;border-radius:50%;flex-shrink:0;background:var(--bg2);border:2px solid var(--border);display:flex;align-items:center;justify-content:center;overflow:hidden;}
+/* HOME */
+.home-intro{display:flex;gap:3.5rem;align-items:flex-start;margin-bottom:3.5rem;}
+.home-photo{width:150px;height:150px;border-radius:12px;flex-shrink:0;background:var(--bg2);box-shadow:0 10px 25px rgba(0,0,0,0.08);display:flex;align-items:center;justify-content:center;overflow:hidden;}
 .home-photo img{width:100%;height:100%;object-fit:cover;display:block;}
-.home-bio p:first-child{font-size:1.15rem; font-weight: 500; color: var(--ink);}
+.home-bio p:first-child{font-size:1.2rem; font-weight: 600; color: var(--ink);}
 
 .vision-manifesto {
   font-size: 1.15rem;
-  font-family: var(--ff-serif);
   color: var(--ink);
-  background: var(--white);
-  border-left: 4px solid var(--blue);
-  padding: 1.5rem;
+  background: var(--bg);
+  border-left: 4px solid var(--accent);
+  padding: 1.75rem;
   border-radius: 0 8px 8px 0;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.03);
-  margin-bottom: 2.5rem;
-  line-height: 1.6;
+  margin-bottom: 3rem;
+  line-height: 1.7;
 }
 
 .research-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.75rem;
   margin-bottom: 3rem;
 }
 .research-card {
-  padding: 1.5rem;
+  padding: 1.75rem;
   border: 1px solid var(--border);
-  border-radius: 8px;
+  border-radius: 10px;
   background: var(--white);
   transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
 }
 .research-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 16px rgba(29,68,128,0.06);
-  border-color: var(--blue);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(15, 23, 42, 0.06);
+  border-color: var(--accent);
 }
 .research-card h3 {
-  color: var(--blue);
-  margin-bottom: 0.6rem;
-  font-size: 1.05rem;
+  color: var(--ink);
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
 .research-card p {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   margin: 0;
-  color: var(--ink2);
+  color: var(--muted);
 }
 
 .app-tags {
@@ -143,64 +141,68 @@ p{margin-bottom:1.2rem;color:var(--ink2);text-align:justify;}
 }
 .app-tag {
   font-size: 0.85rem;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--blue);
-  background: var(--blue-lt);
-  padding: 0.3rem 0.8rem;
-  border-radius: 20px;
+  background: var(--bg2);
+  padding: 0.35rem 0.9rem;
+  border-radius: 6px;
 }
 
-.quick-links{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:2rem;}
-.qlink{display:inline-flex;align-items:center;gap:.5rem;padding:.6rem 1.2rem;border-radius:6px;font-size:.9rem;font-weight:600;border:1px solid var(--border);color:var(--ink2);transition:all .18s;background:var(--white);}
-.qlink:hover{border-color:var(--blue);color:var(--blue);text-decoration:none;}
-.qlink.primary{background:var(--blue);color:var(--white);border-color:var(--blue);}
-.qlink.primary:hover{background:#163870;}
+.quick-links{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:2.5rem;}
+.qlink{display:inline-flex;align-items:center;gap:.5rem;padding:.7rem 1.4rem;border-radius:6px;font-size:.9rem;font-weight:700;border:1px solid var(--border);color:var(--ink);transition:all .2s;background:var(--white);}
+.qlink:hover{border-color:var(--ink);text-decoration:none;box-shadow:0 4px 6px rgba(0,0,0,0.05);}
+.qlink.primary{background:var(--ink);color:var(--white);border-color:var(--ink);}
+.qlink.primary:hover{background:var(--ink2);color:var(--white);}
 
 /* PUBLICATIONS */
-.pub-filters{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:2.5rem;}
-.filter-btn{padding:.4rem 1rem;border-radius:20px;border:1px solid var(--border);background:transparent;font-family:var(--ff-sans);font-size:.85rem;font-weight: 600;cursor:pointer;color:var(--muted);transition:all .18s;}
-.filter-btn.active,.filter-btn:hover{background:var(--blue);color:var(--white);border-color:var(--blue);}
+.pub-filters{display:flex;gap:.6rem;flex-wrap:wrap;margin-bottom:3rem;}
+.filter-btn{padding:.45rem 1.2rem;border-radius:6px;border:1px solid var(--border);background:var(--bg);font-family:var(--ff-sans);font-size:.85rem;font-weight: 700;cursor:pointer;color:var(--muted);transition:all .2s;}
+.filter-btn.active,.filter-btn:hover{background:var(--ink);color:var(--white);border-color:var(--ink);}
 .pub-year-group{margin-bottom:3rem;}
-.pub-year-label{font-size:.9rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);margin-bottom:1.2rem;display:flex;align-items:center;gap:.75rem;}
-.pub-year-label::after{content:'';flex:1;height:1px;background:var(--border);}
-.pub-entry{padding:1.25rem 1.5rem;margin-bottom:.85rem;border:1px solid var(--border);border-radius:8px;background:var(--white);transition:border-color .2s,box-shadow .2s;}
-.pub-entry:hover{border-color:#c5cadf;box-shadow:0 3px 14px rgba(29,68,128,.05);}
-.pub-entry h3{font-size:1.05rem;line-height:1.45;margin-bottom:.4rem;}
-.pub-authors{font-size:.9rem;color:var(--muted);margin-bottom:.3rem;}
-.pub-authors strong{color:var(--ink);font-weight:600;}
-.pub-venue{font-size:.85rem;color:var(--ink2);font-style:italic;}
-.pub-venue-badge{display:inline-block;font-size:.7rem;font-weight:700;padding:.15rem .55rem;border-radius:4px;margin-left:.5rem;vertical-align:middle;letter-spacing:.04em; font-style: normal;}
-.venue-conf{background:#e6ecf8;color:#1d4480;}
-.venue-jour{background:#e8f0e8;color:#2a6e2a;}
+.pub-year-label{font-size:.95rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:1.2rem;display:flex;align-items:center;gap:.75rem;}
+.pub-year-label::after{content:'';flex:1;height:2px;background:var(--bg2);}
+.pub-entry{padding:1.4rem 1.75rem;margin-bottom:1rem;border:1px solid var(--border);border-radius:8px;background:var(--white);transition:border-color .2s,box-shadow .2s;}
+.pub-entry:hover{border-color:var(--accent);box-shadow:0 4px 12px rgba(37, 99, 235, 0.05);}
+.pub-entry h3{font-size:1.05rem;line-height:1.45;margin-bottom:.5rem;}
+.pub-authors{font-size:.95rem;color:var(--muted);margin-bottom:.4rem;}
+.pub-authors strong{color:var(--ink);font-weight:700;}
+.pub-venue{font-size:.85rem;color:var(--ink2);font-style:italic; font-weight: 500;}
+.pub-venue-badge{display:inline-block;font-size:.7rem;font-weight:800;padding:.15rem .6rem;border-radius:4px;margin-left:.6rem;vertical-align:middle;letter-spacing:.05em; font-style: normal;}
+.venue-conf{background:var(--bg2);color:var(--ink);}
+.venue-jour{background:#dbeafe;color:#1e40af;}
 
 /* TEACHING & EXPERIENCE */
-.exp-timeline{display:flex;flex-direction:column;gap:1.5rem;margin-bottom:3rem;}
-.exp-item{background:var(--white);border:1px solid var(--border);border-radius:8px;padding:1.5rem;display:flex;justify-content:space-between;align-items:flex-start;gap:1.5rem;}
-.exp-header h3{font-size:1.1rem;color:var(--ink);margin-bottom:0.2rem;}
-.exp-sub{font-size:0.9rem;color:var(--blue);font-weight:600;margin-bottom:0.5rem;}
-.exp-desc{font-size:0.95rem;color:var(--ink2);}
-.exp-date{font-size:0.85rem;font-weight:600;color:var(--muted);white-space:nowrap;background:var(--bg);padding:0.3rem 0.7rem;border-radius:4px;}
+.exp-timeline{display:flex;flex-direction:column;gap:1.5rem;margin-bottom:3.5rem;}
+.exp-item{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:1.75rem;display:flex;justify-content:space-between;align-items:flex-start;gap:1.5rem;}
+.exp-header h3{font-size:1.15rem;color:var(--ink);margin-bottom:0.2rem;}
+.exp-sub{font-size:0.95rem;color:var(--accent);font-weight:700;margin-bottom:0.6rem;}
+.exp-desc{font-size:0.95rem;color:var(--ink2); line-height: 1.6;}
+.exp-date{font-size:0.85rem;font-weight:700;color:var(--ink);white-space:nowrap;background:var(--bg2);padding:0.35rem 0.8rem;border-radius:6px; letter-spacing: 0.02em;}
 
 /* NEWS FULL */
 .news-list{display:flex;flex-direction:column;}
 .news-item{display:flex;gap:1.5rem;padding:1.25rem 0;border-bottom:1px solid var(--border);align-items:flex-start; flex-direction: column;}
 .news-item:first-child{border-top:1px solid var(--border);}
-.news-date{font-size:.85rem;color:var(--muted);white-space:nowrap;font-weight:600;min-width:85px; margin-bottom: 0.2rem;}
-.news-text{font-size:1rem; line-height: 1.6; color:var(--ink2);}
-.news-badge{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:.15rem .5rem;border-radius:4px;margin-right:.5rem;vertical-align:middle;}
+.news-date{font-size:.85rem;color:var(--accent);white-space:nowrap;font-weight:800;min-width:85px; margin-bottom: 0.3rem;}
+.news-text{font-size:1.05rem; line-height: 1.6; color:var(--ink);}
+.news-badge{display:inline-block;font-size:.7rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:.2rem .6rem;border-radius:4px;margin-right:.6rem;vertical-align:middle;}
 .badge-talk{background:#fef0e6;color:#c0620a;}
 .badge-award{background:#fdf0f0;color:#b03030;}
 .badge-pub{background:#e8f0e8;color:#2a6e2a;}
 
 /* FOOTER */
-.page-footer{margin-top:4rem;padding-top:1.5rem;border-top:1px solid var(--border);font-size:.85rem;color:var(--muted);}
+.page-footer{margin-top:5rem;padding-top:2rem;border-top:2px solid var(--bg2);font-size:.9rem;font-weight:600;color:var(--muted);}
 
 /* RESPONSIVE */
-@media(max-width:850px){
+@media(max-width:900px){
   #sidebar{display:none;}#topbar{display:flex;}
   #main{margin-left:0;padding-top:55px;}
-  .page{padding:2.5rem 2rem;}
-  .home-intro{flex-direction:column;gap:1.5rem;}
+  .page{padding:3rem 2.5rem;}
+  .home-intro{flex-direction:column;gap:2rem;}
+}
+@media(max-width:600px){
+  .exp-item{flex-direction:column; gap: 1rem;}
+  .exp-date{align-self: flex-start;}
 }
 </style>
 </head>
@@ -211,8 +213,8 @@ p{margin-bottom:1.2rem;color:var(--ink2);text-align:justify;}
 <aside id="sidebar">
   <div class="profile-photo"><img src="IMG_7197 1.jpg" alt="Luca Borgianni" onerror="this.style.display='none'; this.parentElement.textContent='LB';"></div>
   <div class="sidebar-name">Luca Borgianni, Ph.D.</div>
-  <div class="sidebar-role" data-i18n="profile.role">AI Systems Architect<br>Postdoctoral Researcher</div>
-  <div class="sidebar-uni">University of Pisa & Stanford Affiliate</div>
+  <div class="sidebar-role" data-i18n="profile.role">AI Systems Architect</div>
+  <div class="sidebar-uni">Univ. of Pisa & Stanford Affiliate</div>
   <div class="lang-toggle">
     <button class="lang-btn active" onclick="setLang('en')">EN</button>
     <button class="lang-btn" onclick="setLang('it')">IT</button>
@@ -221,8 +223,8 @@ p{margin-bottom:1.2rem;color:var(--ink2);text-align:justify;}
   <nav><ul>
     <li><a href="#home"  class="nav-link active" onclick="go('home')"> <span class="nav-icon">⌂</span>  <span data-i18n="nav.home">Home & Vision</span></a></li>
     <li><a href="#pub"   class="nav-link"         onclick="go('pub')">  <span class="nav-icon">📄</span> <span data-i18n="nav.pub">Research Areas</span></a></li>
-    <li><a href="#teach" class="nav-link"         onclick="go('teach')"><span class="nav-icon">🏗️</span> <span data-i18n="nav.teach">Experience</span></a></li>
-    <li><a href="#news"  class="nav-link"         onclick="go('news')"> <span class="nav-icon">📣</span> <span data-i18n="nav.news">Timeline</span></a></li>
+    <li><a href="#teach" class="nav-link"         onclick="go('teach')"><span class="nav-icon">⚙️</span> <span data-i18n="nav.teach">Systems & Experience</span></a></li>
+    <li><a href="#news"  class="nav-link"         onclick="go('news')"> <span class="nav-icon">🚀</span> <span data-i18n="nav.news">Timeline & Impact</span></a></li>
   </ul></nav>
   <div class="sidebar-divider"></div>
   <div class="sidebar-contacts">
@@ -246,10 +248,10 @@ p{margin-bottom:1.2rem;color:var(--ink2);text-align:justify;}
   </div>
 </div>
 <div id="mobile-nav">
-  <a href="#home"  onclick="go('home');toggleNav()"> <span>⌂</span>  <span data-i18n="nav.home">Home & Vision</span></a>
-  <a href="#pub"   onclick="go('pub');toggleNav()">  <span>📄</span> <span data-i18n="nav.pub">Research</span></a>
-  <a href="#teach" onclick="go('teach');toggleNav()"><span>🏗️</span> <span data-i18n="nav.teach">Experience</span></a>
-  <a href="#news"  onclick="go('news');toggleNav()"> <span>📣</span> <span data-i18n="nav.news">Timeline</span></a>
+  <a href="#home"  onclick="go('home');toggleNav()"> <span data-i18n="nav.home">Home & Vision</span></a>
+  <a href="#pub"   onclick="go('pub');toggleNav()">  <span data-i18n="nav.pub">Research</span></a>
+  <a href="#teach" onclick="go('teach');toggleNav()"> <span data-i18n="nav.teach">Experience</span></a>
+  <a href="#news"  onclick="go('news');toggleNav()"> <span data-i18n="nav.news">Timeline</span></a>
   <div class="mobile-contact-row">
     <a href="mailto:luca.borgianni@unipi.it">✉ Email</a>
     <a href="CV_Borgianni.pdf" target="_blank">📄 CV</a>
@@ -265,54 +267,53 @@ p{margin-bottom:1.2rem;color:var(--ink2);text-align:justify;}
     <div class="home-photo"><img src="IMG_7197 1.jpg" alt="Luca Borgianni" onerror="this.style.display='none'; this.parentElement.textContent='LB';"></div>
     <div class="home-bio">
       <h1>Luca Borgianni, Ph.D.</h1>
-      <p class="page-tagline" data-i18n="home.tagline">Building AI Systems that Think Beyond the Cloud</p>
+      <p class="page-tagline" data-i18n="home.tagline">Architecting the Infrastructure for Large-Scale AI Systems</p>
       
-      <p data-i18n="home.bio1">I am a Postdoctoral Researcher at the University of Pisa and an Affiliate Researcher at Stanford University. I received my Ph.D. <em>cum laude</em> from the University of Pisa, which included a 6-month visiting fellowship at Stanford CCRMA. My research focuses on the systems challenges that will define the next generation of Artificial Intelligence. Rather than developing larger AI models, I investigate how distributed AI systems can efficiently coordinate computation, communication, and decision making across edge devices, cloud infrastructures, and future networks.</p>
+      <p data-i18n="home.bio1">I build the resilient, high-throughput networking and orchestration layers required to scale multimodal AI inference and distributed computation. I am a Postdoctoral Researcher at the University of Pisa and an Affiliate Researcher at Stanford University (CCRMA). I received my Ph.D. <em>cum laude</em> focusing on resilient data-driven networking.</p>
       
-      <p data-i18n="home.bio2">Currently, I am part of the Horizon Europe project EU-TRAINS, leading the design of distributed edge AI for sports applications. Concurrently, I collaborate with Stanford Medicine and CCRMA on AI-driven biomedical signal analysis. My work combines distributed systems, networking, machine learning, and real-time multimedia to design scalable AI infrastructures. I use applications such as speech processing, wearable sensing, satellite communications, and networked music performance as demanding real-world testbeds to develop architectures that make large-scale distributed intelligence practical, efficient, and reliable.</p>
+      <p data-i18n="home.bio2">The next barrier in AI is not algorithmic; it is infrastructural. My work bridges high-performance networking, machine learning, and systems architecture to solve the hard bottlenecks of large-scale intelligence. I use demanding real-world testbeds—from zero-latency networked audio to automated biomedical detection (TAM project, Stanford Medicine) and real-time enterprise cybersecurity—to build systems that execute complex inferences when bandwidth, latency, and synchronization are critical constraints.</p>
       
       <div class="quick-links">
         <a href="CV_Borgianni.pdf" target="_blank" class="qlink primary">📄 <span data-i18n="home.cv">Curriculum Vitae</span></a>
-        <a href="#pub" class="qlink" onclick="go('pub');return false">📚 <span data-i18n="home.pubLink">Research Areas</span></a>
+        <a href="#pub" class="qlink" onclick="go('pub');return false">📚 <span data-i18n="home.pubLink">Research & Systems</span></a>
       </div>
     </div>
   </div>
 
   <hr class="section-rule"/>
   
-  <h2 data-i18n="home.visionTitle">Research Vision</h2>
+  <h2 data-i18n="home.visionTitle">Research & Engineering Vision</h2>
   <div class="vision-manifesto" data-i18n="home.manifesto">
-    Artificial Intelligence is rapidly moving from centralized cloud models to billions of intelligent devices operating across heterogeneous environments.<br><br>
-    The next decade will not be limited by larger foundation models, but by our ability to orchestrate computation, communication, and intelligence at planetary scale. My long-term research vision is to build the systems architecture that enables distributed AI to become reliable, efficient, secure, and real-time.
+    Scaling real-time intelligence requires moving beyond static hardware topologies to dynamic, zero-latency architectures. I build the operating systems, the routing logic, and the network orchestration layers that allow thousands of models and agents to collaborate seamlessly across the edge-cloud continuum.
   </div>
 
   <div class="research-grid">
     <div class="research-card">
-      <h3 data-i18n="card1.title">🌐 Distributed AI Systems</h3>
-      <p data-i18n="card1.desc">Designing architectures that coordinate AI across edge, cloud, and heterogeneous infrastructures.</p>
+      <h3 data-i18n="card1.title">🌐 AI Cluster & Network Infrastructure</h3>
+      <p data-i18n="card1.desc">Overcoming network congestion bottlenecks. Applying Reinforcement Learning (PPO) and multi-agent systems to dynamically orchestrate data streams and computing power.</p>
     </div>
     <div class="research-card">
-      <h3 data-i18n="card2.title">⚡ AI Runtime Systems</h3>
-      <p data-i18n="card2.desc">Dynamic orchestration of computation, communication, and energy for large-scale intelligent systems.</p>
+      <h3 data-i18n="card2.title">⚡ Low-Latency AI Serving</h3>
+      <p data-i18n="card2.desc">Designing system architectures capable of sustaining real-time AI serving and semantic inference under strict, sub-millisecond latency constraints.</p>
     </div>
     <div class="research-card">
-      <h3 data-i18n="card3.title">🎙️ Real-Time Multimodal Intelligence</h3>
-      <p data-i18n="card3.desc">Supporting speech, audio, video, and sensor intelligence under strict latency constraints.</p>
+      <h3 data-i18n="card3.title">🎙️ Multimodal Inference Systems</h3>
+      <p data-i18n="card3.desc">Building pipelines for heavy, multimodal workloads (speech, audio, biomedical signals) as the ultimate stress test for synchronized distributed networks.</p>
     </div>
     <div class="research-card">
-      <h3 data-i18n="card4.title">📡 Future AI Infrastructure</h3>
-      <p data-i18n="card4.desc">Building the networking and systems foundations required by the next generation of AI applications.</p>
+      <h3 data-i18n="card4.title">🔒 Zero-Trust AI Security</h3>
+      <p data-i18n="card4.desc">Deploying real-time neural networks at the network edge to secure enterprise VoIP infrastructure against generative voice fraud and deepfakes.</p>
     </div>
   </div>
 
-  <h2 data-i18n="home.appTitle">Applications & Testbeds</h2>
+  <h2 data-i18n="home.appTitle">Production Applications & Testbeds</h2>
   <div class="app-tags">
-    <span class="app-tag" data-i18n="tag.1">Speech & Audio AI</span>
-    <span class="app-tag" data-i18n="tag.2">Wearable Intelligence</span>
-    <span class="app-tag" data-i18n="tag.3">Future Communication Networks</span>
-    <span class="app-tag" data-i18n="tag.4">Cybersecurity</span>
-    <span class="app-tag" data-i18n="tag.5">Digital Health</span>
-    <span class="app-tag" data-i18n="tag.6">Satellite & Edge Computing</span>
+    <span class="app-tag" data-i18n="tag.1">AI Cluster Networking</span>
+    <span class="app-tag" data-i18n="tag.2">Large-Scale Inference</span>
+    <span class="app-tag" data-i18n="tag.3">Real-Time Audio Processing</span>
+    <span class="app-tag" data-i18n="tag.4">Cybersecurity Infrastructure</span>
+    <span class="app-tag" data-i18n="tag.5">Biomedical ML</span>
+    <span class="app-tag" data-i18n="tag.6">LEO Satellite Orhcestration</span>
   </div>
 
   <div class="page-footer" data-i18n="footer.updated">Last updated: July 2026</div>
@@ -320,61 +321,29 @@ p{margin-bottom:1.2rem;color:var(--ink2);text-align:justify;}
 
 <!-- PUBLICATIONS & RESEARCH AREAS -->
 <div class="page" id="page-pub">
-  <h1 data-i18n="pub.title">Research Areas & Publications</h1>
+  <h1 data-i18n="pub.title">Research Areas & Systems Built</h1>
   <p class="page-tagline" data-i18n="pub.tagline">Pioneering literature across the foundational pillars of the next-generation AI infrastructure.</p>
   
   <div class="pub-filters">
     <button class="filter-btn active" onclick="filterPubs(this,'all')"  data-i18n="pub.f.all">All Publications</button>
+    <button class="filter-btn"        onclick="filterPubs(this,'infra')" data-i18n="pub.f.infra">AI Infrastructure & Networking</button>
+    <button class="filter-btn"        onclick="filterPubs(this,'media')" data-i18n="pub.f.media">Low-Latency Multimodal AI</button>
     <button class="filter-btn"        onclick="filterPubs(this,'dist')"  data-i18n="pub.f.dist">Distributed AI Systems</button>
-    <button class="filter-btn"        onclick="filterPubs(this,'infra')" data-i18n="pub.f.infra">AI Infrastructure</button>
-    <button class="filter-btn"        onclick="filterPubs(this,'media')" data-i18n="pub.f.media">Multimodal Intelligence</button>
-    <button class="filter-btn"        onclick="filterPubs(this,'net')"   data-i18n="pub.f.net">Intelligent Networks</button>
-  </div>
-
-  <!-- DISTRIBUTED AI SYSTEMS -->
-  <div class="pub-year-group" data-group-type="dist">
-    <div class="pub-year-label" data-i18n="pub.label.dist">Distributed AI Systems</div>
-    
-    <div class="pub-entry" data-type="dist">
-      <h3>Drone OPERA: An ns-3 energy-aware module for on-board computing in UAV ad hoc networks</h3>
-      <div class="pub-authors">M. Della Bartola, <strong>L. Borgianni</strong>, D. Adami, S. Giordano</div>
-      <div class="pub-venue">Ad Hoc Networks, Elsevier, May 2026 <span class="pub-venue-badge venue-jour">Journal</span></div>
-    </div>
-    <div class="pub-entry" data-type="dist">
-      <h3>Reinforcement Learning-Driven Digital Twin for Zero-Delay Communication in Smart Greenhouse Robotics</h3>
-      <div class="pub-authors">C. Bua, <strong>L. Borgianni</strong>, D. Adami, S. Giordano</div>
-      <div class="pub-venue">Agriculture, June 2025 <span class="pub-venue-badge venue-jour">Journal</span></div>
-    </div>
-    <div class="pub-entry" data-type="dist">
-      <h3>A Scalable Framework for Deploying AI-Powered Wildlife Monitoring in Resource-Limited Field Environments</h3>
-      <div class="pub-authors">M. A. Rahman, T. M. Berhe, <strong>L. Borgianni</strong>, M. S. Ahmed, C. Bua, et al.</div>
-      <div class="pub-venue">IEEE Access, January 2025 <span class="pub-venue-badge venue-jour">Journal</span></div>
-    </div>
-    <div class="pub-entry" data-type="dist">
-      <h3>Efficient Distributed DNN for Extreme Edge Computing in Wildlife Monitoring</h3>
-      <div class="pub-authors"><strong>L. Borgianni</strong>, C. Bua, E. Coli, D. Adami, S. Giordano</div>
-      <div class="pub-venue">IEEE HPSR, May 2025 <span class="pub-venue-badge venue-conf">Conference</span></div>
-    </div>
-    <div class="pub-entry" data-type="dist">
-      <h3>Digital Twin for Remote Control of Robotic Arm via Wearable Glove in Smart Agriculture</h3>
-      <div class="pub-authors">C. Bua, <strong>L. Borgianni</strong>, D. Adami, S. Giordano</div>
-      <div class="pub-venue">IEEE WCNC, March 2025 <span class="pub-venue-badge venue-conf">Conference</span></div>
-    </div>
-    <div class="pub-entry" data-type="dist">
-      <h3>Empowering Remote Agriculture: Wearable Glove Control for Smart Hydroponic Greenhouses</h3>
-      <div class="pub-authors">C. Bua, <strong>L. Borgianni</strong>, D. Adami, S. Giordano</div>
-      <div class="pub-venue">IEEE HPSR, July 2024 <span class="pub-venue-badge venue-conf">Conference</span></div>
-    </div>
   </div>
 
   <!-- AI INFRASTRUCTURE -->
   <div class="pub-year-group" data-group-type="infra">
-    <div class="pub-year-label" data-i18n="pub.label.infra">AI Infrastructure</div>
+    <div class="pub-year-label" data-i18n="pub.label.infra">AI Infrastructure & Large-Scale Networking</div>
     
     <div class="pub-entry" data-type="infra">
       <h3>A Comprehensive Survey on Software-Defined Wide Area Network</h3>
       <div class="pub-authors">S. Troia, <strong>L. Borgianni</strong>, S. Giordano, G. Maier</div>
       <div class="pub-venue">IEEE Communications Surveys & Tutorials, July 2025 <span class="pub-venue-badge venue-jour">Journal</span></div>
+    </div>
+    <div class="pub-entry" data-type="infra">
+      <h3>Evaluating LEO Satellite Internet in Aeronautical Mobility: a Study of Starlink from Hawaii to Japan</h3>
+      <div class="pub-authors"><strong>L. Borgianni</strong>, D. Adami, S. Giordano</div>
+      <div class="pub-venue">IEEE ICNC, February 2026 <span class="pub-venue-badge venue-conf">Conference</span></div>
     </div>
     <div class="pub-entry" data-type="infra">
       <h3>Proximal Policy Optimization for AI-Orchestrated SD-WAN in Underserved Regions</h3>
@@ -387,30 +356,20 @@ p{margin-bottom:1.2rem;color:var(--ink2);text-align:justify;}
       <div class="pub-venue">IEEE CNSM, October 2025 <span class="pub-venue-badge venue-conf">Conference</span></div>
     </div>
     <div class="pub-entry" data-type="infra">
-      <h3>On the Accuracy of Mininet: Comparing Network Emulation and Physical Testbeds for Distributed Systems</h3>
-      <div class="pub-authors"><strong>L. Borgianni</strong>, C. Bua, E. Coli, D. Adami, S. Giordano</div>
-      <div class="pub-venue">ICUMT, October 2025 <span class="pub-venue-badge venue-conf">Conference</span></div>
-    </div>
-    <div class="pub-entry" data-type="infra">
-      <h3>Enhancing Wildlife Monitoring in Variable Network Coverage Areas with Deep RL-based SD-WANs</h3>
-      <div class="pub-authors"><strong>L. Borgianni</strong>, C. Bua, S. Ghadir, D. Ghadir, D. Adami, S. Giordano</div>
-      <div class="pub-venue">IEEE CAMAD, October 2024 <span class="pub-venue-badge venue-conf">Conference</span></div>
+      <h3>Policy-Driven SD-WAN for Hybrid Terrestrial and Non-Terrestrial 6G Connectivity</h3>
+      <div class="pub-authors"><strong>L. Borgianni</strong>, E. Bellini, A. Giorgetti, D. Adami, S. Giordano</div>
+      <div class="pub-venue">IEEE ICNC, February 2026 <span class="pub-venue-badge venue-conf">Conference</span></div>
     </div>
     <div class="pub-entry" data-type="infra">
       <h3>Assessing the Efficacy of Reinforcement Learning in Enhancing Quality of Service in SD-WANs</h3>
       <div class="pub-authors"><strong>L. Borgianni</strong>, S. Troia, D. Adami, G. Maier, S. Giordano</div>
       <div class="pub-venue">IEEE GLOBECOM, December 2023 <span class="pub-venue-badge venue-conf">Conference</span></div>
     </div>
-    <div class="pub-entry" data-type="infra">
-      <h3>From MPLS to SD-WAN to ensure QoS and QoE in cloud-based applications</h3>
-      <div class="pub-authors"><strong>L. Borgianni</strong>, S. Troia, D. Adami, G. Maier, S. Giordano</div>
-      <div class="pub-venue">IEEE NetSoft, June 2023 <span class="pub-venue-badge venue-conf">Conference</span></div>
-    </div>
   </div>
 
   <!-- MULTIMEDIA INTELLIGENCE -->
   <div class="pub-year-group" data-group-type="media">
-    <div class="pub-year-label" data-i18n="pub.label.media">Real-Time Multimodal Intelligence</div>
+    <div class="pub-year-label" data-i18n="pub.label.media">Low-Latency Multimodal AI</div>
     
     <div class="pub-entry" data-type="media">
       <h3>A Comprehensive Evaluation of Networked Music Performance using LEO Satellite Internet: The Starlink Use Case</h3>
@@ -428,55 +387,35 @@ p{margin-bottom:1.2rem;color:var(--ink2);text-align:justify;}
       <div class="pub-venue">IEEE Communications Magazine, December 2024 <span class="pub-venue-badge venue-jour">Journal</span></div>
     </div>
     <div class="pub-entry" data-type="media">
-      <h3>Experimental Analysis of Sub-GHz RF Communication for in-Water Wearables in Swimming Applications</h3>
-      <div class="pub-authors"><strong>L. Borgianni</strong>, L. Boggioni, L. Monti, S. Giordano, S. Saponara, A. Caiti, et al.</div>
-      <div class="pub-venue">IEEE STAR, September 2025 <span class="pub-venue-badge venue-conf">Conference</span></div>
-    </div>
-    <div class="pub-entry" data-type="media">
       <h3>Spectrogram Based Bee Sound Analysis with DNNs: a step toward Federated Learning approach</h3>
       <div class="pub-authors"><strong>L. Borgianni</strong>, M. S. Ahmed, D. Adami, S. Giordano</div>
       <div class="pub-venue">Internet of Sounds, October 2023 <span class="pub-venue-badge venue-conf">Conference</span></div>
     </div>
   </div>
 
-  <!-- INTELLIGENT NETWORKS -->
-  <div class="pub-year-group" data-group-type="net">
-    <div class="pub-year-label" data-i18n="pub.label.net">Intelligent Networks</div>
+  <!-- DISTRIBUTED AI SYSTEMS -->
+  <div class="pub-year-group" data-group-type="dist">
+    <div class="pub-year-label" data-i18n="pub.label.dist">Distributed AI Systems</div>
     
-    <div class="pub-entry" data-type="net">
-      <h3>Evaluating LEO Satellite Internet in Aeronautical Mobility: a Study of Starlink from Hawaii to Japan</h3>
-      <div class="pub-authors"><strong>L. Borgianni</strong>, D. Adami, S. Giordano</div>
-      <div class="pub-venue">IEEE ICNC, February 2026 <span class="pub-venue-badge venue-conf">Conference</span></div>
+    <div class="pub-entry" data-type="dist">
+      <h3>Drone OPERA: An ns-3 energy-aware module for on-board computing in UAV ad hoc networks</h3>
+      <div class="pub-authors">M. Della Bartola, <strong>L. Borgianni</strong>, D. Adami, S. Giordano</div>
+      <div class="pub-venue">Ad Hoc Networks, Elsevier, May 2026 <span class="pub-venue-badge venue-jour">Journal</span></div>
     </div>
-    <div class="pub-entry" data-type="net">
-      <h3>Policy-Driven SD-WAN for Hybrid Terrestrial and Non-Terrestrial 6G Connectivity</h3>
-      <div class="pub-authors"><strong>L. Borgianni</strong>, E. Bellini, A. Giorgetti, D. Adami, S. Giordano</div>
-      <div class="pub-venue">IEEE ICNC, February 2026 <span class="pub-venue-badge venue-conf">Conference</span></div>
+    <div class="pub-entry" data-type="dist">
+      <h3>A Scalable Framework for Deploying AI-Powered Wildlife Monitoring in Resource-Limited Field Environments</h3>
+      <div class="pub-authors">M. A. Rahman, T. M. Berhe, <strong>L. Borgianni</strong>, M. S. Ahmed, C. Bua, et al.</div>
+      <div class="pub-venue">IEEE Access, January 2025 <span class="pub-venue-badge venue-jour">Journal</span></div>
     </div>
-    <div class="pub-entry" data-type="net">
-      <h3>Monitoring Wildlife in Remote Areas through LEO Satellites within a Cloud Continuum Perspective</h3>
-      <div class="pub-authors">M. A. Rahman, <strong>L. Borgianni</strong>, E. Marku, et al.</div>
-      <div class="pub-venue">IEEE GLOBECOM, December 2025 <span class="pub-venue-badge venue-conf">Conference</span></div>
+    <div class="pub-entry" data-type="dist">
+      <h3>Efficient Distributed DNN for Extreme Edge Computing in Wildlife Monitoring</h3>
+      <div class="pub-authors"><strong>L. Borgianni</strong>, C. Bua, E. Coli, D. Adami, S. Giordano</div>
+      <div class="pub-venue">IEEE HPSR, May 2025 <span class="pub-venue-badge venue-conf">Conference</span></div>
     </div>
-    <div class="pub-entry" data-type="net">
-      <h3>Global Net Equity: The Role of LEO Satellites Towards 6G Connectivity Landscape</h3>
-      <div class="pub-authors"><strong>L. Borgianni</strong>, D. Adami, S. Giordano, C. Chafe</div>
-      <div class="pub-venue">IEEE MedComNet, June 2025 <span class="pub-venue-badge venue-conf">Conference</span></div>
-    </div>
-    <div class="pub-entry" data-type="net">
-      <h3>Towards 6G: Adaptive and Resilient Network Management for Hybrid Terrestrial-Satellite Systems</h3>
-      <div class="pub-authors"><strong>L. Borgianni</strong>, D. Adami, S. Giordano</div>
-      <div class="pub-venue">IEEE NOMS, May 2025 <span class="pub-venue-badge venue-conf">Conference</span></div>
-    </div>
-    <div class="pub-entry" data-type="net">
-      <h3>Quantum Networking for Secure and Reliable Communication in Space Exploration</h3>
-      <div class="pub-authors"><strong>L. Borgianni</strong>, D. Adami, S. Giordano</div>
-      <div class="pub-venue">IEEE Communications Magazine, October 2024 <span class="pub-venue-badge venue-jour">Journal</span></div>
-    </div>
-    <div class="pub-entry" data-type="net">
-      <h3>Optimizing Network Performance and Reliability with an Integrated SD-WAN and Satellite 6G Architecture</h3>
-      <div class="pub-authors"><strong>L. Borgianni</strong>, D. Adami, S. Giordano</div>
-      <div class="pub-venue">IEEE 6GNet, October 2023 <span class="pub-venue-badge venue-conf">Conference</span></div>
+    <div class="pub-entry" data-type="dist">
+      <h3>Digital Twin for Remote Control of Robotic Arm via Wearable Glove in Smart Agriculture</h3>
+      <div class="pub-authors">C. Bua, <strong>L. Borgianni</strong>, D. Adami, S. Giordano</div>
+      <div class="pub-venue">IEEE WCNC, March 2025 <span class="pub-venue-badge venue-conf">Conference</span></div>
     </div>
   </div>
 
@@ -484,58 +423,57 @@ p{margin-bottom:1.2rem;color:var(--ink2);text-align:justify;}
 
 <!-- EXPERIENCE -->
 <div class="page" id="page-teach">
-  <h1 data-i18n="teach.title">Experience</h1>
-  <p class="page-tagline" data-i18n="teach.tagline">Translating systems architecture into large-scale distributed intelligence applications.</p>
+  <h1 data-i18n="teach.title">Systems Architecture & Experience</h1>
+  <p class="page-tagline" data-i18n="teach.tagline">Engineering real-world infrastructure for strict-latency and high-throughput AI applications.</p>
 
   <div class="exp-timeline">
     <div class="exp-item">
       <div class="exp-header">
-        <h3 data-i18n="exp1.title">Postdoctoral Researcher</h3>
+        <h3 data-i18n="exp1.title">Affiliate Researcher / Postdoc: Low-Latency Biomedical AI</h3>
         <div class="exp-sub">University of Pisa & Stanford Medicine School</div>
-        <div class="exp-desc" data-i18n="exp.1">Developing AI systems for real-time multimodal biomedical signal analysis in collaboration with Stanford Medicine.</div>
+        <div class="exp-desc" data-i18n="exp.1">Architecting the computational pipelines to execute Machine Learning for automated Tracheal Acoustic Monitoring (TAM project). Solving synchronization and real-time processing constraints for multimodal clinical streams.</div>
       </div>
       <span class="exp-date">04/2026 - Present</span>
     </div>
     <div class="exp-item">
       <div class="exp-header">
-        <h3 data-i18n="exp2.title">R&D Engineer & WP8 Leader</h3>
-        <div class="exp-sub">Xtremion / Horizon Europe "EU-TRAINS"</div>
-        <div class="exp-desc" data-i18n="exp.2">Leading the design of distributed Edge AI architectures for wearable intelligence within the Horizon Europe project EU-TRAINS.</div>
+        <h3 data-i18n="exp2.title">Technical Director: Zero-Trust AI Security</h3>
+        <div class="exp-sub">Kalliope Srl / PE SERICS Program (PNRR)</div>
+        <div class="exp-desc" data-i18n="exp.2">Directed the GATE project. Built an advanced virtual PBX platform executing deep neural networks in real-time to detect generative voice deepfakes and vishing, achieving zero-trust security on enterprise VoIP streams.</div>
       </div>
-      <span class="exp-date">11/2025 - Present</span>
+      <span class="exp-date">07/2024 - 09/2025</span>
     </div>
     <div class="exp-item">
       <div class="exp-header">
-        <h3 data-i18n="exp3.title">Visiting Ph.D. Fellow</h3>
+        <h3 data-i18n="exp3.title">Visiting Ph.D. Fellow: Extreme Latency Audio Inference</h3>
         <div class="exp-sub">Stanford University, CCRMA</div>
-        <div class="exp-desc" data-i18n="exp.3">Developed distributed AI and networking architectures for real-time multimedia systems under extreme latency constraints.</div>
+        <div class="exp-desc" data-i18n="exp.3">Developed distributed AI and networking architectures for real-time multimedia systems. Orchestrated Networked Music Performance over volatile LEO satellite links (Starlink), stressing the absolute limits of packet synchronization.</div>
       </div>
       <span class="exp-date">03/2024 - 08/2024</span>
     </div>
     <div class="exp-item">
       <div class="exp-header">
-        <h3 data-i18n="exp4.title">Technical Director (GATE Project)</h3>
-        <div class="exp-sub">Kalliope Srl / PE SERICS Program (PNRR)</div>
-        <div class="exp-desc" data-i18n="exp.4">Directed technical deployment for cybersecurity infrastructure, building AI platforms defending against vishing and generative voice deepfakes.</div>
+        <h3 data-i18n="exp4.title">R&D Engineer & WP8 Leader: Distributed Edge AI</h3>
+        <div class="exp-sub">Xtremion / Horizon Europe "EU-TRAINS"</div>
+        <div class="exp-desc" data-i18n="exp.4">Leading the design of distributed architectures for wearable intelligence within the EU-TRAINS project, enabling real-time technique synthesis and inference allocation under constrained bandwidth.</div>
       </div>
-      <span class="exp-date">07/2024 - 09/2025</span>
+      <span class="exp-date">11/2025 - Present</span>
     </div>
   </div>
 </div>
 
 <!-- NEWS TIMELINE -->
 <div class="page" id="page-news">
-  <h1 data-i18n="news.title">Presentations & Timeline</h1>
-  <p class="page-tagline" data-i18n="news.tagline">Spreading the vision of distributed runtime systems across global scientific communities.</p>
+  <h1 data-i18n="news.title">Impact & Academic Timeline</h1>
+  <p class="page-tagline" data-i18n="news.tagline">Global scientific engagement, technical pitches, and networking community leadership.</p>
   <div class="news-list news-full">
     <div class="news-item"><span class="news-date">05/2026</span><span class="news-text"><span class="news-badge badge-talk">Pitch</span><strong>IEEE ICC 2026 (Glasgow):</strong> Selected as Top 6 international presenter for industrial R&D leaders. Talk: <em>"Semantic Communication Framework for Deepfake Voice Detection"</em>.</span></div>
+    <div class="news-item"><span class="news-date">05/2026</span><span class="news-text"><span class="news-badge badge-pub">Role</span><strong>IEEE ComSoc:</strong> Appointed as IEEE ComSoc Young Professionals (YP) EMEA Regional Representative.</span></div>
     <div class="news-item"><span class="news-date">05/2026</span><span class="news-text"><span class="news-badge badge-pub">Talk</span><strong>IEEE/IFIP NOMS 2026 (Rome):</strong> Paper Presentation: <em>"An AI-Driven SD-WAN Deployment for LEO Satellite and Terrestrial Network Integration"</em>.</span></div>
-    <div class="news-item"><span class="news-date">01/2026</span><span class="news-text"><span class="news-badge badge-talk">Oral</span><strong>Italian Networking Workshop (Bardonecchia):</strong> Oral presentation on <em>"Semantic Experiences in the Wild"</em>.</span></div>
+    <div class="news-item"><span class="news-date">03/2026</span><span class="news-text"><span class="news-badge badge-talk">Outreach</span><strong>STEM UP Project:</strong> Selected expert researcher to deliver orientation bridging academic research and industry opportunities for high school students.</span></div>
     <div class="news-item"><span class="news-date">12/2025</span><span class="news-text"><span class="news-badge badge-award">Finalist</span><strong>IEEE Globecom 2025 (Taipei):</strong> Presented as world finalist at the ComSoc Four Minute Thesis (4MT) Competition. Talk: <em>"Towards Reliable Networks: SD-WAN with LEO Satellites"</em>.</span></div>
     <div class="news-item"><span class="news-date">10/2025</span><span class="news-text"><span class="news-badge badge-talk">Talk</span><strong>IEEE CNSM (Bologna):</strong> Paper presentation: <em>"Decentralized Intelligence for Centralized Control: Multi-Agent RL for SD-WAN"</em>.</span></div>
     <div class="news-item"><span class="news-date">05/2025</span><span class="news-text"><span class="news-badge badge-talk">Talk</span><strong>Stanford University (USA):</strong> Invited Talk at CCRMA: <em>"Can Musicians Play Together Over Satellite Internet?"</em>.</span></div>
-    <div class="news-item"><span class="news-date">04/2025</span><span class="news-text"><span class="news-badge badge-talk">Panel</span><strong>10th Workshop on Molecular Communications (Catania):</strong> Invited Panel Speaker on Future Trends: <em>"6G and Beyond"</em>.</span></div>
-    <div class="news-item"><span class="news-date">01/2024</span><span class="news-text"><span class="news-badge badge-award">Speech</span><strong>Senato della Repubblica Italiana:</strong> Delivered an invited institutional speech at the Senate of the Italian Republic.</span></div>
   </div>
 </div>
 
@@ -545,85 +483,83 @@ p{margin-bottom:1.2rem;color:var(--ink2);text-align:justify;}
 <script>
 const T={
 en:{
-  "profile.role":"AI Systems Architect<br>Postdoctoral Researcher",
+  "profile.role":"AI Systems Architect",
   "sidebar.cv":"Download CV",
-  "nav.home":"Home & Vision","nav.pub":"Research Areas","nav.teach":"Experience","nav.news":"Timeline",
-  "home.tagline":"Building AI Systems that Think Beyond the Cloud",
-  "home.bio1":"I am a Postdoctoral Researcher at the University of Pisa and an Affiliate Researcher at Stanford University. I received my Ph.D. <em>cum laude</em> from the University of Pisa, which included a 6-month visiting fellowship at Stanford CCRMA. My research focuses on the systems challenges that will define the next generation of Artificial Intelligence. Rather than developing larger AI models, I investigate how distributed AI systems can efficiently coordinate computation, communication, and decision making across edge devices, cloud infrastructures, and future networks.",
-  "home.bio2":"Currently, I am part of the Horizon Europe project EU-TRAINS, leading the design of distributed edge AI for sports applications. Concurrently, I collaborate with Stanford Medicine and CCRMA on AI-driven biomedical signal analysis. My work combines distributed systems, networking, machine learning, and real-time multimedia to design scalable AI infrastructures. I use applications such as speech processing, wearable sensing, satellite communications, and networked music performance as demanding real-world testbeds to develop architectures that make large-scale distributed intelligence practical, efficient, and reliable.",
-  "home.cv":"Curriculum Vitae","home.pubLink":"Research Areas",
-  "home.visionTitle":"Research Vision",
-  "home.manifesto":"Artificial Intelligence is rapidly moving from centralized cloud models to billions of intelligent devices operating across heterogeneous environments.<br><br>The next decade will not be limited by larger foundation models, but by our ability to orchestrate computation, communication, and intelligence at planetary scale. My long-term research vision is to build the systems architecture that enables distributed AI to become reliable, efficient, secure, and real-time.",
-  "card1.title":"🌐 Distributed AI Systems",
-  "card1.desc":"Designing architectures that coordinate AI across edge, cloud, and heterogeneous infrastructures.",
-  "card2.title":"⚡ AI Runtime Systems",
-  "card2.desc":"Dynamic orchestration of computation, communication, and energy for large-scale intelligent systems.",
-  "card3.title":"🎙️ Real-Time Multimodal Intelligence",
-  "card3.desc":"Supporting speech, audio, video, and sensor intelligence under strict latency constraints.",
-  "card4.title":"📡 Future AI Infrastructure",
-  "card4.desc":"Building the networking and systems foundations required by the next generation of AI applications.",
-  "home.appTitle":"Applications & Testbeds",
-  "tag.1":"Speech & Audio AI","tag.2":"Wearable Intelligence","tag.3":"Future Communication Networks","tag.4":"Cybersecurity","tag.5":"Digital Health","tag.6":"Satellite & Edge Computing",
-  "pub.title":"Research Areas & Publications",
+  "nav.home":"Home & Vision","nav.pub":"Research Areas","nav.teach":"Systems Built","nav.news":"Impact",
+  "home.tagline":"Architecting the Infrastructure for Large-Scale AI Systems",
+  "home.bio1":"I build the resilient, high-throughput networking and orchestration layers required to scale multimodal AI inference and distributed computation. I am a Postdoctoral Researcher at the University of Pisa and an Affiliate Researcher at Stanford University (CCRMA). I received my Ph.D. <em>cum laude</em> focusing on resilient data-driven networking.",
+  "home.bio2":"The next barrier in AI is not algorithmic; it is infrastructural. My work bridges high-performance networking, machine learning, and systems architecture to solve the hard bottlenecks of large-scale intelligence. I use demanding real-world testbeds—from zero-latency networked audio to automated biomedical detection (TAM project, Stanford Medicine) and real-time enterprise cybersecurity—to build systems that execute complex inferences when bandwidth, latency, and synchronization are critical constraints.",
+  "home.cv":"Curriculum Vitae","home.pubLink":"Research & Systems",
+  "home.visionTitle":"Research & Engineering Vision",
+  "home.manifesto":"Scaling real-time intelligence requires moving beyond static hardware topologies to dynamic, zero-latency architectures. I build the operating systems, the routing logic, and the network orchestration layers that allow thousands of models and agents to collaborate seamlessly across the edge-cloud continuum.",
+  "card1.title":"🌐 AI Cluster & Network Infrastructure",
+  "card1.desc":"Overcoming network congestion bottlenecks. Applying Reinforcement Learning (PPO) and multi-agent systems to dynamically orchestrate data streams and computing power.",
+  "card2.title":"⚡ Low-Latency AI Serving",
+  "card2.desc":"Designing system architectures capable of sustaining real-time AI serving and semantic inference under strict, sub-millisecond latency constraints.",
+  "card3.title":"🎙️ Multimodal Inference Systems",
+  "card3.desc":"Building pipelines for heavy, multimodal workloads (speech, audio, biomedical signals) as the ultimate stress test for synchronized distributed networks.",
+  "card4.title":"🔒 Zero-Trust AI Security",
+  "card4.desc":"Deploying real-time neural networks at the network edge to secure enterprise VoIP infrastructure against generative voice fraud and deepfakes.",
+  "home.appTitle":"Production Applications & Testbeds",
+  "tag.1":"AI Cluster Networking","tag.2":"Large-Scale Inference","tag.3":"Real-Time Audio Processing","tag.4":"Cybersecurity Infrastructure","tag.5":"Biomedical ML","tag.6":"LEO Satellite Orchestration",
+  "pub.title":"Research Areas & Systems Built",
   "pub.tagline":"Pioneering literature across the foundational pillars of the next-generation AI infrastructure.",
-  "pub.f.all":"All Publications","pub.f.dist":"Distributed AI Systems","pub.f.infra":"AI Infrastructure","pub.f.media":"Multimodal Intelligence","pub.f.net":"Intelligent Networks",
+  "pub.f.all":"All Publications","pub.f.infra":"AI Infrastructure & Networking","pub.f.media":"Low-Latency Multimodal AI","pub.f.dist":"Distributed AI Systems",
+  "pub.label.infra":"AI Infrastructure & Large-Scale Networking",
+  "pub.label.media":"Low-Latency Multimodal AI",
   "pub.label.dist":"Distributed AI Systems",
-  "pub.label.infra":"AI Infrastructure",
-  "pub.label.media":"Real-Time Multimodal Intelligence",
-  "pub.label.net":"Intelligent Networks",
-  "teach.title":"Experience",
-  "teach.tagline":"Translating systems architecture into large-scale distributed intelligence applications.",
-  "exp1.title":"Postdoctoral Researcher",
-  "exp2.title":"R&D Engineer & WP8 Leader",
-  "exp3.title":"Visiting Ph.D. Fellow",
-  "exp4.title":"Technical Director (GATE Project)",
-  "exp.1":"Developing AI systems for real-time multimodal biomedical signal analysis in collaboration with Stanford Medicine.",
-  "exp.2":"Leading the design of distributed Edge AI architectures for wearable intelligence within the Horizon Europe project EU-TRAINS.",
-  "exp.3":"Developed distributed AI and networking architectures for real-time multimedia systems under extreme latency constraints.",
-  "exp.4":"Directed technical deployment for cybersecurity infrastructure, building AI platforms defending against vishing and generative voice deepfakes.",
-  "news.title":"Presentations & Timeline",
-  "news.tagline":"Spreading the vision of distributed runtime systems across global scientific communities.",
+  "teach.title":"Systems Architecture & Experience",
+  "teach.tagline":"Engineering real-world infrastructure for strict-latency and high-throughput AI applications.",
+  "exp1.title":"Affiliate Researcher / Postdoc: Low-Latency Biomedical AI",
+  "exp2.title":"Technical Director: Zero-Trust AI Security",
+  "exp3.title":"Visiting Ph.D. Fellow: Extreme Latency Audio Inference",
+  "exp4.title":"R&D Engineer & WP8 Leader: Distributed Edge AI",
+  "exp.1":"Architecting the computational pipelines to execute Machine Learning for automated Tracheal Acoustic Monitoring (TAM project). Solving synchronization and real-time processing constraints for multimodal clinical streams.",
+  "exp.2":"Directed the GATE project. Built an advanced virtual PBX platform executing deep neural networks in real-time to detect generative voice deepfakes and vishing, achieving zero-trust security on enterprise VoIP streams.",
+  "exp.3":"Developed distributed AI and networking architectures for real-time multimedia systems. Orchestrated Networked Music Performance over volatile LEO satellite links (Starlink), stressing the absolute limits of packet synchronization.",
+  "exp.4":"Leading the design of distributed architectures for wearable intelligence within the EU-TRAINS project, enabling real-time technique synthesis and inference allocation under constrained bandwidth.",
+  "news.title":"Impact & Academic Timeline",
+  "news.tagline":"Global scientific engagement, technical pitches, and networking community leadership.",
   "footer.updated":"Last updated: July 2026"
 },
 it:{
-  "profile.role":"AI Systems Architect<br>Assegnista di Ricerca",
+  "profile.role":"AI Systems Architect",
   "sidebar.cv":"Scarica il CV",
-  "nav.home":"Home & Visione","nav.pub":"Aree di Ricerca","nav.teach":"Esperienza","nav.news":"Timeline",
-  "home.tagline":"Costruire sistemi AI che pensano oltre il Cloud",
-  "home.bio1":"Sono un Assegnista di Ricerca presso l'Università di Pisa e un Affiliate Researcher alla Stanford University. Ho conseguito il dottorato <em>cum laude</em> presso l'Università di Pisa, includendo un periodo di visiting fellowship di 6 mesi presso il CCRMA di Stanford. La mia ricerca si concentra sulle sfide infrastrutturali che definiranno la prossima generazione di Intelligenza Artificiale. Invece di sviluppare modelli AI sempre più grandi, studio come i sistemi AI distribuiti possano coordinare in modo efficiente calcolo, comunicazione e decisioni tra dispositivi edge, infrastrutture cloud e reti del futuro.",
-  "home.bio2":"Attualmente faccio parte del progetto Horizon Europe EU-TRAINS, dove guido la progettazione di edge AI distribuita per applicazioni sportive. Parallelamente, collaboro con Stanford Medicine e CCRMA sull'analisi dei segnali biomedici guidata dall'AI. Il mio lavoro combina sistemi distribuiti, networking, machine learning e multimedia in tempo reale per progettare infrastrutture AI scalabili. Utilizzo applicazioni come l'elaborazione vocale, i sensori wearable, le comunicazioni satellitari e le performance musicali in rete come rigorosi banchi di prova per sviluppare architetture che rendano l'intelligenza distribuita su larga scala pratica, efficiente e affidabile.",
-  "home.cv":"Curriculum Vitae","home.pubLink":"Aree di Ricerca",
-  "home.visionTitle":"Visione Scientifica",
-  "home.manifesto":"L'Intelligenza Artificiale si sta rapidamente spostando dai modelli centralizzati su cloud a miliardi di dispositivi intelligenti che operano in ambienti eterogenei.<br><br>Il prossimo decennio non sarà limitato da modelli fondazionali più grandi, ma dalla nostra capacità di orchestrare calcolo, comunicazione e intelligenza su scala planetaria. La mia visione di ricerca a lungo termine è costruire l'architettura di sistema che permetta all'AI distribuita di diventare affidabile, efficiente, sicura e in tempo reale.",
-  "card1.title":"🌐 Sistemi AI Distribuiti",
-  "card1.desc":"Progettazione di architetture che coordinano l'AI attraverso edge, cloud e infrastrutture eterogenee.",
-  "card2.title":"⚡ Sistemi Runtime AI",
-  "card2.desc":"Orchestrazione dinamica di calcolo, comunicazione ed energia per sistemi intelligenti su larga scala.",
-  "card3.title":"🎙️ Intelligenza Multimodale in Tempo Reale",
-  "card3.desc":"Supportare intelligenza vocale, audio, video e sensoriale sotto stretti vincoli di latenza.",
-  "card4.title":"📡 Infrastruttura AI del Futuro",
-  "card4.desc":"Costruire le fondamenta di rete e di sistema richieste dalla prossima generazione di applicazioni AI.",
-  "home.appTitle":"Applicazioni e Testbed",
-  "tag.1":"Speech & Audio AI","tag.2":"Wearable Intelligence","tag.3":"Reti di Comunicazione Future","tag.4":"Cybersecurity","tag.5":"Digital Health","tag.6":"Satellite & Edge Computing",
-  "pub.title":"Aree di Ricerca & Pubblicazioni",
+  "nav.home":"Home & Visione","nav.pub":"Aree di Ricerca","nav.teach":"Sistemi e Architetture","nav.news":"Impatto",
+  "home.tagline":"Architettare l'Infrastruttura per i Sistemi AI su Larga Scala",
+  "home.bio1":"Progetto i livelli di orchestrazione e networking ad alto throughput necessari per scalare l'inferenza AI multimodale e il calcolo distribuito. Sono Assegnista di Ricerca presso l'Università di Pisa e Affiliate Researcher alla Stanford University (CCRMA). Ho conseguito il dottorato <em>cum laude</em> concentrandomi sul networking resiliente guidato dai dati.",
+  "home.bio2":"La prossima barriera nell'AI non è algoritmica; è infrastrutturale. Il mio lavoro unisce networking ad alte prestazioni, machine learning e architettura di sistema per risolvere i colli di bottiglia dell'intelligenza su larga scala. Utilizzo rigorosi banchi di prova—dall'audio in rete a zero latenza all'analisi biomedica automatizzata (progetto TAM, Stanford Medicine), fino alla cybersecurity enterprise—per costruire sistemi che eseguono inferenze complesse quando larghezza di banda, latenza e sincronizzazione sono limiti critici.",
+  "home.cv":"Curriculum Vitae","home.pubLink":"Ricerca e Sistemi",
+  "home.visionTitle":"Visione Architetturale e Scientifica",
+  "home.manifesto":"Scalare l'intelligenza in tempo reale richiede di andare oltre le topologie hardware statiche verso architetture dinamiche a latenza zero. Costruisco i sistemi operativi, la logica di routing e i layer di orchestrazione di rete che permettono a migliaia di modelli e agenti di collaborare senza interruzioni lungo il continuum edge-cloud.",
+  "card1.title":"🌐 Infrastrutture AI di Rete e Cluster",
+  "card1.desc":"Superare i colli di bottiglia della congestione di rete. Applicare il Reinforcement Learning (PPO) per orchestrare dinamicamente flussi di dati e potenza di calcolo.",
+  "card2.title":"⚡ Low-Latency AI Serving",
+  "card2.desc":"Progettare architetture di sistema in grado di sostenere l'erogazione AI e l'inferenza semantica in tempo reale sotto stretti vincoli di latenza sub-millisecondo.",
+  "card3.title":"🎙️ Sistemi di Inferenza Multimodale",
+  "card3.desc":"Costruire pipeline per carichi di lavoro pesanti (voce, audio, segnali biomedici) come stress test definitivo per le reti distribuite sincronizzate.",
+  "card4.title":"🔒 Sicurezza AI Zero-Trust",
+  "card4.desc":"Implementare reti neurali in tempo reale all'edge per proteggere l'infrastruttura VoIP aziendale contro frodi vocali generative e deepfake.",
+  "home.appTitle":"Applicazioni e Testbed Produttivi",
+  "tag.1":"AI Cluster Networking","tag.2":"Inferenza Larga Scala","tag.3":"Audio Processing Real-Time","tag.4":"Cybersecurity Infrastrutturale","tag.5":"Machine Learning Biomedico","tag.6":"Orchestrazione Satellitare LEO",
+  "pub.title":"Aree di Ricerca e Sistemi Realizzati",
   "pub.tagline":"Letteratura scientifica sui pilastri fondazionali dell'infrastruttura AI di prossima generazione.",
-  "pub.f.all":"Tutte le Pubblicazioni","pub.f.dist":"Sistemi AI Distribuiti","pub.f.infra":"Infrastruttura AI","pub.f.media":"Intelligenza Multimodale","pub.f.net":"Reti Intelligenti",
+  "pub.f.all":"Tutte le Pubblicazioni","pub.f.infra":"Infrastruttura AI e Reti","pub.f.media":"AI Multimodale Bassa Latenza","pub.f.dist":"Sistemi AI Distribuiti",
+  "pub.label.infra":"Infrastruttura AI e Networking su Larga Scala",
+  "pub.label.media":"AI Multimodale a Bassa Latenza",
   "pub.label.dist":"Sistemi AI Distribuiti",
-  "pub.label.infra":"Infrastruttura AI",
-  "pub.label.media":"Intelligenza Multimodale in Tempo Reale",
-  "pub.label.net":"Reti Intelligenti",
-  "teach.title":"Esperienza",
-  "teach.tagline":"Tradurre l'architettura di sistema in applicazioni di intelligenza distribuita su larga scala.",
-  "exp1.title":"Assegnista di Ricerca",
-  "exp2.title":"R&D Engineer & WP8 Leader",
-  "exp3.title":"Visiting Ph.D. Fellow",
-  "exp4.title":"Direttore Tecnico (Progetto GATE)",
-  "exp.1":"Sviluppo di sistemi AI per l'analisi real-time di segnali biomedici multimodali in collaborazione con Stanford Medicine.",
-  "exp.2":"Guida alla progettazione di architetture Edge AI distribuite per intelligenza wearable all'interno del progetto Horizon Europe EU-TRAINS.",
-  "exp.3":"Sviluppo di architetture AI e di rete distribuite per sistemi multimediali in tempo reale sotto vincoli di latenza estremi.",
-  "exp.4":"Direzione tecnica per infrastruttura di cybersecurity, costruendo piattaforme AI a difesa da vishing e deepfake vocali generativi.",
-  "news.title":"Presentazioni & Timeline",
-  "news.tagline":"Diffondere la visione dei sistemi di runtime distribuiti nelle comunità scientifiche globali.",
+  "teach.title":"Architettura di Sistema ed Esperienza",
+  "teach.tagline":"Ingegnerizzare l'infrastruttura reale per applicazioni AI ad alta capacità e latenza critica.",
+  "exp1.title":"Affiliate Researcher / Postdoc: AI Biomedica",
+  "exp2.title":"Direttore Tecnico: Sicurezza AI Zero-Trust",
+  "exp3.title":"Visiting Ph.D. Fellow: Inferenza Audio Estrema",
+  "exp4.title":"R&D Engineer & WP8 Leader: Edge AI",
+  "exp.1":"Progettazione delle pipeline computazionali per eseguire il Machine Learning per il monitoraggio acustico tracheale automatizzato (progetto TAM). Risoluzione dei vincoli di sincronizzazione ed elaborazione in tempo reale per flussi clinici multimodali.",
+  "exp.2":"Direzione del progetto GATE. Costruzione di una piattaforma PBX virtuale avanzata in grado di eseguire reti neurali profonde in tempo reale per rilevare deepfake vocali, ottenendo una sicurezza zero-trust sui flussi VoIP aziendali.",
+  "exp.3":"Sviluppo di architetture AI e di networking distribuite per sistemi multimediali. Orchestrazione di esecuzioni musicali in rete su collegamenti satellitari LEO volatili (Starlink), stressando i limiti assoluti della sincronizzazione dei pacchetti.",
+  "exp.4":"Guida della progettazione di architetture distribuite per l'intelligenza wearable all'interno del progetto EU-TRAINS, consentendo la sintesi della tecnica in tempo reale e l'allocazione dell'inferenza con larghezza di banda vincolata.",
+  "news.title":"Impatto e Timeline Accademica",
+  "news.tagline":"Coinvolgimento scientifico globale, presentazioni tecniche e leadership nella comunità.",
   "footer.updated":"Ultimo aggiornamento: Luglio 2026"
 }
 };
