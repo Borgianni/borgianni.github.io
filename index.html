@@ -560,6 +560,10 @@ p{margin-bottom:1.2rem;color:var(--ink2);text-align:justify;font-size:1.05rem;}
   <div class="interest-section">
     <h2 data-i18n="inter.music.title">🎵 Audio Synthesis & Music</h2>
     <p data-i18n="inter.music.desc">I am a songwriter and acoustic guitar player, having published original music on YouTube and Spotify. This intrinsic connection to the physics of sound and musical composition directly drives my academic pursuit of Networked Music Performance and real-time audio reconstruction at the edge of the network.</p>
+
+    <div class="quick-links" style="margin-top:.75rem">
+      <a href="https://open.spotify.com/intl-it/artist/78SRmXQOv87oVZ3GVWlpIj" target="_blank" rel="noopener noreferrer" class="qlink">🎧 Spotify</a>
+    </div>
   </div>
 </div>
 
@@ -725,7 +729,8 @@ function setLang(l){
   
   const activeBtn = document.querySelector('.filter-btn.active');
   if (activeBtn) {
-    const match = activeBtn.getAttribute('onclick')?.match(/'([^']+)'/);
+    const onclickValue = activeBtn.getAttribute('onclick');
+    const match = onclickValue ? onclickValue.match(/'([^']+)'/) : null;
     filterPubs(activeBtn, match ? match[1] : 'all');
   }
 }
