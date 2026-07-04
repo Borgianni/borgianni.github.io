@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Luca Borgianni, Ph.D. — AI Systems & Infrastructure Architect</title>
+<title>Luca Borgianni, Ph.D. — AI Systems Architect</title>
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
@@ -33,10 +33,7 @@ ul{list-style:none;}
   border:2px solid var(--border);display:flex;align-items:center;
   justify-content:center;font-size:2rem;margin-bottom:1.25rem;overflow:hidden;
 }
-.profile-photo img{
-  width:100%;height:100%;object-fit:cover;display:block;
-}
-.profile-photo img:not([src]),.home-photo img:not([src]){display:none;}
+.profile-photo img{width:100%;height:100%;object-fit:cover;display:block;}
 .sidebar-name{font-family:var(--ff-serif);font-size:1.3rem;font-weight:600;color:var(--ink);line-height:1.2;margin-bottom:.3rem;}
 .sidebar-role{font-size:.85rem;font-weight:700;color:var(--accent);line-height:1.45;margin-bottom:.2rem; letter-spacing: 0.02em;}
 .sidebar-uni{font-size:.8rem;color:var(--muted);font-weight:500;margin-bottom:1.5rem;}
@@ -72,7 +69,7 @@ nav ul li a .nav-icon{font-size:.95rem;opacity:.8;width:18px;text-align:center;c
 .mobile-contact-row a{font-size:.85rem;color:var(--muted);padding:.4rem .8rem;border:1px solid var(--border);border-radius:4px;font-weight:600;}
 
 /* PAGES */
-.page{display:none;padding:4.5rem 5.5rem;max-width:1000px;}
+.page{display:none;padding:4.5rem 5.5rem;max-width:1050px;}
 .page.active{display:block;animation:fadeUp .35s ease both;}
 @keyframes fadeUp{from{opacity:0;transform:translateY(15px);}to{opacity:1;transform:translateY(0);}}
 
@@ -86,7 +83,7 @@ p{margin-bottom:1.2rem;color:var(--ink2);text-align:justify;font-size:1.05rem;}
 
 /* HOME */
 .home-intro{display:flex;gap:3.5rem;align-items:flex-start;margin-bottom:3.5rem;}
-.home-photo{width:150px;height:150px;border-radius:12px;flex-shrink:0;background:var(--bg2);box-shadow:0 10px 25px rgba(0,0,0,0.08);display:flex;align-items:center;justify-content:center;overflow:hidden;}
+.home-photo{width:160px;height:160px;border-radius:12px;flex-shrink:0;background:var(--bg2);box-shadow:0 10px 25px rgba(0,0,0,0.08);display:flex;align-items:center;justify-content:center;overflow:hidden;}
 .home-photo img{width:100%;height:100%;object-fit:cover;display:block;}
 .home-bio p:first-child{font-size:1.2rem; font-weight: 600; color: var(--ink);}
 
@@ -101,53 +98,6 @@ p{margin-bottom:1.2rem;color:var(--ink2);text-align:justify;font-size:1.05rem;}
   line-height: 1.7;
 }
 
-.research-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 1.75rem;
-  margin-bottom: 3rem;
-}
-.research-card {
-  padding: 1.75rem;
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  background: var(--white);
-  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
-}
-.research-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 24px rgba(15, 23, 42, 0.06);
-  border-color: var(--accent);
-}
-.research-card h3 {
-  color: var(--ink);
-  margin-bottom: 0.75rem;
-  font-size: 1.1rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-.research-card p {
-  font-size: 0.95rem;
-  margin: 0;
-  color: var(--muted);
-}
-
-.app-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.6rem;
-  margin-top: 1rem;
-}
-.app-tag {
-  font-size: 0.85rem;
-  font-weight: 700;
-  color: var(--blue);
-  background: var(--bg2);
-  padding: 0.35rem 0.9rem;
-  border-radius: 6px;
-}
-
 .quick-links{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:2.5rem;}
 .qlink{display:inline-flex;align-items:center;gap:.5rem;padding:.7rem 1.4rem;border-radius:6px;font-size:.9rem;font-weight:700;border:1px solid var(--border);color:var(--ink);transition:all .2s;background:var(--white);}
 .qlink:hover{border-color:var(--ink);text-decoration:none;box-shadow:0 4px 6px rgba(0,0,0,0.05);}
@@ -155,23 +105,24 @@ p{margin-bottom:1.2rem;color:var(--ink2);text-align:justify;font-size:1.05rem;}
 .qlink.primary:hover{background:var(--ink2);color:var(--white);}
 
 /* PUBLICATIONS */
-.pub-filters{display:flex;gap:.6rem;flex-wrap:wrap;margin-bottom:3rem;}
+.pub-filters{display:flex;gap:.6rem;flex-wrap:wrap;margin-bottom:2.5rem;}
 .filter-btn{padding:.45rem 1.2rem;border-radius:6px;border:1px solid var(--border);background:var(--bg);font-family:var(--ff-sans);font-size:.85rem;font-weight: 700;cursor:pointer;color:var(--muted);transition:all .2s;}
 .filter-btn.active,.filter-btn:hover{background:var(--ink);color:var(--white);border-color:var(--ink);}
 .pub-year-group{margin-bottom:3rem;}
 .pub-year-label{font-size:.95rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:1.2rem;display:flex;align-items:center;gap:.75rem;}
 .pub-year-label::after{content:'';flex:1;height:2px;background:var(--bg2);}
-.pub-entry{padding:1.4rem 1.75rem;margin-bottom:1rem;border:1px solid var(--border);border-radius:8px;background:var(--white);transition:border-color .2s,box-shadow .2s;}
+.pub-entry{padding:1.2rem 1.5rem;margin-bottom:.85rem;border:1px solid var(--border);border-radius:8px;background:var(--white);transition:border-color .2s,box-shadow .2s;}
 .pub-entry:hover{border-color:var(--accent);box-shadow:0 4px 12px rgba(37, 99, 235, 0.05);}
-.pub-entry h3{font-size:1.05rem;line-height:1.45;margin-bottom:.5rem;}
-.pub-authors{font-size:.95rem;color:var(--muted);margin-bottom:.4rem;}
+.pub-entry h3{font-size:1.05rem;line-height:1.4;margin-bottom:.3rem;}
+.pub-authors{font-size:.9rem;color:var(--muted);margin-bottom:.3rem;}
 .pub-authors strong{color:var(--ink);font-weight:700;}
 .pub-venue{font-size:.85rem;color:var(--ink2);font-style:italic; font-weight: 500;}
-.pub-venue-badge{display:inline-block;font-size:.7rem;font-weight:800;padding:.15rem .6rem;border-radius:4px;margin-left:.6rem;vertical-align:middle;letter-spacing:.05em; font-style: normal;}
+.pub-venue-badge{display:inline-block;font-size:.65rem;font-weight:800;padding:.15rem .5rem;border-radius:4px;margin-left:.6rem;vertical-align:middle;letter-spacing:.05em; font-style: normal;}
 .venue-conf{background:var(--bg2);color:var(--ink);}
 .venue-jour{background:#dbeafe;color:#1e40af;}
+.venue-book{background:#fef0e6;color:#c0620a;}
 
-/* TEACHING & EXPERIENCE */
+/* EXPERIENCE & TEACHING */
 .exp-timeline{display:flex;flex-direction:column;gap:1.5rem;margin-bottom:3.5rem;}
 .exp-item{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:1.75rem;display:flex;justify-content:space-between;align-items:flex-start;gap:1.5rem;}
 .exp-header h3{font-size:1.15rem;color:var(--ink);margin-bottom:0.2rem;}
@@ -179,30 +130,66 @@ p{margin-bottom:1.2rem;color:var(--ink2);text-align:justify;font-size:1.05rem;}
 .exp-desc{font-size:0.95rem;color:var(--ink2); line-height: 1.6;}
 .exp-date{font-size:0.85rem;font-weight:700;color:var(--ink);white-space:nowrap;background:var(--bg2);padding:0.35rem 0.8rem;border-radius:6px; letter-spacing: 0.02em;}
 
-/* NEWS FULL */
+.course-list{display:flex;flex-direction:column;gap:1px;background:var(--border);border:1px solid var(--border);border-radius:8px;overflow:hidden;margin-bottom:2.5rem;}
+.course-item{background:var(--white);padding:1.25rem 1.5rem;display:flex;gap:1.5rem;align-items:flex-start;transition:background .15s;}
+.course-item:hover{background:var(--bg);}
+.course-code{font-size:.8rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);white-space:nowrap;padding-top:.2rem;min-width:80px;}
+.course-name{font-size:1rem;font-weight:700;color:var(--ink);margin-bottom:.2rem;}
+.course-meta{font-size:.85rem;color:var(--muted);}
+.course-role{font-size:.75rem;font-weight:700;padding:.15rem .6rem;border-radius:4px;background:var(--blue-lt);color:var(--accent);white-space:nowrap;align-self:flex-start;margin-top:.25rem;}
+
+.thesis-list {margin-left: 1.5rem; list-style-type: square; margin-bottom: 2rem; color: var(--ink2); font-size: 0.95rem; display: flex; flex-direction: column; gap: 0.5rem;}
+.thesis-list li {line-height: 1.5;}
+
+/* TALKS FULL */
 .news-list{display:flex;flex-direction:column;}
 .news-item{display:flex;gap:1.5rem;padding:1.25rem 0;border-bottom:1px solid var(--border);align-items:flex-start; flex-direction: column;}
 .news-item:first-child{border-top:1px solid var(--border);}
 .news-date{font-size:.85rem;color:var(--accent);white-space:nowrap;font-weight:800;min-width:85px; margin-bottom: 0.3rem;}
-.news-text{font-size:1.05rem; line-height: 1.6; color:var(--ink);}
+.news-text{font-size:1rem; line-height: 1.6; color:var(--ink);}
 .news-badge{display:inline-block;font-size:.7rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:.2rem .6rem;border-radius:4px;margin-right:.6rem;vertical-align:middle;}
 .badge-talk{background:#fef0e6;color:#c0620a;}
 .badge-award{background:#fdf0f0;color:#b03030;}
 .badge-pub{background:#e8f0e8;color:#2a6e2a;}
 
+/* PERFORMANCE & MULTIMEDIA */
+.interest-section{margin-bottom:3.5rem;}
+.interest-section h2{margin-top:0;}
+.yt-card{display:flex;gap:1.5rem;align-items:center;padding:1.5rem;border:1px solid var(--border);border-radius:10px;background:var(--white);margin-bottom:1rem;transition:border-color .2s;}
+.yt-card:hover{border-color:var(--accent);}
+.yt-thumb{width:140px;height:80px;border-radius:6px;flex-shrink:0;background:linear-gradient(135deg,#db4437,#e66a5e);display:flex;align-items:center;justify-content:center;font-size:1.5rem;color:white;font-weight:bold; letter-spacing: -0.05em;}
+.yt-info h3{font-size:1.1rem;margin-bottom:.3rem;}
+.yt-info p{font-size:.95rem;margin:0;color:var(--muted);}
+.tri-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:10px;overflow:hidden;margin:1.5rem 0 2.5rem;}
+.tri-stat{background:var(--white);padding:1.5rem;text-align:center;}
+.tri-num{font-family:var(--ff-serif);font-size:2rem;font-weight:600;color:var(--accent);line-height:1;}
+.tri-label{font-size:.85rem;font-weight:600;color:var(--muted);margin-top:.5rem;}
+
+.sport-feature{display:grid;grid-template-columns:250px 1fr;gap:1.75rem;align-items:stretch;margin:1.5rem 0 2.5rem;}
+.sport-photo{border-radius:10px;overflow:hidden;border:1px solid var(--border);background:var(--white);min-height:220px;}
+.sport-photo img{width:100%;height:100%;object-fit:cover;display:block;}
+.sport-results{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:1.5rem;}
+.sport-results h3{margin-bottom:1.2rem;}
+.result-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.75rem 1rem;}
+.result-item{font-size:.9rem;color:var(--ink2);padding:.5rem .75rem;background:var(--bg);border-radius:6px;}
+.result-year{font-weight:800;color:var(--accent);margin-right:.5rem;}
+
 /* FOOTER */
 .page-footer{margin-top:5rem;padding-top:2rem;border-top:2px solid var(--bg2);font-size:.9rem;font-weight:600;color:var(--muted);}
 
 /* RESPONSIVE */
-@media(max-width:900px){
+@media(max-width:950px){
   #sidebar{display:none;}#topbar{display:flex;}
   #main{margin-left:0;padding-top:55px;}
   .page{padding:3rem 2.5rem;}
   .home-intro{flex-direction:column;gap:2rem;}
 }
-@media(max-width:600px){
+@media(max-width:650px){
   .exp-item{flex-direction:column; gap: 1rem;}
   .exp-date{align-self: flex-start;}
+  .sport-feature{grid-template-columns:1fr;}
+  .yt-card{flex-direction:column; align-items:flex-start;}
+  .result-grid{grid-template-columns:1fr;}
 }
 </style>
 </head>
@@ -222,9 +209,10 @@ p{margin-bottom:1.2rem;color:var(--ink2);text-align:justify;font-size:1.05rem;}
   <div class="sidebar-divider"></div>
   <nav><ul>
     <li><a href="#home"  class="nav-link active" onclick="go('home')"> <span class="nav-icon">⌂</span>  <span data-i18n="nav.home">Home & Vision</span></a></li>
-    <li><a href="#pub"   class="nav-link"         onclick="go('pub')">  <span class="nav-icon">📄</span> <span data-i18n="nav.pub">Research Areas</span></a></li>
-    <li><a href="#teach" class="nav-link"         onclick="go('teach')"><span class="nav-icon">⚙️</span> <span data-i18n="nav.teach">Systems & Experience</span></a></li>
-    <li><a href="#news"  class="nav-link"         onclick="go('news')"> <span class="nav-icon">🚀</span> <span data-i18n="nav.news">Timeline & Impact</span></a></li>
+    <li><a href="#pub"   class="nav-link"         onclick="go('pub')">  <span class="nav-icon">📄</span> <span data-i18n="nav.pub">Publications (28)</span></a></li>
+    <li><a href="#teach" class="nav-link"         onclick="go('teach')"><span class="nav-icon">⚙️</span> <span data-i18n="nav.teach">Experience & Teaching</span></a></li>
+    <li><a href="#talks" class="nav-link"         onclick="go('talks')"> <span class="nav-icon">🚀</span> <span data-i18n="nav.talks">Talks & Service</span></a></li>
+    <li><a href="#inter" class="nav-link"         onclick="go('inter')"><span class="nav-icon">✦</span> <span data-i18n="nav.inter">Performance & Media</span></a></li>
   </ul></nav>
   <div class="sidebar-divider"></div>
   <div class="sidebar-contacts">
@@ -249,9 +237,10 @@ p{margin-bottom:1.2rem;color:var(--ink2);text-align:justify;font-size:1.05rem;}
 </div>
 <div id="mobile-nav">
   <a href="#home"  onclick="go('home');toggleNav()"> <span data-i18n="nav.home">Home & Vision</span></a>
-  <a href="#pub"   onclick="go('pub');toggleNav()">  <span data-i18n="nav.pub">Research</span></a>
-  <a href="#teach" onclick="go('teach');toggleNav()"> <span data-i18n="nav.teach">Experience</span></a>
-  <a href="#news"  onclick="go('news');toggleNav()"> <span data-i18n="nav.news">Timeline</span></a>
+  <a href="#pub"   onclick="go('pub');toggleNav()">  <span data-i18n="nav.pub">Publications</span></a>
+  <a href="#teach" onclick="go('teach');toggleNav()"> <span data-i18n="nav.teach">Experience & Teaching</span></a>
+  <a href="#talks" onclick="go('talks');toggleNav()"> <span data-i18n="nav.talks">Talks & Service</span></a>
+  <a href="#inter" onclick="go('inter');toggleNav()"> <span data-i18n="nav.inter">Performance</span></a>
   <div class="mobile-contact-row">
     <a href="mailto:luca.borgianni@unipi.it">✉ Email</a>
     <a href="CV_Borgianni.pdf" target="_blank">📄 CV</a>
@@ -269,13 +258,13 @@ p{margin-bottom:1.2rem;color:var(--ink2);text-align:justify;font-size:1.05rem;}
       <h1>Luca Borgianni, Ph.D.</h1>
       <p class="page-tagline" data-i18n="home.tagline">Architecting the Infrastructure for Large-Scale AI Systems</p>
       
-      <p data-i18n="home.bio1">I build the resilient, high-throughput networking and orchestration layers required to scale multimodal AI inference and distributed computation. I am a Postdoctoral Researcher at the University of Pisa and an Affiliate Researcher at Stanford University (CCRMA). I received my Ph.D. <em>cum laude</em> focusing on resilient data-driven networking.</p>
+      <p data-i18n="home.bio1">I build the resilient, high-throughput networking and orchestration layers required to scale multimodal AI inference and distributed computation. I am a Postdoctoral Researcher at the University of Pisa and currently serve as an Affiliate Researcher at Stanford University (CCRMA). I received my Ph.D. <em>cum laude</em> focusing on resilient data-driven networking.</p>
       
       <p data-i18n="home.bio2">The next barrier in AI is not algorithmic; it is infrastructural. My work bridges high-performance networking, machine learning, and systems architecture to solve the hard bottlenecks of large-scale intelligence. I use demanding real-world testbeds—from zero-latency networked audio to automated biomedical detection (TAM project, Stanford Medicine) and real-time enterprise cybersecurity—to build systems that execute complex inferences when bandwidth, latency, and synchronization are critical constraints.</p>
       
       <div class="quick-links">
         <a href="CV_Borgianni.pdf" target="_blank" class="qlink primary">📄 <span data-i18n="home.cv">Curriculum Vitae</span></a>
-        <a href="#pub" class="qlink" onclick="go('pub');return false">📚 <span data-i18n="home.pubLink">Research & Systems</span></a>
+        <a href="#pub" class="qlink" onclick="go('pub');return false">📚 <span data-i18n="home.pubLink">Research & Publications</span></a>
       </div>
     </div>
   </div>
@@ -287,33 +276,12 @@ p{margin-bottom:1.2rem;color:var(--ink2);text-align:justify;font-size:1.05rem;}
     Scaling real-time intelligence requires moving beyond static hardware topologies to dynamic, zero-latency architectures. I build the operating systems, the routing logic, and the network orchestration layers that allow thousands of models and agents to collaborate seamlessly across the edge-cloud continuum.
   </div>
 
-  <div class="research-grid">
-    <div class="research-card">
-      <h3 data-i18n="card1.title">🌐 AI Cluster & Network Infrastructure</h3>
-      <p data-i18n="card1.desc">Overcoming network congestion bottlenecks. Applying Reinforcement Learning (PPO) and multi-agent systems to dynamically orchestrate data streams and computing power.</p>
-    </div>
-    <div class="research-card">
-      <h3 data-i18n="card2.title">⚡ Low-Latency AI Serving</h3>
-      <p data-i18n="card2.desc">Designing system architectures capable of sustaining real-time AI serving and semantic inference under strict, sub-millisecond latency constraints.</p>
-    </div>
-    <div class="research-card">
-      <h3 data-i18n="card3.title">🎙️ Multimodal Inference Systems</h3>
-      <p data-i18n="card3.desc">Building pipelines for heavy, multimodal workloads (speech, audio, biomedical signals) as the ultimate stress test for synchronized distributed networks.</p>
-    </div>
-    <div class="research-card">
-      <h3 data-i18n="card4.title">🔒 Zero-Trust AI Security</h3>
-      <p data-i18n="card4.desc">Deploying real-time neural networks at the network edge to secure enterprise VoIP infrastructure against generative voice fraud and deepfakes.</p>
-    </div>
-  </div>
-
-  <h2 data-i18n="home.appTitle">Production Applications & Testbeds</h2>
-  <div class="app-tags">
-    <span class="app-tag" data-i18n="tag.1">AI Cluster Networking</span>
-    <span class="app-tag" data-i18n="tag.2">Large-Scale Inference</span>
-    <span class="app-tag" data-i18n="tag.3">Real-Time Audio Processing</span>
-    <span class="app-tag" data-i18n="tag.4">Cybersecurity Infrastructure</span>
-    <span class="app-tag" data-i18n="tag.5">Biomedical ML</span>
-    <span class="app-tag" data-i18n="tag.6">LEO Satellite Orhcestration</span>
+  <h2 data-i18n="home.newsTitle">Career Highlights & Awards</h2>
+  <div class="news-list" style="margin-bottom: 3rem;">
+    <div class="news-item" style="padding: 1rem 0; border: none;"><span class="news-date">Award</span><span class="news-text"><span class="news-badge badge-award">Ph.D.</span>Defended Ph.D. Thesis on Resilient Networking for 6G and LEO Satellites, graduating <em>cum laude</em> (Pisa, 2026).</span></div>
+    <div class="news-item" style="padding: 1rem 0; border: none;"><span class="news-date">Award</span><span class="news-text"><span class="news-badge badge-award">Finalist</span>Selected as World Finalist for the IEEE ComSoc Four Minute Thesis (4MT) Competition at IEEE Globecom 2025.</span></div>
+    <div class="news-item" style="padding: 1rem 0; border: none;"><span class="news-date">Grant</span><span class="news-text"><span class="news-badge badge-pub">Winner</span>Awarded Research Grant for Abroad Mobility (CARIPT Funding) for Stanford University fellowship (2024).</span></div>
+    <div class="news-item" style="padding: 1rem 0; border: none;"><span class="news-date">Grants</span><span class="news-text"><span class="news-badge badge-pub">Winner</span>Travel Grant Winner for ACM SIGCOMM (2025), IEEE Internet of Sound (2025), and IEEE CAMAD (2024).</span></div>
   </div>
 
   <div class="page-footer" data-i18n="footer.updated">Last updated: July 2026</div>
@@ -321,8 +289,8 @@ p{margin-bottom:1.2rem;color:var(--ink2);text-align:justify;font-size:1.05rem;}
 
 <!-- PUBLICATIONS & RESEARCH AREAS -->
 <div class="page" id="page-pub">
-  <h1 data-i18n="pub.title">Research Areas & Systems Built</h1>
-  <p class="page-tagline" data-i18n="pub.tagline">Pioneering literature across the foundational pillars of the next-generation AI infrastructure.</p>
+  <h1 data-i18n="pub.title">Research Areas & Complete Publications</h1>
+  <p class="page-tagline" data-i18n="pub.tagline">Pioneering literature across the foundational pillars of the next-generation AI infrastructure (28 Peer-Reviewed + 1 Book Chapter).</p>
   
   <div class="pub-filters">
     <button class="filter-btn active" onclick="filterPubs(this,'all')"  data-i18n="pub.f.all">All Publications</button>
@@ -335,105 +303,89 @@ p{margin-bottom:1.2rem;color:var(--ink2);text-align:justify;font-size:1.05rem;}
   <div class="pub-year-group" data-group-type="infra">
     <div class="pub-year-label" data-i18n="pub.label.infra">AI Infrastructure & Large-Scale Networking</div>
     
-    <div class="pub-entry" data-type="infra">
-      <h3>A Comprehensive Survey on Software-Defined Wide Area Network</h3>
-      <div class="pub-authors">S. Troia, <strong>L. Borgianni</strong>, S. Giordano, G. Maier</div>
-      <div class="pub-venue">IEEE Communications Surveys & Tutorials, July 2025 <span class="pub-venue-badge venue-jour">Journal</span></div>
-    </div>
-    <div class="pub-entry" data-type="infra">
-      <h3>Evaluating LEO Satellite Internet in Aeronautical Mobility: a Study of Starlink from Hawaii to Japan</h3>
-      <div class="pub-authors"><strong>L. Borgianni</strong>, D. Adami, S. Giordano</div>
-      <div class="pub-venue">IEEE ICNC, February 2026 <span class="pub-venue-badge venue-conf">Conference</span></div>
-    </div>
-    <div class="pub-entry" data-type="infra">
-      <h3>Proximal Policy Optimization for AI-Orchestrated SD-WAN in Underserved Regions</h3>
-      <div class="pub-authors"><strong>L. Borgianni</strong>, D. Ghadir, S. Ghadir, D. Adami, S. Giordano</div>
-      <div class="pub-venue">IEEE NFV/SDN, November 2025 <span class="pub-venue-badge venue-conf">Conference</span></div>
-    </div>
-    <div class="pub-entry" data-type="infra">
-      <h3>Decentralized Intelligence for Centralized Control: Multi-Agent Reinforcement Learning for SD-WAN</h3>
-      <div class="pub-authors">E. Khanlari, <strong>L. Borgianni</strong>, D. Adami, S. Giordano</div>
-      <div class="pub-venue">IEEE CNSM, October 2025 <span class="pub-venue-badge venue-conf">Conference</span></div>
-    </div>
-    <div class="pub-entry" data-type="infra">
-      <h3>Policy-Driven SD-WAN for Hybrid Terrestrial and Non-Terrestrial 6G Connectivity</h3>
-      <div class="pub-authors"><strong>L. Borgianni</strong>, E. Bellini, A. Giorgetti, D. Adami, S. Giordano</div>
-      <div class="pub-venue">IEEE ICNC, February 2026 <span class="pub-venue-badge venue-conf">Conference</span></div>
-    </div>
-    <div class="pub-entry" data-type="infra">
-      <h3>Assessing the Efficacy of Reinforcement Learning in Enhancing Quality of Service in SD-WANs</h3>
-      <div class="pub-authors"><strong>L. Borgianni</strong>, S. Troia, D. Adami, G. Maier, S. Giordano</div>
-      <div class="pub-venue">IEEE GLOBECOM, December 2023 <span class="pub-venue-badge venue-conf">Conference</span></div>
-    </div>
+    <div class="pub-entry" data-type="infra"><h3>A Comprehensive Survey on Software-Defined Wide Area Network</h3><div class="pub-authors">S. Troia, <strong>L. Borgianni</strong>, S. Giordano, G. Maier</div><div class="pub-venue">IEEE Communications Surveys & Tutorials, July 2025 <span class="pub-venue-badge venue-jour">Journal</span></div></div>
+    <div class="pub-entry" data-type="infra"><h3>Quantum Networking for Secure and Reliable Communication in Space Exploration</h3><div class="pub-authors"><strong>L. Borgianni</strong>, D. Adami, S. Giordano</div><div class="pub-venue">IEEE Communications Magazine, October 2024 <span class="pub-venue-badge venue-jour">Journal</span></div></div>
+    <div class="pub-entry" data-type="infra"><h3>Enhancing Reliability in Rural Networks Using a Software-Defined Wide Area Network</h3><div class="pub-authors"><strong>L. Borgianni</strong>, D. Adami, S. Giordano, M. Pagano</div><div class="pub-venue">Computers, April 2024 <span class="pub-venue-badge venue-jour">Journal</span></div></div>
+    <div class="pub-entry" data-type="infra"><h3>Evaluating LEO Satellite Internet in Aeronautical Mobility: a Study of Starlink from Hawaii to Japan</h3><div class="pub-authors"><strong>L. Borgianni</strong>, D. Adami, S. Giordano</div><div class="pub-venue">IEEE ICNC, February 2026 <span class="pub-venue-badge venue-conf">Conference</span></div></div>
+    <div class="pub-entry" data-type="infra"><h3>Policy-Driven SD-WAN for Hybrid Terrestrial and Non-Terrestrial 6G Connectivity</h3><div class="pub-authors"><strong>L. Borgianni</strong>, E. Bellini, A. Giorgetti, D. Adami, S. Giordano</div><div class="pub-venue">IEEE ICNC, February 2026 <span class="pub-venue-badge venue-conf">Conference</span></div></div>
+    <div class="pub-entry" data-type="infra"><h3>A First Look at Starlink In-Flight Performance: An Intercontinental Empirical Study</h3><div class="pub-authors">M. Asad Ullah, <strong>L. Borgianni</strong>, H. Kokkinen, A. Anttonen, S. Giordano</div><div class="pub-venue">IEEE ComComAp, December 2025 <span class="pub-venue-badge venue-conf">Conference</span></div></div>
+    <div class="pub-entry" data-type="infra"><h3>Proximal Policy Optimization for AI-Orchestrated SD-WAN in Underserved Regions</h3><div class="pub-authors"><strong>L. Borgianni</strong>, D. Ghadir, S. Ghadir, D. Adami, S. Giordano</div><div class="pub-venue">IEEE NFV/SDN, November 2025 <span class="pub-venue-badge venue-conf">Conference</span></div></div>
+    <div class="pub-entry" data-type="infra"><h3>Decentralized Intelligence for Centralized Control: Multi-Agent Reinforcement Learning for SD-WAN</h3><div class="pub-authors">E. Khanlari, <strong>L. Borgianni</strong>, D. Adami, S. Giordano</div><div class="pub-venue">IEEE CNSM, October 2025 <span class="pub-venue-badge venue-conf">Conference</span></div></div>
+    <div class="pub-entry" data-type="infra"><h3>On the Accuracy of Mininet: Comparing Network Emulation and Physical Testbeds for Distributed Systems</h3><div class="pub-authors"><strong>L. Borgianni</strong>, C. Bua, E. Coli, D. Adami, S. Giordano</div><div class="pub-venue">ICUMT, October 2025 <span class="pub-venue-badge venue-conf">Conference</span></div></div>
+    <div class="pub-entry" data-type="infra"><h3>Global Net Equity: The Role of LEO Satellites Towards 6G Connectivity Landscape</h3><div class="pub-authors"><strong>L. Borgianni</strong>, D. Adami, S. Giordano, C. Chafe</div><div class="pub-venue">IEEE MedComNet, June 2025 <span class="pub-venue-badge venue-conf">Conference</span></div></div>
+    <div class="pub-entry" data-type="infra"><h3>Towards 6G: Adaptive and Resilient Network Management for Hybrid Terrestrial-Satellite Systems</h3><div class="pub-authors"><strong>L. Borgianni</strong>, D. Adami, S. Giordano</div><div class="pub-venue">IEEE NOMS, May 2025 <span class="pub-venue-badge venue-conf">Conference</span></div></div>
+    <div class="pub-entry" data-type="infra"><h3>Enhancing Wildlife Monitoring in Variable Network Coverage Areas with Deep RL-based SD-WANs</h3><div class="pub-authors"><strong>L. Borgianni</strong>, C. Bua, S. Ghadir, D. Ghadir, D. Adami, S. Giordano</div><div class="pub-venue">IEEE CAMAD, October 2024 <span class="pub-venue-badge venue-conf">Conference</span></div></div>
+    <div class="pub-entry" data-type="infra"><h3>Assessing the Efficacy of Reinforcement Learning in Enhancing Quality of Service in SD-WANs</h3><div class="pub-authors"><strong>L. Borgianni</strong>, S. Troia, D. Adami, G. Maier, S. Giordano</div><div class="pub-venue">IEEE GLOBECOM, December 2023 <span class="pub-venue-badge venue-conf">Conference</span></div></div>
+    <div class="pub-entry" data-type="infra"><h3>Optimizing Network Performance and Reliability with an Integrated SD-WAN and Satellite 6G Architecture</h3><div class="pub-authors"><strong>L. Borgianni</strong>, D. Adami, S. Giordano</div><div class="pub-venue">IEEE 6GNet, October 2023 <span class="pub-venue-badge venue-conf">Conference</span></div></div>
+    <div class="pub-entry" data-type="infra"><h3>From MPLS to SD-WAN to ensure QoS and QoE in cloud-based applications</h3><div class="pub-authors"><strong>L. Borgianni</strong>, S. Troia, D. Adami, G. Maier, S. Giordano</div><div class="pub-venue">IEEE NetSoft, June 2023 <span class="pub-venue-badge venue-conf">Conference</span></div></div>
   </div>
 
   <!-- MULTIMEDIA INTELLIGENCE -->
   <div class="pub-year-group" data-group-type="media">
     <div class="pub-year-label" data-i18n="pub.label.media">Low-Latency Multimodal AI</div>
     
-    <div class="pub-entry" data-type="media">
-      <h3>A Comprehensive Evaluation of Networked Music Performance using LEO Satellite Internet: The Starlink Use Case</h3>
-      <div class="pub-authors"><strong>L. Borgianni</strong>, D. Adami, M. Bosi, S. Giordano, C. Chafe</div>
-      <div class="pub-venue">IEEE Transactions on Network and Service Management, July 2025 <span class="pub-venue-badge venue-jour">Journal</span></div>
-    </div>
-    <div class="pub-entry" data-type="media">
-      <h3>Reconstructing the Sound at the Edge: A Low-Latency Framework for NMP with Autotuned Local Synthesis</h3>
-      <div class="pub-authors"><strong>L. Borgianni</strong>, C. Bua, D. Adami, S. Giordano</div>
-      <div class="pub-venue">IEEE IS2, October 2025 <span class="pub-venue-badge venue-conf">Conference</span></div>
-    </div>
-    <div class="pub-entry" data-type="media">
-      <h3>Democratizing Networked Music Performance with a RL-based SD-WAN</h3>
-      <div class="pub-authors"><strong>L. Borgianni</strong>, S. Giordano, C. Chafe</div>
-      <div class="pub-venue">IEEE Communications Magazine, December 2024 <span class="pub-venue-badge venue-jour">Journal</span></div>
-    </div>
-    <div class="pub-entry" data-type="media">
-      <h3>Spectrogram Based Bee Sound Analysis with DNNs: a step toward Federated Learning approach</h3>
-      <div class="pub-authors"><strong>L. Borgianni</strong>, M. S. Ahmed, D. Adami, S. Giordano</div>
-      <div class="pub-venue">Internet of Sounds, October 2023 <span class="pub-venue-badge venue-conf">Conference</span></div>
-    </div>
+    <div class="pub-entry" data-type="media"><h3>A Comprehensive Evaluation of Networked Music Performance using LEO Satellite Internet: The Starlink Use Case</h3><div class="pub-authors"><strong>L. Borgianni</strong>, D. Adami, M. Bosi, S. Giordano, C. Chafe</div><div class="pub-venue">IEEE Transactions on Network and Service Management, July 2025 <span class="pub-venue-badge venue-jour">Journal</span></div></div>
+    <div class="pub-entry" data-type="media"><h3>Democratizing Networked Music Performance with a RL-based SD-WAN</h3><div class="pub-authors"><strong>L. Borgianni</strong>, S. Giordano, C. Chafe</div><div class="pub-venue">IEEE Communications Magazine, December 2024 <span class="pub-venue-badge venue-jour">Journal</span></div></div>
+    <div class="pub-entry" data-type="media"><h3>Reconstructing the Sound at the Edge: A Low-Latency Framework for NMP with Autotuned Local Synthesis</h3><div class="pub-authors"><strong>L. Borgianni</strong>, C. Bua, D. Adami, S. Giordano</div><div class="pub-venue">IEEE IS2, October 2025 <span class="pub-venue-badge venue-conf">Conference</span></div></div>
+    <div class="pub-entry" data-type="media"><h3>Experimental Analysis of Sub-GHz RF Communication for in-Water Wearables in Swimming Applications</h3><div class="pub-authors"><strong>L. Borgianni</strong>, L. Boggioni, L. Monti, S. Giordano, S. Saponara, A. Caiti, et al.</div><div class="pub-venue">IEEE STAR, September 2025 <span class="pub-venue-badge venue-conf">Conference</span></div></div>
+    <div class="pub-entry" data-type="media"><h3>Spectrogram Based Bee Sound Analysis with DNNs: a step toward Federated Learning approach</h3><div class="pub-authors"><strong>L. Borgianni</strong>, M. S. Ahmed, D. Adami, S. Giordano</div><div class="pub-venue">Internet of Sounds, October 2023 <span class="pub-venue-badge venue-conf">Conference</span></div></div>
   </div>
 
   <!-- DISTRIBUTED AI SYSTEMS -->
   <div class="pub-year-group" data-group-type="dist">
     <div class="pub-year-label" data-i18n="pub.label.dist">Distributed AI Systems</div>
     
-    <div class="pub-entry" data-type="dist">
-      <h3>Drone OPERA: An ns-3 energy-aware module for on-board computing in UAV ad hoc networks</h3>
-      <div class="pub-authors">M. Della Bartola, <strong>L. Borgianni</strong>, D. Adami, S. Giordano</div>
-      <div class="pub-venue">Ad Hoc Networks, Elsevier, May 2026 <span class="pub-venue-badge venue-jour">Journal</span></div>
-    </div>
-    <div class="pub-entry" data-type="dist">
-      <h3>A Scalable Framework for Deploying AI-Powered Wildlife Monitoring in Resource-Limited Field Environments</h3>
-      <div class="pub-authors">M. A. Rahman, T. M. Berhe, <strong>L. Borgianni</strong>, M. S. Ahmed, C. Bua, et al.</div>
-      <div class="pub-venue">IEEE Access, January 2025 <span class="pub-venue-badge venue-jour">Journal</span></div>
-    </div>
-    <div class="pub-entry" data-type="dist">
-      <h3>Efficient Distributed DNN for Extreme Edge Computing in Wildlife Monitoring</h3>
-      <div class="pub-authors"><strong>L. Borgianni</strong>, C. Bua, E. Coli, D. Adami, S. Giordano</div>
-      <div class="pub-venue">IEEE HPSR, May 2025 <span class="pub-venue-badge venue-conf">Conference</span></div>
-    </div>
-    <div class="pub-entry" data-type="dist">
-      <h3>Digital Twin for Remote Control of Robotic Arm via Wearable Glove in Smart Agriculture</h3>
-      <div class="pub-authors">C. Bua, <strong>L. Borgianni</strong>, D. Adami, S. Giordano</div>
-      <div class="pub-venue">IEEE WCNC, March 2025 <span class="pub-venue-badge venue-conf">Conference</span></div>
+    <div class="pub-entry" data-type="dist"><h3>Drone OPERA: An ns-3 energy-aware module for on-board computing in UAV ad hoc networks</h3><div class="pub-authors">M. Della Bartola, <strong>L. Borgianni</strong>, D. Adami, S. Giordano</div><div class="pub-venue">Ad Hoc Networks, Elsevier, May 2026 <span class="pub-venue-badge venue-jour">Journal</span></div></div>
+    <div class="pub-entry" data-type="dist"><h3>Reinforcement Learning-Driven Digital Twin for Zero-Delay Communication in Smart Greenhouse Robotics</h3><div class="pub-authors">C. Bua, <strong>L. Borgianni</strong>, D. Adami, S. Giordano</div><div class="pub-venue">Agriculture, June 2025 <span class="pub-venue-badge venue-jour">Journal</span></div></div>
+    <div class="pub-entry" data-type="dist"><h3>A Scalable Framework for Deploying AI-Powered Wildlife Monitoring in Resource-Limited Field Environments</h3><div class="pub-authors">M. A. Rahman, T. M. Berhe, <strong>L. Borgianni</strong>, M. S. Ahmed, C. Bua, et al.</div><div class="pub-venue">IEEE Access, January 2025 <span class="pub-venue-badge venue-jour">Journal</span></div></div>
+    <div class="pub-entry" data-type="dist"><h3>Monitoring Wildlife in Remote Areas through LEO Satellites within a Cloud Continuum Perspective</h3><div class="pub-authors">M. A. Rahman, <strong>L. Borgianni</strong>, E. Marku, S. Mathew, O. Navadehrazi, E. Coli, D. Adami, S. Giordano</div><div class="pub-venue">IEEE GLOBECOM, December 2025 <span class="pub-venue-badge venue-conf">Conference</span></div></div>
+    <div class="pub-entry" data-type="dist"><h3>Efficient Distributed DNN for Extreme Edge Computing in Wildlife Monitoring</h3><div class="pub-authors"><strong>L. Borgianni</strong>, C. Bua, E. Coli, D. Adami, S. Giordano</div><div class="pub-venue">IEEE HPSR, May 2025 <span class="pub-venue-badge venue-conf">Conference</span></div></div>
+    <div class="pub-entry" data-type="dist"><h3>Towards a made-in-Europe ecosystem for multisport training, healthy lifestyle and remote patient monitoring</h3><div class="pub-authors"><strong>L. Borgianni</strong>, M. Ottella, R. Heer, J. Montiel-Nelson, D. P. Pau, R. Proietti, et al.</div><div class="pub-venue">SSI, April 2025 <span class="pub-venue-badge venue-conf">Conference</span></div></div>
+    <div class="pub-entry" data-type="dist"><h3>Digital Twin for Remote Control of Robotic Arm via Wearable Glove in Smart Agriculture</h3><div class="pub-authors">C. Bua, <strong>L. Borgianni</strong>, D. Adami, S. Giordano</div><div class="pub-venue">IEEE WCNC, March 2025 <span class="pub-venue-badge venue-conf">Conference</span></div></div>
+    <div class="pub-entry" data-type="dist"><h3>Empowering Remote Agriculture: Wearable Glove Control for Smart Hydroponic Greenhouses</h3><div class="pub-authors">C. Bua, <strong>L. Borgianni</strong>, D. Adami, S. Giordano</div><div class="pub-venue">IEEE HPSR, July 2024 <span class="pub-venue-badge venue-conf">Conference</span></div></div>
+  </div>
+
+  <div class="pub-year-group" data-group-type="infra">
+    <div class="pub-year-label">Book Chapter</div>
+    <div class="pub-entry">
+      <h3>E.T. Telefono a Fibra ottica</h3>
+      <div class="pub-authors"><strong>L. Borgianni</strong>, co-author</div>
+      <div class="pub-venue"><em>La facoltà di scegliere</em>, edited by Giulio Deangeli, Mondadori, January 2024. ISBN: 978-8804774464 <span class="pub-venue-badge venue-book">Book</span></div>
     </div>
   </div>
 
 </div>
 
-<!-- EXPERIENCE -->
+<!-- EXPERIENCE & TEACHING -->
 <div class="page" id="page-teach">
   <h1 data-i18n="teach.title">Systems Architecture & Experience</h1>
   <p class="page-tagline" data-i18n="teach.tagline">Engineering real-world infrastructure for strict-latency and high-throughput AI applications.</p>
 
+  <h2 data-i18n="teach.sect.exp">Research & Industrial Experience</h2>
   <div class="exp-timeline">
     <div class="exp-item">
       <div class="exp-header">
-        <h3 data-i18n="exp1.title">Affiliate Researcher / Postdoc: Low-Latency Biomedical AI</h3>
-        <div class="exp-sub">University of Pisa & Stanford Medicine School</div>
-        <div class="exp-desc" data-i18n="exp.1">Architecting the computational pipelines to execute Machine Learning for automated Tracheal Acoustic Monitoring (TAM project). Solving synchronization and real-time processing constraints for multimodal clinical streams.</div>
+        <h3 data-i18n="exp1.title">Postdoctoral Researcher: Biomedical AI</h3>
+        <div class="exp-sub">University of Pisa</div>
+        <div class="exp-desc" data-i18n="exp.1">Architecting the computational pipelines to execute Machine Learning for automated Tracheal Acoustic Monitoring (TAM project) with Stanford Medicine. Solving synchronization and real-time processing constraints for multimodal clinical streams.</div>
       </div>
       <span class="exp-date">04/2026 - Present</span>
+    </div>
+    <div class="exp-item">
+      <div class="exp-header">
+        <h3 data-i18n="exp5.title">Affiliate Researcher</h3>
+        <div class="exp-sub">Stanford University, CCRMA</div>
+        <div class="exp-desc" data-i18n="exp.5">Continuing the collaboration established during the visiting Ph.D. fellowship, focusing on advanced signal processing and AI for low-latency networked applications.</div>
+      </div>
+      <span class="exp-date">05/2026 - Present</span>
+    </div>
+    <div class="exp-item">
+      <div class="exp-header">
+        <h3 data-i18n="exp4.title">R&D Engineer & WP8 Leader: Distributed Edge AI</h3>
+        <div class="exp-sub">Xtremion / Horizon Europe "EU-TRAINS"</div>
+        <div class="exp-desc" data-i18n="exp.4">Leading the design of distributed architectures for wearable intelligence within the EU-TRAINS project, enabling real-time technique synthesis and inference allocation under constrained bandwidth.</div>
+      </div>
+      <span class="exp-date">11/2025 - Present</span>
     </div>
     <div class="exp-item">
       <div class="exp-header">
@@ -451,29 +403,163 @@ p{margin-bottom:1.2rem;color:var(--ink2);text-align:justify;font-size:1.05rem;}
       </div>
       <span class="exp-date">03/2024 - 08/2024</span>
     </div>
-    <div class="exp-item">
-      <div class="exp-header">
-        <h3 data-i18n="exp4.title">R&D Engineer & WP8 Leader: Distributed Edge AI</h3>
-        <div class="exp-sub">Xtremion / Horizon Europe "EU-TRAINS"</div>
-        <div class="exp-desc" data-i18n="exp.4">Leading the design of distributed architectures for wearable intelligence within the EU-TRAINS project, enabling real-time technique synthesis and inference allocation under constrained bandwidth.</div>
-      </div>
-      <span class="exp-date">11/2025 - Present</span>
+  </div>
+
+  <h2 data-i18n="teach.sect.courses">Academic Courses & Seminars</h2>
+  <div class="course-list">
+    <div class="course-item">
+      <span class="course-code">ITS Pisa</span>
+      <div style="flex:1"><div class="course-name" data-i18n="c1.name">Cybersecurity and Voice Protection (GATE Project)</div><div class="course-meta" data-i18n="c1.meta">ITS Academy Prodigi · 2026 · 12 hours Lecture Series</div></div>
+      <span class="course-role" data-i18n="role.inst">Guest Lecturer</span>
     </div>
+    <div class="course-item">
+      <span class="course-code">Stanford</span>
+      <div style="flex:1"><div class="course-name" data-i18n="c2.name">Can Musicians Play Together Over Satellite Internet? The Starlink case</div><div class="course-meta" data-i18n="c2.meta">Stanford University · Seminar, Class 220C · May 2025</div></div>
+      <span class="course-role" data-i18n="role.sem">Invited Speaker</span>
+    </div>
+    <div class="course-item">
+      <span class="course-code">UNIPI</span>
+      <div style="flex:1"><div class="course-name" data-i18n="c3.name">Cloud and IoT Solutions: MQTT, FPGA, and AWS Cloud</div><div class="course-meta" data-i18n="c3.meta">University of Pisa · Networking Course Seminar · Dec 2024</div></div>
+      <span class="course-role" data-i18n="role.sem">Seminar Speaker</span>
+    </div>
+    <div class="course-item">
+      <span class="course-code">UNIPI</span>
+      <div style="flex:1"><div class="course-name" data-i18n="c4.name">Network Metrology (Mininet) & FPGA Architectures</div><div class="course-meta" data-i18n="c4.meta">University of Pisa · Core M.Sc. Networking Courses · 40h/year (2022-2025)</div></div>
+      <span class="course-role" data-i18n="role.ta">Teaching Assistant</span>
+    </div>
+    <div class="course-item">
+      <span class="course-code">UNIPI</span>
+      <div style="flex:1"><div class="course-name" data-i18n="c5.name">Mathematical Analysis 1</div><div class="course-meta" data-i18n="c5.meta">University of Pisa · B.Sc. Course · Sep 2021 - Dec 2022</div></div>
+      <span class="course-role" data-i18n="role.ta">Teaching Assistant</span>
+    </div>
+  </div>
+
+  <h2 data-i18n="teach.sup">Supervised Student Theses (9)</h2>
+  <ul class="thesis-list">
+    <li>"Dynamic tunnel Selection in SD-WAN using PPO-based Reinforcement Learning" — Delaram Ghadir (M.Sc.)</li>
+    <li>"Deep Q-Learning for Enhanced SD-WAN Performance and Reliability in Rural Areas" — Setayesh Ghadir (M.Sc.)</li>
+    <li>"SDN Traffic Optimization Using RYU and Reinforcement Learning" — Muhammad Ameen Uddin (M.Sc.)</li>
+    <li>"Dynamic Overlay Selection in SD-WAN Using Reinforcement Learning: A Collaborative Multi-Agent Approach" — Elshan Khanlari (M.Sc.)</li>
+    <li>"Emulating and Evaluating Starlink-like LEO Satellite Networks Using Mininet and Real-Time Traffic Traces" — Sagar Kumar (M.Sc.)</li>
+    <li>"Federated Learning in Drone Networks with Digital Twin Modeling" — Matteo della Bartola (M.Sc.)</li>
+    <li>"SD-WAN for 6G: an SDN architecture for integrating Terrestrial and Non-Terrestrial Networks" — Eleonora Bellini (B.Sc.)</li>
+    <li>"Graph Neural Network for Adaptive Control of Olive Tree Water Stress" — Antonio Masu (B.Sc.)</li>
+    <li>"Semantic Communication at the edge for wildlife surveillance" — Federico Cheli (M.Sc.)</li>
+  </ul>
+</div>
+
+<!-- TALKS TIMELINE & SERVICE -->
+<div class="page" id="page-talks">
+  <h1 data-i18n="talks.title">Presentations & Academic Service</h1>
+  <p class="page-tagline" data-i18n="talks.tagline">Spreading the vision of distributed runtime systems across 25 global scientific engagements.</p>
+
+  <h2 data-i18n="talks.service">Academic Leadership & Service</h2>
+  <div class="course-list" style="margin-bottom: 3.5rem;">
+    <div class="course-item">
+      <span class="course-code">CHAIR</span>
+      <div style="flex:1"><div class="course-name">Track Chair & Session Chair</div><div class="course-meta">Track 4 "AI-Native Connectivity" at IEEE COINS 2026 (Bologna) <br> "Emerging Topics" at IEEE Globecom 2025 (Taipei)</div></div>
+    </div>
+    <div class="course-item">
+      <span class="course-code">TPC</span>
+      <div style="flex:1"><div class="course-name">Technical Program Committee</div><div class="course-meta">IEEE WCNC 2026, IEEE HPSR 2026, IEEE IS2 2025, IEEE ComComAp 2025, IEEE HPSR 2024 (Web Chair).</div></div>
+    </div>
+    <div class="course-item">
+      <span class="course-code">LEAD</span>
+      <div style="flex:1"><div class="course-name">IEEE ComSoc YP EMEA Representative</div><div class="course-meta">Appointed Regional Representative for Young Professionals in Europe, Middle East, and Africa (2026-Present).</div></div>
+    </div>
+    <div class="course-item">
+      <span class="course-code">OUTREACH</span>
+      <div style="flex:1"><div class="course-name">STEM UP Project & Pre-University Speaker</div><div class="course-meta">Expert researcher for High School STEM orientation (2026). Speaker on Embedded AI at IEEE ICC 2025 & Globecom 2025.</div></div>
+    </div>
+  </div>
+
+  <h2 data-i18n="talks.talks">Invited Talks, Pitches & Paper Presentations</h2>
+  <div class="news-list news-full">
+    <div class="news-item"><span class="news-date">05/2026</span><span class="news-text"><span class="news-badge badge-talk">Invited Pitch</span><strong>IEEE ICC 2026 (Glasgow):</strong> <em>"Semantic Communication Framework for Deepfake Voice Detection"</em> (Selected Top 6 presenter).</span></div>
+    <div class="news-item"><span class="news-date">05/2026</span><span class="news-text"><span class="news-badge badge-pub">Paper</span><strong>IEEE NOMS 2026 (Rome):</strong> <em>"An AI-Driven SD-WAN Deployment for LEO Satellite and Terrestrial Network Integration"</em>.</span></div>
+    <div class="news-item"><span class="news-date">01/2026</span><span class="news-text"><span class="news-badge badge-talk">Oral</span><strong>INW 2026 (Bardonecchia):</strong> <em>"Semantic Experiences in the Wild"</em>.</span></div>
+    <div class="news-item"><span class="news-date">12/2025</span><span class="news-text"><span class="news-badge badge-pub">Paper</span><strong>IEEE Globecom 2025 (Taipei):</strong> <em>"Monitoring Wildlife in Remote Areas through LEO Satellites within a Cloud Continuum Perspective"</em>.</span></div>
+    <div class="news-item"><span class="news-date">12/2025</span><span class="news-text"><span class="news-badge badge-award">Finalist</span><strong>IEEE Globecom 2025 (Taipei):</strong> <em>"Towards Reliable Networks: SD-WAN with LEO Satellites for Real-Time Applications"</em> (4MT Competition).</span></div>
+    <div class="news-item"><span class="news-date">10/2025</span><span class="news-text"><span class="news-badge badge-pub">Paper</span><strong>IEEE NFV/SDN (Athens):</strong> <em>"Proximal Policy Optimization for AI-Orchestrated SD-WAN in Underserved Regions"</em>.</span></div>
+    <div class="news-item"><span class="news-date">10/2025</span><span class="news-text"><span class="news-badge badge-pub">Paper</span><strong>IEEE IS2 (L'Aquila):</strong> <em>"Reconstructing the Sound at the Edge: A Low-Latency Framework for NMP with Autotuned Local Synthesis"</em>.</span></div>
+    <div class="news-item"><span class="news-date">10/2025</span><span class="news-text"><span class="news-badge badge-pub">Paper</span><strong>IEEE CNSM (Bologna):</strong> <em>"Decentralized Intelligence for Centralized Control: Multi-Agent RL for SD-WAN"</em>.</span></div>
+    <div class="news-item"><span class="news-date">09/2025</span><span class="news-text"><span class="news-badge badge-pub">Poster</span><strong>Meeting GTTI (Bologna):</strong> <em>"Low-Latency Jamming via LEO: Measuring Starlink for Networked Music Performance"</em>.</span></div>
+    <div class="news-item"><span class="news-date">07/2025</span><span class="news-text"><span class="news-badge badge-pub">Paper</span><strong>IEEE MedComNet (Nice):</strong> <em>"Global Net Equity: The Role of LEO Satellites Towards 6G Connectivity Landscape"</em>.</span></div>
+    <div class="news-item"><span class="news-date">05/2025</span><span class="news-text"><span class="news-badge badge-pub">Paper</span><strong>IEEE HPSR (Osaka):</strong> <em>"Efficient Distributed DNN for Extreme Edge Computing in Wildlife Monitoring"</em>.</span></div>
+    <div class="news-item"><span class="news-date">05/2025</span><span class="news-text"><span class="news-badge badge-pub">Paper</span><strong>IEEE NOMS (Honolulu):</strong> <em>"Towards 6G: Adaptive and Resilient Network Management for Hybrid Terrestrial-Satellite Systems"</em>.</span></div>
+    <div class="news-item"><span class="news-date">05/2025</span><span class="news-text"><span class="news-badge badge-talk">Invited Talk</span><strong>Stanford University (USA):</strong> <em>"Can Musicians Play Together Over Satellite Internet? The Starlink case"</em>.</span></div>
+    <div class="news-item"><span class="news-date">04/2025</span><span class="news-text"><span class="news-badge badge-talk">Panel</span><strong>10th Workshop on Molecular Communications (Catania):</strong> Panel Session on Future Trends: <em>"6G and Beyond"</em>.</span></div>
+    <div class="news-item"><span class="news-date">01/2025</span><span class="news-text"><span class="news-badge badge-talk">Oral</span><strong>INW 2025 (Moena):</strong> <em>"A Comprehensive Evaluation of Networked Music Performance using LEO Satellite Internet: The Starlink Use Case"</em>.</span></div>
+    <div class="news-item"><span class="news-date">10/2024</span><span class="news-text"><span class="news-badge badge-pub">Paper</span><strong>IEEE CAMAD (Athens):</strong> <em>"Enhancing Wildlife Monitoring in Variable Network Coverage Areas with Deep RL-based SD-WANs"</em>.</span></div>
+    <div class="news-item"><span class="news-date">06/2024</span><span class="news-text"><span class="news-badge badge-talk">Oral</span><strong>MedComNet (Ponza):</strong> <em>"Overcoming TCP challenges in SD-WAN with an Adaptive Reinforcement Learning Approach"</em>.</span></div>
+    <div class="news-item"><span class="news-date">05/2024</span><span class="news-text"><span class="news-badge badge-pub">Poster</span><strong>CCRMA, Stanford University:</strong> <em>"Democratizing Networked Music Performance with a RL-based SD-WAN"</em>.</span></div>
+    <div class="news-item"><span class="news-date">01/2024</span><span class="news-text"><span class="news-badge badge-award">Institutional</span><strong>Senato della Repubblica Italiana:</strong> Invited Institutional Speech.</span></div>
+    <div class="news-item"><span class="news-date">01/2024</span><span class="news-text"><span class="news-badge badge-talk">Oral</span><strong>INW 2024 (Madonna di Campiglio):</strong> <em>"Democratizing Networked Music Performance with SD-WAN"</em>.</span></div>
+    <div class="news-item"><span class="news-date">10/2023</span><span class="news-text"><span class="news-badge badge-pub">Poster</span><strong>Internet of Sound (Pisa):</strong> <em>"Spectrogram Based Bee Sound Analysis with DNNs"</em>.</span></div>
+    <div class="news-item"><span class="news-date">10/2023</span><span class="news-text"><span class="news-badge badge-pub">Paper</span><strong>IEEE 6GNet (Paris):</strong> <em>"Optimizing Network Performance and Reliability with an Integrated SD-WAN and Satellite 6G Architecture"</em>.</span></div>
+    <div class="news-item"><span class="news-date">09/2023</span><span class="news-text"><span class="news-badge badge-pub">Poster</span><strong>Meeting GTTI (Roma):</strong> <em>"Reinforcement Learning-Based Approaches for Tunnel Selection and TCP Parameter Optimization in SD-WAN"</em>.</span></div>
+    <div class="news-item"><span class="news-date">06/2023</span><span class="news-text"><span class="news-badge badge-talk">Oral</span><strong>TMA Conference (Turin):</strong> <em>"Enhancing Quality of Service in SD-WAN through Reinforcement Learning-based TCP Congestion Control"</em>.</span></div>
+    <div class="news-item"><span class="news-date">06/2023</span><span class="news-text"><span class="news-badge badge-pub">Paper</span><strong>IEEE NetSoft (Madrid):</strong> <em>"From MPLS to SD-WAN to ensure QoS and QoE in cloud-based applications"</em>.</span></div>
   </div>
 </div>
 
-<!-- NEWS TIMELINE -->
-<div class="page" id="page-news">
-  <h1 data-i18n="news.title">Impact & Academic Timeline</h1>
-  <p class="page-tagline" data-i18n="news.tagline">Global scientific engagement, technical pitches, and networking community leadership.</p>
-  <div class="news-list news-full">
-    <div class="news-item"><span class="news-date">05/2026</span><span class="news-text"><span class="news-badge badge-talk">Pitch</span><strong>IEEE ICC 2026 (Glasgow):</strong> Selected as Top 6 international presenter for industrial R&D leaders. Talk: <em>"Semantic Communication Framework for Deepfake Voice Detection"</em>.</span></div>
-    <div class="news-item"><span class="news-date">05/2026</span><span class="news-text"><span class="news-badge badge-pub">Role</span><strong>IEEE ComSoc:</strong> Appointed as IEEE ComSoc Young Professionals (YP) EMEA Regional Representative.</span></div>
-    <div class="news-item"><span class="news-date">05/2026</span><span class="news-text"><span class="news-badge badge-pub">Talk</span><strong>IEEE/IFIP NOMS 2026 (Rome):</strong> Paper Presentation: <em>"An AI-Driven SD-WAN Deployment for LEO Satellite and Terrestrial Network Integration"</em>.</span></div>
-    <div class="news-item"><span class="news-date">03/2026</span><span class="news-text"><span class="news-badge badge-talk">Outreach</span><strong>STEM UP Project:</strong> Selected expert researcher to deliver orientation bridging academic research and industry opportunities for high school students.</span></div>
-    <div class="news-item"><span class="news-date">12/2025</span><span class="news-text"><span class="news-badge badge-award">Finalist</span><strong>IEEE Globecom 2025 (Taipei):</strong> Presented as world finalist at the ComSoc Four Minute Thesis (4MT) Competition. Talk: <em>"Towards Reliable Networks: SD-WAN with LEO Satellites"</em>.</span></div>
-    <div class="news-item"><span class="news-date">10/2025</span><span class="news-text"><span class="news-badge badge-talk">Talk</span><strong>IEEE CNSM (Bologna):</strong> Paper presentation: <em>"Decentralized Intelligence for Centralized Control: Multi-Agent RL for SD-WAN"</em>.</span></div>
-    <div class="news-item"><span class="news-date">05/2025</span><span class="news-text"><span class="news-badge badge-talk">Talk</span><strong>Stanford University (USA):</strong> Invited Talk at CCRMA: <em>"Can Musicians Play Together Over Satellite Internet?"</em>.</span></div>
+<!-- PERFORMANCE & MULTIMEDIA -->
+<div class="page" id="page-inter">
+  <h1 data-i18n="inter.title">Human Performance & Multimedia</h1>
+  <p class="page-tagline" data-i18n="inter.tagline">Stress-testing the limits of human endurance and the physics of sound.</p>
+
+  <div class="interest-section">
+    <h2 data-i18n="inter.yt.title">📺 Triathlon Italia & Sports Tech Community</h2>
+    <p data-i18n="inter.yt.desc">I am the founder of Triathlon Italia, a digital community bridging endurance training and sports technology. Managing an active audience of over 10,000 members, I analyze wearable telemetry, biomechanical data, and race performance. This experience proves my ability to communicate complex data, build a large-scale brand, and turn human performance into actionable metrics.</p>
+    <div class="yt-card">
+      <div class="yt-thumb">YouTube</div>
+      <div class="yt-info">
+        <h3 data-i18n="yt.v1">Triathlon Italia (10k+ Members)</h3>
+        <p data-i18n="yt.v1.m">Reference channel for triathlon · Training culture, race stories, and sports tech analytics.</p>
+      </div>
+    </div>
+    <div class="quick-links" style="margin-top:.75rem">
+      <a href="https://www.youtube.com/@triathlon.italia" target="_blank" class="qlink">▶ YouTube</a>
+      <a href="https://www.instagram.com/triathlon.italia/" target="_blank" class="qlink">📷 Instagram</a>
+      <a href="https://triathlonitalia.com/" target="_blank" class="qlink">✍ Blog</a>
+    </div>
+  </div>
+
+  <hr class="section-rule"/>
+
+  <div class="interest-section">
+    <h2 data-i18n="inter.tri.title">🏊🚴🏃 Competitive Sport & Triathlon</h2>
+    <p data-i18n="inter.tri.desc">My background in competitive swimming (Fiamme Oro youth group) and triathlon fundamentally shapes my engineering mindset. Competing at regional and national levels demands the same meticulous optimization of energy, efficiency, and real-time adaptation that I now apply to distributed computing systems.</p>
+    
+    <div class="sport-feature">
+      <div class="sport-photo"><img src="1725329446354.jpeg" alt="Running race with Stanford running team"></div>
+      <div class="sport-results">
+        <h3 data-i18n="tri.results.title">Selected Race Results</h3>
+        <div class="result-grid">
+          <div class="result-item"><span class="result-year">2019</span><span data-i18n="tri.res.2019a">2nd overall, Duathlon Pisa</span></div>
+          <div class="result-item"><span class="result-year">2019</span><span data-i18n="tri.res.2019b">2nd overall, Triathlon Sprint Tirrenia</span></div>
+          <div class="result-item"><span class="result-year">2021</span><span data-i18n="tri.res.2021a">1st overall, Triathlon Sprint Empoli</span></div>
+          <div class="result-item"><span class="result-year">2021</span><span data-i18n="tri.res.2021b">2nd overall, Triathlon Olimpico Castiglione della Pescaia</span></div>
+          <div class="result-item"><span class="result-year">2022</span><span data-i18n="tri.res.2022a">1st overall, Triathlon Sprint Lago Brasimone</span></div>
+          <div class="result-item"><span class="result-year">2022</span><span data-i18n="tri.res.2022b">1st overall, Aquathlon Città di Chioggia</span></div>
+          <div class="result-item"><span class="result-year">2022</span><span data-i18n="tri.res.2022c">4th in category, Ironman 70.3 Poreč</span></div>
+          <div class="result-item"><span class="result-year">2023</span><span data-i18n="tri.res.2023a">3rd overall, Triathlon Olimpico Marina di Castagneto Carducci</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tri-stats">
+      <div class="tri-stat"><div class="tri-num">FITRI</div><div class="tri-label" data-i18n="tri.label.1">Triathlon Instructor</div></div>
+      <div class="tri-stat"><div class="tri-num">FISA</div><div class="tri-label" data-i18n="tri.label.2">Lifeguard Patent</div></div>
+      <div class="tri-stat"><div class="tri-num">WASE</div><div class="tri-label" data-i18n="tri.label.3">Sub Open Patent</div></div>
+    </div>
+  </div>
+
+  <hr class="section-rule"/>
+
+  <div class="interest-section">
+    <h2 data-i18n="inter.music.title">🎵 Audio Synthesis & Music</h2>
+    <p data-i18n="inter.music.desc">I am a songwriter and acoustic guitar player, having published original music on YouTube and Spotify. This intrinsic connection to the physics of sound and musical composition directly drives my academic pursuit of Networked Music Performance and real-time audio reconstruction at the edge of the network.</p>
   </div>
 </div>
 
@@ -485,11 +571,11 @@ const T={
 en:{
   "profile.role":"AI Systems Architect",
   "sidebar.cv":"Download CV",
-  "nav.home":"Home & Vision","nav.pub":"Research Areas","nav.teach":"Systems Built","nav.news":"Impact",
+  "nav.home":"Home & Vision","nav.pub":"Publications (28)","nav.teach":"Experience & Teaching","nav.talks":"Talks & Service","nav.inter":"Performance & Media",
   "home.tagline":"Architecting the Infrastructure for Large-Scale AI Systems",
-  "home.bio1":"I build the resilient, high-throughput networking and orchestration layers required to scale multimodal AI inference and distributed computation. I am a Postdoctoral Researcher at the University of Pisa and an Affiliate Researcher at Stanford University (CCRMA). I received my Ph.D. <em>cum laude</em> focusing on resilient data-driven networking.",
+  "home.bio1":"I build the resilient, high-throughput networking and orchestration layers required to scale multimodal AI inference and distributed computation. I am a Postdoctoral Researcher at the University of Pisa and currently serve as an Affiliate Researcher at Stanford University (CCRMA). I received my Ph.D. <em>cum laude</em> focusing on resilient data-driven networking.",
   "home.bio2":"The next barrier in AI is not algorithmic; it is infrastructural. My work bridges high-performance networking, machine learning, and systems architecture to solve the hard bottlenecks of large-scale intelligence. I use demanding real-world testbeds—from zero-latency networked audio to automated biomedical detection (TAM project, Stanford Medicine) and real-time enterprise cybersecurity—to build systems that execute complex inferences when bandwidth, latency, and synchronization are critical constraints.",
-  "home.cv":"Curriculum Vitae","home.pubLink":"Research & Systems",
+  "home.cv":"Curriculum Vitae","home.pubLink":"Research & Publications",
   "home.visionTitle":"Research & Engineering Vision",
   "home.manifesto":"Scaling real-time intelligence requires moving beyond static hardware topologies to dynamic, zero-latency architectures. I build the operating systems, the routing logic, and the network orchestration layers that allow thousands of models and agents to collaborate seamlessly across the edge-cloud continuum.",
   "card1.title":"🌐 AI Cluster & Network Infrastructure",
@@ -500,36 +586,68 @@ en:{
   "card3.desc":"Building pipelines for heavy, multimodal workloads (speech, audio, biomedical signals) as the ultimate stress test for synchronized distributed networks.",
   "card4.title":"🔒 Zero-Trust AI Security",
   "card4.desc":"Deploying real-time neural networks at the network edge to secure enterprise VoIP infrastructure against generative voice fraud and deepfakes.",
-  "home.appTitle":"Production Applications & Testbeds",
-  "tag.1":"AI Cluster Networking","tag.2":"Large-Scale Inference","tag.3":"Real-Time Audio Processing","tag.4":"Cybersecurity Infrastructure","tag.5":"Biomedical ML","tag.6":"LEO Satellite Orchestration",
-  "pub.title":"Research Areas & Systems Built",
-  "pub.tagline":"Pioneering literature across the foundational pillars of the next-generation AI infrastructure.",
+  "home.newsTitle":"Career Highlights & Awards",
+  "pub.title":"Research Areas & Complete Publications",
+  "pub.tagline":"Pioneering literature across the foundational pillars of the next-generation AI infrastructure (28 Peer-Reviewed + 1 Book Chapter).",
   "pub.f.all":"All Publications","pub.f.infra":"AI Infrastructure & Networking","pub.f.media":"Low-Latency Multimodal AI","pub.f.dist":"Distributed AI Systems",
   "pub.label.infra":"AI Infrastructure & Large-Scale Networking",
   "pub.label.media":"Low-Latency Multimodal AI",
   "pub.label.dist":"Distributed AI Systems",
   "teach.title":"Systems Architecture & Experience",
   "teach.tagline":"Engineering real-world infrastructure for strict-latency and high-throughput AI applications.",
-  "exp1.title":"Affiliate Researcher / Postdoc: Low-Latency Biomedical AI",
+  "teach.sect.exp":"Research & Industrial Experience",
+  "teach.sect.courses":"Academic Courses & Seminars",
+  "teach.sup":"Supervised Student Theses (9)",
+  "exp1.title":"Postdoctoral Researcher: Biomedical AI",
+  "exp5.title":"Affiliate Researcher",
   "exp2.title":"Technical Director: Zero-Trust AI Security",
   "exp3.title":"Visiting Ph.D. Fellow: Extreme Latency Audio Inference",
   "exp4.title":"R&D Engineer & WP8 Leader: Distributed Edge AI",
-  "exp.1":"Architecting the computational pipelines to execute Machine Learning for automated Tracheal Acoustic Monitoring (TAM project). Solving synchronization and real-time processing constraints for multimodal clinical streams.",
+  "exp.1":"Architecting the computational pipelines to execute Machine Learning for automated Tracheal Acoustic Monitoring (TAM project) with Stanford Medicine. Solving synchronization and real-time processing constraints for multimodal clinical streams.",
+  "exp.5":"Continuing the collaboration established during the visiting Ph.D. fellowship, focusing on advanced signal processing and AI for low-latency networked applications.",
   "exp.2":"Directed the GATE project. Built an advanced virtual PBX platform executing deep neural networks in real-time to detect generative voice deepfakes and vishing, achieving zero-trust security on enterprise VoIP streams.",
   "exp.3":"Developed distributed AI and networking architectures for real-time multimedia systems. Orchestrated Networked Music Performance over volatile LEO satellite links (Starlink), stressing the absolute limits of packet synchronization.",
   "exp.4":"Leading the design of distributed architectures for wearable intelligence within the EU-TRAINS project, enabling real-time technique synthesis and inference allocation under constrained bandwidth.",
-  "news.title":"Impact & Academic Timeline",
-  "news.tagline":"Global scientific engagement, technical pitches, and networking community leadership.",
+  "c1.name":"Cybersecurity and Voice Protection (GATE Project)","c1.meta":"ITS Academy Prodigi · 2026 · 12 hours Lecture Series",
+  "c2.name":"Can Musicians Play Together Over Satellite Internet? The Starlink case","c2.meta":"Stanford University · Seminar, Class 220C · May 2025",
+  "c3.name":"Cloud and IoT Solutions: MQTT, FPGA, and AWS Cloud","c3.meta":"University of Pisa · Networking Course Seminar · Dec 2024",
+  "c4.name":"Network Metrology (Mininet) & FPGA Architectures","c4.meta":"University of Pisa · Core M.Sc. Networking Courses · 40h/year (2022-2025)",
+  "c5.name":"Mathematical Analysis 1","c5.meta":"University of Pisa · B.Sc. Course · Sep 2021 - Dec 2022",
+  "role.inst":"Guest Lecturer","role.sem":"Invited Speaker / Seminar",
+  "role.ta":"Teaching Assistant",
+  "talks.title":"Presentations & Academic Service",
+  "talks.tagline":"Spreading the vision of distributed runtime systems across 25 global scientific engagements.",
+  "talks.service":"Academic Leadership & Service",
+  "talks.talks":"Invited Talks, Pitches & Paper Presentations",
+  "inter.title":"Human Performance & Multimedia",
+  "inter.tagline":"Stress-testing the limits of human endurance and the physics of sound.",
+  "inter.yt.title":"📺 Triathlon Italia & Sports Tech Community",
+  "inter.tri.title":"🏊🚴🏃 Competitive Sport & Triathlon",
+  "inter.music.title":"🎵 Audio Synthesis & Music",
+  "inter.yt.desc":"I am the founder of Triathlon Italia, a digital community bridging endurance training and sports technology. Managing an active audience of over 10,000 members, I analyze wearable telemetry, biomechanical data, and race performance. This experience proves my ability to communicate complex data, build a large-scale brand, and turn human performance into actionable metrics.",
+  "yt.v1":"Triathlon Italia (10k+ Members)","yt.v1.m":"Reference channel for triathlon · Training culture, race stories, and sports tech analytics.",
+  "inter.tri.desc":"My background in competitive swimming (Fiamme Oro youth group) and triathlon fundamentally shapes my engineering mindset. Competing at regional and national levels demands the same meticulous optimization of energy, efficiency, and real-time adaptation that I now apply to distributed computing systems.",
+  "tri.results.title":"Selected Race Results",
+  "tri.res.2019a":"2nd overall, Duathlon Pisa",
+  "tri.res.2019b":"2nd overall, Triathlon Sprint Tirrenia",
+  "tri.res.2021a":"1st overall, Triathlon Sprint Empoli",
+  "tri.res.2021b":"2nd overall, Triathlon Olimpico Castiglione della Pescaia",
+  "tri.res.2022a":"1st overall, Triathlon Sprint Lago Brasimone",
+  "tri.res.2022b":"1st overall, Aquathlon Città di Chioggia",
+  "tri.res.2022c":"4th in category, Ironman 70.3 Poreč",
+  "tri.res.2023a":"3rd overall, Triathlon Olimpico Marina di Castagneto Carducci",
+  "tri.label.1":"Triathlon Instructor","tri.label.2":"Lifeguard Patent","tri.label.3":"Sub Open Patent",
+  "inter.music.desc":"I am a songwriter and acoustic guitar player, having published original music on YouTube and Spotify. This intrinsic connection to the physics of sound and musical composition directly drives my academic pursuit of Networked Music Performance and real-time audio reconstruction at the edge of the network.",
   "footer.updated":"Last updated: July 2026"
 },
 it:{
   "profile.role":"AI Systems Architect",
   "sidebar.cv":"Scarica il CV",
-  "nav.home":"Home & Visione","nav.pub":"Aree di Ricerca","nav.teach":"Sistemi e Architetture","nav.news":"Impatto",
+  "nav.home":"Home & Visione","nav.pub":"Pubblicazioni (28)","nav.teach":"Esperienza e Insegnamento","nav.talks":"Talk e Servizio Accademico","nav.inter":"Performance e Media",
   "home.tagline":"Architettare l'Infrastruttura per i Sistemi AI su Larga Scala",
-  "home.bio1":"Progetto i livelli di orchestrazione e networking ad alto throughput necessari per scalare l'inferenza AI multimodale e il calcolo distribuito. Sono Assegnista di Ricerca presso l'Università di Pisa e Affiliate Researcher alla Stanford University (CCRMA). Ho conseguito il dottorato <em>cum laude</em> concentrandomi sul networking resiliente guidato dai dati.",
+  "home.bio1":"Progetto i livelli di orchestrazione e networking ad alto throughput necessari per scalare l'inferenza AI multimodale e il calcolo distribuito. Sono Assegnista di Ricerca presso l'Università di Pisa e attualmente Affiliate Researcher alla Stanford University (CCRMA). Ho conseguito il dottorato <em>cum laude</em> concentrandomi sul networking resiliente guidato dai dati.",
   "home.bio2":"La prossima barriera nell'AI non è algoritmica; è infrastrutturale. Il mio lavoro unisce networking ad alte prestazioni, machine learning e architettura di sistema per risolvere i colli di bottiglia dell'intelligenza su larga scala. Utilizzo rigorosi banchi di prova—dall'audio in rete a zero latenza all'analisi biomedica automatizzata (progetto TAM, Stanford Medicine), fino alla cybersecurity enterprise—per costruire sistemi che eseguono inferenze complesse quando larghezza di banda, latenza e sincronizzazione sono limiti critici.",
-  "home.cv":"Curriculum Vitae","home.pubLink":"Ricerca e Sistemi",
+  "home.cv":"Curriculum Vitae","home.pubLink":"Ricerca e Pubblicazioni",
   "home.visionTitle":"Visione Architetturale e Scientifica",
   "home.manifesto":"Scalare l'intelligenza in tempo reale richiede di andare oltre le topologie hardware statiche verso architetture dinamiche a latenza zero. Costruisco i sistemi operativi, la logica di routing e i layer di orchestrazione di rete che permettono a migliaia di modelli e agenti di collaborare senza interruzioni lungo il continuum edge-cloud.",
   "card1.title":"🌐 Infrastrutture AI di Rete e Cluster",
@@ -540,26 +658,57 @@ it:{
   "card3.desc":"Costruire pipeline per carichi di lavoro pesanti (voce, audio, segnali biomedici) come stress test definitivo per le reti distribuite sincronizzate.",
   "card4.title":"🔒 Sicurezza AI Zero-Trust",
   "card4.desc":"Implementare reti neurali in tempo reale all'edge per proteggere l'infrastruttura VoIP aziendale contro frodi vocali generative e deepfake.",
-  "home.appTitle":"Applicazioni e Testbed Produttivi",
-  "tag.1":"AI Cluster Networking","tag.2":"Inferenza Larga Scala","tag.3":"Audio Processing Real-Time","tag.4":"Cybersecurity Infrastrutturale","tag.5":"Machine Learning Biomedico","tag.6":"Orchestrazione Satellitare LEO",
-  "pub.title":"Aree di Ricerca e Sistemi Realizzati",
-  "pub.tagline":"Letteratura scientifica sui pilastri fondazionali dell'infrastruttura AI di prossima generazione.",
+  "home.newsTitle":"Highlight di Carriera e Premi",
+  "pub.title":"Aree di Ricerca e Tutte le Pubblicazioni",
+  "pub.tagline":"Letteratura scientifica sui pilastri fondazionali dell'infrastruttura AI di prossima generazione (28 Peer-Reviewed + 1 Book Chapter).",
   "pub.f.all":"Tutte le Pubblicazioni","pub.f.infra":"Infrastruttura AI e Reti","pub.f.media":"AI Multimodale Bassa Latenza","pub.f.dist":"Sistemi AI Distribuiti",
   "pub.label.infra":"Infrastruttura AI e Networking su Larga Scala",
   "pub.label.media":"AI Multimodale a Bassa Latenza",
   "pub.label.dist":"Sistemi AI Distribuiti",
   "teach.title":"Architettura di Sistema ed Esperienza",
   "teach.tagline":"Ingegnerizzare l'infrastruttura reale per applicazioni AI ad alta capacità e latenza critica.",
-  "exp1.title":"Affiliate Researcher / Postdoc: AI Biomedica",
+  "teach.sect.exp":"Esperienza di Ricerca & Industriale",
+  "teach.sect.courses":"Corsi Accademici & Seminari",
+  "teach.sup":"Tesi Studenti Supervisionate (9)",
+  "exp1.title":"Assegnista di Ricerca (Postdoc): AI Biomedica",
+  "exp5.title":"Affiliate Researcher",
   "exp2.title":"Direttore Tecnico: Sicurezza AI Zero-Trust",
   "exp3.title":"Visiting Ph.D. Fellow: Inferenza Audio Estrema",
   "exp4.title":"R&D Engineer & WP8 Leader: Edge AI",
-  "exp.1":"Progettazione delle pipeline computazionali per eseguire il Machine Learning per il monitoraggio acustico tracheale automatizzato (progetto TAM). Risoluzione dei vincoli di sincronizzazione ed elaborazione in tempo reale per flussi clinici multimodali.",
+  "exp.1":"Progettazione delle pipeline computazionali per eseguire il Machine Learning per il monitoraggio acustico tracheale automatizzato (progetto TAM) in collaborazione con Stanford Medicine. Risoluzione dei vincoli di sincronizzazione ed elaborazione in tempo reale per flussi clinici multimodali.",
+  "exp.5":"Proseguimento della collaborazione stabilita durante il periodo di visiting del Ph.D., con focus su elaborazione avanzata dei segnali e intelligenza artificiale per applicazioni di rete a bassa latenza.",
   "exp.2":"Direzione del progetto GATE. Costruzione di una piattaforma PBX virtuale avanzata in grado di eseguire reti neurali profonde in tempo reale per rilevare deepfake vocali, ottenendo una sicurezza zero-trust sui flussi VoIP aziendali.",
   "exp.3":"Sviluppo di architetture AI e di networking distribuite per sistemi multimediali. Orchestrazione di esecuzioni musicali in rete su collegamenti satellitari LEO volatili (Starlink), stressando i limiti assoluti della sincronizzazione dei pacchetti.",
   "exp.4":"Guida della progettazione di architetture distribuite per l'intelligenza wearable all'interno del progetto EU-TRAINS, consentendo la sintesi della tecnica in tempo reale e l'allocazione dell'inferenza con larghezza di banda vincolata.",
-  "news.title":"Impatto e Timeline Accademica",
-  "news.tagline":"Coinvolgimento scientifico globale, presentazioni tecniche e leadership nella comunità.",
+  "c1.name":"Cybersecurity e Protezione Vocale (Progetto GATE)","c1.meta":"ITS Academy Prodigi · 2026 · Ciclo di lezioni da 12 ore",
+  "c2.name":"Latenza Estrema: Orchestrazione Audio su Satelliti LEO","c2.meta":"Stanford University · Seminario, Classe 220C · Maggio 2025",
+  "c3.name":"Soluzioni Cloud e IoT: MQTT, FPGA e AWS Cloud","c3.meta":"Università di Pisa · Seminario per Corso di Networking · Dic 2024",
+  "c4.name":"Metrologia di Rete (Mininet) & Architetture FPGA","c4.meta":"Università di Pisa · Corsi Laurea Magistrale · 40 ore/anno (2022-2025)",
+  "c5.name":"Analisi Matematica 1","c5.meta":"Università di Pisa · Corso Triennale · Set 2021 - Dic 2022",
+  "role.inst":"Docente Invitato","role.sem":"Relatore Invitato / Seminario","role.ta":"Co-Docente",
+  "talks.title":"Presentazioni e Servizio Accademico",
+  "talks.tagline":"Diffondere la visione dei sistemi di runtime distribuiti attraverso 25 impegni scientifici globali.",
+  "talks.service":"Leadership e Servizio Accademico",
+  "talks.talks":"Talk Invitati, Pitch e Presentazioni Paper",
+  "inter.title":"Performance Umana e Multimedia",
+  "inter.tagline":"Testare i limiti della resistenza umana e della fisica del suono.",
+  "inter.yt.title":"📺 Triathlon Italia e Community Tech",
+  "inter.tri.title":"🏊🚴🏃 Sport Agonistico e Triathlon",
+  "inter.music.title":"🎵 Sintesi Audio e Musica",
+  "inter.yt.desc":"Sono il fondatore di Triathlon Italia, una community digitale che unisce allenamento endurance e tecnologia. Gestendo un pubblico attivo di oltre 10.000 membri, analizzo telemetria wearable, dati biomeccanici e prestazioni di gara. Questa esperienza dimostra la capacità di comunicare dati complessi, costruire un brand su larga scala e trasformare le performance in metriche analizzabili.",
+  "yt.v1":"Triathlon Italia (10k+ Membri)","yt.v1.m":"Canale di riferimento per il triathlon · Cultura sportiva e analisi tech.",
+  "inter.tri.desc":"Il mio passato nel nuoto agonistico (Fiamme Oro) e nel triathlon plasma la mia mentalità ingegneristica. Competere a livello nazionale richiede la stessa maniacale ottimizzazione di energia, efficienza e adattamento in tempo reale che applico oggi alla progettazione di sistemi di calcolo distribuiti.",
+  "tri.results.title":"Risultati Sportivi Selezionati",
+  "tri.res.2019a":"2° assoluto, Duathlon Pisa",
+  "tri.res.2019b":"2° assoluto, Triathlon Sprint Tirrenia",
+  "tri.res.2021a":"1° assoluto, Triathlon Sprint Empoli",
+  "tri.res.2021b":"2° assoluto, Triathlon Olimpico Castiglione della Pescaia",
+  "tri.res.2022a":"1° assoluto, Triathlon Sprint Lago Brasimone",
+  "tri.res.2022b":"1° assoluto, Aquathlon Città di Chioggia",
+  "tri.res.2022c":"4° di categoria, Ironman 70.3 Poreč",
+  "tri.res.2023a":"3° assoluto, Triathlon Olimpico Marina di Castagneto Carducci",
+  "tri.label.1":"Istruttore Triathlon","tri.label.2":"Brevetto Bagnino","tri.label.3":"Brevetto Sub Open",
+  "inter.music.desc":"Sono un cantautore e suono la chitarra acustica, con brani inediti pubblicati su YouTube e Spotify. Questa profonda connessione con la fisica del suono e la composizione musicale guida direttamente la mia ricerca accademica sulle esecuzioni musicali in rete (NMP) e sulla ricostruzione audio all'estremità della rete.",
   "footer.updated":"Ultimo aggiornamento: Luglio 2026"
 }
 };
@@ -610,7 +759,7 @@ function toggleNav(){document.getElementById('mobile-nav').classList.toggle('ope
 
 (function(){
   const h=location.hash.replace('#','')||'home';
-  go(['home','pub','teach','news'].includes(h)?h:'home');
+  go(['home','pub','teach','talks','inter'].includes(h)?h:'home');
 })();
 </script>
 </body>
